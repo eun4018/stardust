@@ -1,0 +1,199 @@
+.bt-menu-right {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 0;
+	border-width: 0px;
+	border-style: solid;
+	border-color: transparent;
+	background-color: rgba(0,0,0,0);
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
+	transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
+	z-index:10000;
+}
+
+.bt-menu-right.bt-menu-open-right {
+	height: 100%;
+	border-width: 0 500px 0 0;
+	background-color: rgba(0,0,0,0.7);
+	-webkit-transition: border-width 0.3s, background-color 0.3s;
+	transition: border-width 0.3s, background-color 0.3s;
+}
+
+.bt-overlay-right {
+	position: absolute;
+	width: 100%;
+}
+
+.bt-menu-open-right .bt-overlay-right {
+	height: 100%;
+}
+
+.bt-menu-trigger-right {
+	position: fixed;
+	bottom: 50px;
+	right: 74px;
+	display: block;
+	width: 52px;
+	height: 62px;
+	cursor: pointer;
+	border-radius:5px;
+}
+.back-right{
+   width:82px;
+   height:82px;
+   background:#000;
+   border-radius:60px;
+   box-shadow:0px 2px 5px 2px rgba(0,0,0,0.4);
+}
+.bt-menu-trigger-right span {
+	position: absolute;
+	top: 41px;
+	left: 21px;
+	display: block;
+	width: 80%;
+	height: 2px;
+	margin-top: -2px;
+	background: #fff;
+	font-size: 0px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-transition: background-color 0.3s;
+	transition: background-color 0.3s;
+}
+
+.bt-menu-open-right .bt-menu-trigger-right span {
+	background-color: transparent;
+}
+
+.bt-menu-trigger-right span:before,
+.bt-menu-trigger-right span:after {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	content: '';
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.bt-menu-trigger-right span:before {
+	-webkit-transform: translateY(0) rotate(-90deg);
+	transform: translateY(0) rotate(-90deg);
+}
+
+.bt-menu-trigger-right span {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.bt-menu-open-right .bt-menu-trigger-right span:before {
+	-webkit-transform: translateY(0) rotate(45deg);
+	transform: translateY(0) rotate(45deg);
+}
+
+.bt-menu-open-right .bt-menu-trigger-right span:after {
+	-webkit-transform: translateY(0) rotate(-45deg);
+	transform: translateY(0) rotate(-45deg);
+}
+
+.bt-menu-right ul {
+	position: fixed;
+	bottom: 150px;
+	right: 50px;
+	margin: 0;
+	padding: 0;
+	width: 500px;
+	list-style: none;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.bt-menu-right ul li,
+.bt-menu-right ul li a {
+	display: block;
+	width: 100%;
+	color:#fff;
+	text-align: right;
+}
+.bt-menu-right ul li a.menu-font-right{
+	font-size:3rem;
+	color:#fff;
+}
+.bt-menu-right ul li img{
+	 box-shadow:0px 2px 5px 2px rgba(0,0,0,0.4);
+	 border-radius:120px;
+	 background:#fff;
+}
+.bt-menu-right ul li a.menu-font-right:hover{
+	color:#ddd;
+}
+.bt-menu-right ul li {
+	padding: 16px 0;
+	opacity: 0;
+	color:#fff;
+	visibility: hidden;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s, visibility 0s 0.3s;
+	transition: transform 0.3s, opacity 0.2s, visibility 0s 0.3s;
+}
+
+.bt-menu-right ul li:first-child { 
+	-webkit-transform: translate3d(-100%,200%,0);
+	transform: translate3d(-100%,200%,0);
+}
+
+.bt-menu-right ul li:nth-child(2) { 
+	-webkit-transform: translate3d(-100%,100%,0);
+	transform: translate3d(-100%,100%,0);
+}
+
+.bt-menu-right ul li:nth-child(3) { 
+	-webkit-transform: translate3d(-100%,0,0);
+	transform: translate3d(-100%,0,0);
+}
+
+.bt-menu-right ul li:nth-child(4) { 
+	-webkit-transform: translate3d(-100%,-100%,0);
+	transform: translate3d(-100%,-100%,0);
+}
+
+.bt-menu-right ul li:nth-child(5) { 
+	-webkit-transform: translate3d(-100%,-200%,0);
+	transform: translate3d(-100%,-200%,0);
+}
+
+.bt-menu-right.bt-menu-open-right ul li {
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s 0.1s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.bt-menu-right ul li a {
+	display: block;
+	outline: none;
+	color: transparent;
+	text-decoration: none;
+	font-size: 0px;
+}
+
+.bt-menu-right ul li a:before {
+	color: #04a466;
+	font-size: 48px;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+.bt-menu-right ul li a:hover:before,
+.bt-menu-right ul li a:focus:before  {
+	color: #fff;
+}

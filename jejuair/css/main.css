@@ -1,0 +1,512 @@
+/********jeju_visual********/
+.jeju_visual .visual_txt{position: absolute; top:22%; left:5%; width:340px; height:202px; opacity: 0; margin-left:40px; color:#fff; background:url(../img/bg_main_visual_txt.png); padding:30px 10px 5px 10px;}
+.jeju_visual .visual .bx-wrapper ul > li.active .visual_txt{animation: moveUp .5s forwards;}
+@keyframes moveUp{
+ from{opacity: 0; margin-left:40px;}
+ to{opacity: 1; margin-left:0;}
+}
+.jeju_visual .visual_txt h1,
+.jeju_visual .visual_txt p,
+.jeju_visual .visual_txt span{margin:0 auto; width:90%; text-shadow: 1px 1px 1.5px rgba(0, 0, 0, .5);}
+.jeju_visual .visual_txt h1{font-size:36px; font-weight:500;}
+.jeju_visual .visual_txt p{font-size:20px; margin-top:10px; font-weight:300;}
+.jeju_visual .visual_txt p:last-child{font-size:16px;}
+/********jeju_flight********/
+.jeju_flight .inner{height:auto; position: relative; background:#f15a23;}
+.jeju_flight .inner .flight_tabs{height: 40px; width: 100%; border-bottom:1px solid #ee8f6d;}
+.flight_tabs > li{float: left; height: 40px;  margin-bottom: -1px; overflow: hidden;position: relative;}
+.jeju_flight .inner .group_reserve{position: absolute; top:0; left:240px; width:100%; max-width:140px;}
+.jeju_flight .inner .group_reserve > a,
+.flight_tabs > li > a{color: #ebebeb; display: block; padding: 0 20px; font-size:18px;line-height:40px;}
+.flight_tabs > li.active > a::after{content: ''; display: block; width: 100%; height: 3px; background-color: #05aae2; position: absolute; bottom: 0; left: 0;}
+.jeju_flight .inner .tab_container{width: 100%; padding:10px 0;}
+#tab2 .trip_box .route1_box,
+#tab3 .trip_box .route1_box{width: 67%;}
+#tab3 .trip_box > .route1_box.route1_sizing{height:48px; margin-top:-4px;}
+#tab3 .trip_box input{margin-top: 3px;}
+#tab3 .trip_box .person_inner{position: absolute; top:53px; right:0;}
+/*결재선택 창*/
+.sign_area{position: absolute; top:10px; right:10px;}
+.sign_inner{float:left; position: relative; padding-left: 20px; margin-bottom: 12px; cursor: pointer; font-size: 14px; color:#ebebeb; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+.sign_inner:first-child{margin-right:18px;}
+.sign_inner input{position: absolute;opacity: 0;cursor: pointer;}
+.checkmark{position: absolute; top:-2px; left: -4px; height: 20px; width: 20px; background-color: #ebebeb; border-radius: 50%;}
+.sign_inner:hover input ~ .checkmark{background-color: #ccc;}
+.sign_inner input:checked ~ .checkmark {background-color: #ffffff;}
+.checkmark:after {content: ''; position: absolute; display:none;}
+.sign_inner input:checked ~ .checkmark:after{display:block;}
+.sign_inner .checkmark:after{top: 4px; left:7px; width: 7px; height: 10px; border: solid #05aae2; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);}
+.tab_content .trip_box{display:block; height:54px; padding-left:10px;}
+.tab_content .trip_box input{width:100%; height:40px; margin-top:7px; background:#fff;}
+.tab_content input[type=text]{padding-left:10px; font-size:14px;}
+.tab_content input[value]{color:#666;}
+/*출발지, 목적지, 달력 버튼 설정*/
+.tab_content .trip_box .route1_box{width:50%; display:flex; float:left; margin-right:0.5%; height:54px;}
+.tab_content .trip_box .route1_box > div,
+.tab_content .trip_box .route2_box{position: relative;}
+.tab_content .trip_box .route1_box > div{flex:1; margin-right:1%;}
+.tab_content .trip_box > .route1_box > .calender_box{margin-right:0;}
+.tab_content .trip_box .route2_box{float:left; width:18%; max-width:194.4px;}
+.tab_content .depart_box > button,
+.tab_content .desti_box > button,
+.tab_content .calender_box .datelabel{position: absolute; top:8px; right:0; width:40px; height:40px; font-size:0;}
+#tab3 .depart_box > button,
+#tab3 .desti_box > button,
+#tab3 .calender_box .datelabel{position: absolute; top:4px;   }
+.depart_box button{background:url(../img/ico_airplane.svg) no-repeat;}
+.desti_box button{background:url(../img/ico_desti_airplane.svg) no-repeat;}
+.calender_box .datelabel{cursor: pointer; background:url(../img/ico_calendar.svg) no-repeat;}
+/****출발지, 목적지 선택창****/
+.tab_content .trip_box .area_name{width:46em; height:480px; background:#fff; border:1px solid #515151; position: absolute; top:48px; padding:20px; z-index:2; display:none;}
+.tab_content .trip_box #depart_name3,
+.tab_content .trip_box #desti_name3{top:44px; z-index: 3;}
+.tab_content .trip_box #depart_name4,
+.tab_container .trip_box #desti_name4{top:42px; z-index: 2;}
+.area_name .area_tabs,
+.area_name.destination .desti_tabs{float:left; width:35%; height:436px; background:#eaeaea; padding:14px;}
+.area_name .area_tabs > li,
+.area_name.destination .desti_tabs > li{display:block; font-size:17px; position: relative;}
+.area_name .area_tabs > li,
+.area_name.destination .desti_tabs > li{display:block; width:100%; line-height:48px; padding:0 10px; cursor: pointer;}
+.area_name .area_tabs > li.select,
+.area_name.destination .desti_tabs > li.current{background:#fff; border:1px solid #f15a23;}
+.area_name .area_tabs > li.select::after,
+.area_name.destination .desti_tabs > li.current::after{content:''; float:right; padding-right:10px; position: absolute; top: 17px; right: 8px; width:8px; height:15px; background:url(../img/area_name_btn.svg) no-repeat;}
+.area_name > .name_container,
+.area_name.destination .desti_list{float:right; width:60%; height:100%; overflow-y:auto; margin-left:3%;}
+.area_name.destination .desti_list{display:none;}
+.area_name.destination .desti_list.current{display:inherit;}
+.name_container .name_list{display:block; width:100%;}
+.name_list > ul > li > button,
+.desti_list > ul > li > button{display:block; font-size:16px; width:100%; text-align:left; line-height:42px; background:#f2f2f2; margin-bottom:10px; padding-left:12px;}
+.name_list > ul > li:last-child > button,
+.desti_list > ul > li:last-child > button{margin-bottom:0;}
+/*인원수 창*/
+.tab_content .trip_box .person_inner{width:30%; margin:0 1%; height:54px; float:right;}
+.tab_content .trip_box .person_inner .person_area{display:flex;}
+.person_area .person_box{flex:1; color:#ebebeb;}
+.person_area .person_box:nth-child(2){margin:0 10px;}
+.person_area .person_box p{padding:3.5px 0; font-size:16px; text-align:center;}
+.person_area .person_box .person_txt{text-align:center; width:100%; display:flex;}
+.person_area .person_box .person_txt span{ font-size:20px; line-height:25px; width:20%;}
+.person_area .person_box .person_txt a+span{flex:1;}
+.person_area .person_box .person_txt a{font-size:0; width:25px; height:25px; background:url(../img/icon.png); background-position:-39px -90px;}
+.person_area .person_box .person_txt a.plus{background-position-x:-66px;}
+/*나이계산기, 예매하기부분*/
+/*나이계산기 모달창*/
+#modal{width:100%; height:100%; background:rgba(0, 0, 0, .7); position: fixed; top:0; left:0; z-index:11; display: none;}
+#modal .modal_close{width:25px; height:25px; position: absolute; top:5px; right:10px; font-size:0; cursor: pointer;}
+#modal .modal_close span{position: absolute; top:44%; transform:rotate(45deg); border-radius: 50px; display:block; width:25px; height:2px; background:#666;}
+#modal .modal_close span::before{content:''; transform:rotate(-90deg); border-radius:50px; position:absolute; left:0; top:0; width:25px; height:2px; background:#666;}
+#modal .modal_con{width:50%; max-width:570px; background:#fff; padding:14px; position: absolute; top:50%; left:50%; transform:translate(-50%,-50%);}
+#modal .modal_con h2{font-size:18px; padding-bottom:20px; border-bottom:1px solid #cfcfcf;}
+#modal .modal_con .cal_con{width:100%; padding:20px 0; border-bottom: 1px solid #cfcfcf;}
+#modal .modal_con .cal_con .cal_intro{font-size:15px; color:#333; font-weight: 400; display:block; padding:0 0 14px 0; border-bottom:1px solid #cfcfcf;}
+#modal .modal_con .cal_con .cal_input{width:70%;max-width: 368px; margin:10px auto;}
+#modal .modal_con .cal_con .cal_input input[type=text]{width:200px; height:38px; background: #f2f2f2; font-size:16px; border-radius: 5px; padding-left:10px;}
+#modal .modal_con .cal_con .cal_input input[value]{color:#333;}
+#modal .modal_con .cal_con .cal_input label{font-size:16px; margin-right:20px;}
+#modal .modal_con .cal_con .cal_input .board_txt{margin-right:35px !important;}
+#modal .modal_con button{color: #ebebeb; font-weight:bold; border-radius: 5px;}
+#modal .modal_con .cal_con .cal_input .input_btn{background:#f68121; padding:10px 20px; margin-left:10px; float:right;}
+#modal .modal_con .cal_con .txt_box{margin-top:14px;}
+#modal .modal_con .cal_con .txt_box > ul > li{padding-left:10px; margin-bottom:10px; font-size:15px; line-height: 22px; color:#f15a23;}
+#modal .modal_con .cal_con .txt_box > ul > li::before{content:''; float:left; margin-left: -7px; margin-right:5px; margin-top: 9px; width: 4px; height: 4px; background-color: #f15a23;}
+#modal .modal_con .cal_con .cal_print{width:100%; padding:25px 0; background:#dfdfdf; border:1px solid #b4b4b4; margin-top:13px; font-size:16px; }
+#modal .modal_con .cal_con .cal_print p{text-align:center; line-height:22px;}
+#modal .modal_con .cal_con .cal_print > p > span{color:#f15a23; font-weight:bold;}
+#modal .modal_con .button_area{margin:20px 0 10px 0;}
+#modal .modal_con .button_area button{background:#f15a23; padding:10px 40px; font-size:18px; margin:0 auto; display:block;}
+/*나이계산기 모달창 끝*/
+.button_inner{clear:both; height:46px; margin-top:10px;}
+.age_cal a,
+.reserve_btn{color:#ebebeb;}
+.button_inner .age_cal{display:inline-block; line-height:46px; padding:0 10px; text-decoration: underline;}
+.button_inner .age_cal a{font-size:16px; font-weight:bold;}
+.reserve_btn{position: absolute;; right:0;padding:10px 40px; background:transparent; border: 2px solid #ebebeb; font-weight:bold; font-size:16px; margin-right:10px;}
+/********jeju_event********/
+.jeju_event{margin:40px 0;}
+/********jeju_news********/
+.jeju_news{margin:20px 0;border-top:1px solid #cfcfcf; border-bottom: 1px solid #cfcfcf;}
+.jeju_news .inner .news{display:inline-block; position: relative; height:50px; overflow: hidden; transition:height .4s; width:100%; box-sizing: border-box;}
+.news h3{float:left; width:15%; height:50px; margin:0; font-size:18px; line-height:50px;}
+.news .rolling{position:relative; width: 80%; margin-left:15%;}
+.news .rolling > li{line-height: 50px; font-size:16px; font-weight:300;}
+.news .rolling > li > span{float:left;}
+.news .rolling > li > span:first-child{width:80%; color:#333;}
+.news .rolling > li > span:last-child{text-align:right; width:16%; color:#515151;}
+.more{display:block; position: absolute; top:16px; right:24px; width: 20px; height: 20px;}
+.more span{font-size:0; position: relative; top:0; right:0; display:block; width:100%; height:100%;}
+.more span::before{content:''; position: absolute; top:0; left:47%; border-radius: 50px; width:2px; height:20px; background:#707070;}
+.more span::after{content:''; position: absolute; top:45%; left:0; border-radius: 50px; width:20px; height:2px; background:#707070;}
+/********jeju_special********/
+.jeju_special{margin:40px 0;}
+.jeju_special .inner .special_area{display:flex; width:100%;}
+.special_area div{flex:1; width: 33.3%; height:216px; background-image: url(../img/img_main_brandstory.png); position: relative; z-index: 1; cursor: pointer; background-size:cover;}
+.special_area div + div{margin-left:48px;}
+.special_area div:hover span::before{opacity:0; content:''; position: absolute; top:0; right:0; width:20px; height:200px; background:rgba(0, 0, 0, .7);}
+.special_area div:hover span::after{opacity: 0; content:''; position: absolute; bottom: 0; right: 0; width: 0; height: 0; border-top: 30px solid rgba(0, 0, 0, .7); border-right: 20px solid transparent;}
+.special_area div span{position: absolute; bottom:0; left:0;width: 200px; height:112px; padding:26px 0 0 30px; color:#fff; background: rgba(241, 90, 34, .9); -webkit-transition: all .4s; transition: all .4s; -webkit-transform: translateY(0); transform: translateY(0);}
+.special_area div:hover span{width: 100%; height: 100%; padding: 24px 0 0 24px; background: rgba(0, 0, 0, .7);-webkit-transform: translateZ(0); transform: translateZ(0);}
+.special_area div span::before{content:''; position: absolute; top: 0; right: -20px; width: 20px; height: 82px; background: rgba(241, 90, 34, .9); -webkit-transition: all .4s; transition: all .4s;}
+.special_area div span::after{opacity: 1; content: ''; position: absolute; bottom: 0; right: -20px; width: 0; height: 0; border-top: 30px solid rgba(241, 90, 34, .9); border-right: 20px solid transparent; -webkit-transition: all .4s; transition: all .4s;}
+.special_area div span strong,
+.special_area div span em{-webkit-transition: all .4s ease; transition: all .4s ease; }
+.special_area div span strong{display:block; font-size:18px; margin-bottom:7px;font-weight: 500;}
+.special_area div:hover span strong{font-size:22px; margin-bottom:15px;}
+.special_area div span em{font-size:15px; line-height:20px; font-weight:300;}
+.special_area div:hover span em{display:block;font-size:18px;}
+.special_area .aircafe{background-image: url(../img/img_main_aircafe.png);}
+.special_area .hotel{background-image: url(../img/img_main_hotel.png);}
+/********jeju_service********/
+.jeju_service{margin:48px 0;}
+.jeju_service .inner > ul{display:flex; width:88%; margin:0 auto}
+.jeju_service .inner > ul > li{flex:1; position:relative; padding: 0 20px; box-sizing: border-box;}
+.jeju_service .inner > ul > li::before{content: ''; position: absolute; top: 32px; left: -1px; width: 1px; height: 60px; background: #707070;}
+.jeju_service .inner > ul > li:first-child::before{display:none;}
+.jeju_service .inner > ul > li img{display:block; width:100%; max-width:100px; height:109px; margin:0 auto;
+transform:scale(1); transition:all .5s;}
+.jeju_service .inner > ul > li:hover img{transform:scale(1.1);} 
+.jeju_service .inner > ul > li p{margin-top:10px; text-align:Center; font-size:18px; font-weight:500; color:#666;}
+/********jeju_point********/
+.jeju_point{margin-bottom:40px;}
+.jeju_point .inner div{display:block; width:48%; height:145px; background-size:cover;}
+.jeju_point .inner .point_left{float:left; background:url(../img/img_main_refresh1.png) no-repeat bottom;}
+.jeju_point .inner .point_right{float:right; background:url(../img/img_main_refresh2.png) no-repeat bottom center;}
+.jeju_point .inner span{position:relative; display:block; width:40%; height:104px; margin-top:41px; color:#ebebeb; background:rgba(241, 90, 34, .9); padding: 24px 0 0 20px;}
+.jeju_point .inner span::before{content: ''; position: absolute; top: 0; right: -20px; width: 20px; height: 74px; background: rgba(241, 90, 34, .9);}
+.jeju_point .inner span::after{content: ''; position: absolute; bottom: 0; right: -20px; width: 0; height: 0; border-top: 30px solid rgba(241, 90, 34, .9); border-right: 20px solid transparent;}
+.jeju_point .inner span strong{display:block; font-size:18px; font-weight:500; margin-bottom:6px;}
+.jeju_point .inner span em{font-size:16px; font-weight:300; line-height: 18px;}
+/********contact_area********/
+.contact_area{display:block; width:100%; padding-top:20px; border-top: 1px solid #cfcfcf;}
+.contact_area .inner div{float:left; width:33.3%; height:auto;}
+.contact_area .inner div h4{font-size:17px; color:#616161; padding-bottom:15px;}
+.contact_area .inner .cs_center strong{color:#f15a23; font-size:3em; font-weight:400;}
+.contact_area .inner .cs_center p{padding-top:10px; font-size:13px; line-height:16px; color:#666;}
+.contact_area .inner .sns{padding:0 40px 35px 40px;}
+.sns > ul > li{display:inline-block; cursor:pointer; width:27px; height:28px; line-height:31px; font-size:0; background:url(../img/ico_facebook.svg) no-repeat;}
+.sns > ul > li:nth-child(2){background:url(../img/ico_instagram.svg) no-repeat;}
+.sns > ul > li:nth-child(3){background:url(../img/ico_youtube.svg) no-repeat;}
+.sns > ul > li:last-child{background:url(../img/ico_weibo.svg) no-repeat;}
+.sns > ul > li+li{margin-left:10px;}
+.contact_area .inner .partner{padding-bottom:14px;}
+.partner .part_tit{font-size:17px; color:#616161;font-weight:500; padding-bottom:15px;}
+.partner .part_tit span{font-size:15px; color:#f15a23; font-weight:400;}
+.partner .part_txt{font-size:13px; color:#666; font-weight:300; line-height:18px;}
+.partner button{padding-top:10px; background:transparent;}
+.partner button a{font-size:13px; color:#0992c1; font-weight:bold; letter-spacing: -0.5px;}
+.partner button a:before{content:'★'; display:inline-block; margin-right:5px; font-size:13px; position: relative; top:-2px; z-index:-1;}
+@media screen and (max-width:1280px){
+/********jeju_flight********/
+/*tab1 왕복*/
+.tab_content .trip_box .person_inner{width:28%;}
+}
+@media screen and (max-width:1024px){
+/********jeju_flight********/
+/*tab1 왕복*/
+.tab_content .trip_box .route2_box{float:left; width:18%; max-width:194.4px; margin-left:0.1%;}
+.tab_content .trip_box .person_inner{width: 29%;}
+/*나이계산기 modal*/
+#modal .modal_con .cal_con .cal_input{width: 100%;}
+/********jeju_special********/
+.special_area div{height: 184px;}
+.special_area div span{width: 158px;height: 105px;padding: 20px 0 0 20px;}
+.special_area div span::before{height: 75px;}
+/********jeju_point********/
+.jeju_point .inner span {width: 50%;}
+.jeju_point .inner span strong{font-size: 16px;}
+.jeju_point .inner span em{font-size: 14px;}
+/********contact_area********/
+.partner .part_txt{padding-right:25px;}
+}
+@media screen and (max-width:768px){
+/********jeju_visual********/
+.jeju_visual .visual_txt{top: 8%;}
+/********jeju_flight********/
+.tab_content .trip_box .area_name{width: 30em;}
+.area_name .area_tabs, 
+.area_name.destination .desti_tabs{width: 40%; padding: 10px;}
+.area_name .area_tabs > li, 
+.area_name.destination .desti_tabs > li{padding: 0 6px;}
+.area_name .area_tabs > li, 
+.area_name.destination .desti_tabs > li{font-size: 16px;}
+.area_name .area_tabs > li.select::after, 
+.area_name.destination .desti_tabs > li.current::after{padding-right: 0; top:18px; right: 7px;}
+.area_name > .name_container, 
+.area_name.destination .desti_list{width: 55%;}
+.name_list > ul > li > button, .desti_list > ul > li > button{font-size: 15px;}
+/*tab1 왕복*/
+.tab_content .trip_box .route1_box{width: 100%; display: block;}
+.tab_content .trip_box .route1_box > div{display:inline-block; margin-right: 0; width:49%;}
+.tab_content .trip_box .route1_box .desti_box{float: right; margin-right: 8px; width: 48.6%;}
+.tab_content .trip_box .route2_box{margin-left: 0; position: absolute; top: 97px; right: 8px; width: 48%; max-width: 100%;}
+.tab_content .trip_box .person_inner{width: 100%; float: left; margin: 8% 0 0 0;}
+.tab_content .trip_box .person_inner .person_area{width:50%;}
+/*tab2 편도,tab3 다구간*/
+#tab2 .trip_box .route1_box,
+#tab3 .trip_box .route1_box{width: 100%;}
+#tab3{height:27em;}
+#tab3 .trip_box{height: 18em;}
+#tab3 .trip_box input{margin-top: 7px;}
+#tab3 .trip_box .route1_box,
+#tab3 .trip_box > .route1_box.route1_sizing{height: 58px;}
+#tab3 .trip_box > .route1_box.route1_sizing{margin-top: 36px;}
+#tab3 .trip_box .person_inner{position: absolute; top:194px; left:9px; width:96%;}
+#tab3 .button_inner{margin-top: 56px;}
+/*나이계산기 modal*/
+#modal .modal_con{width: 100%;}
+/********jeju_special********/
+.special_area div{height: 140px;}
+.special_area div + div{margin-left: 22px;}
+.special_area div span{width:130px; height: 85px; padding: 16px 0 0 16px;}
+.special_area div span::before{height: 55px;}
+.special_area div:hover span::before{height:140px;}
+.special_area div span strong{font-size: 14px;}
+.special_area div:hover span strong{font-size:16px;}
+.special_area div span em{font-size: 12px;}
+.special_area div:hover span em{font-size:13px;}
+/********jeju_service********/
+.jeju_service .inner > ul {width: 90%;}
+.jeju_service .inner > ul > li img{width: 100%; max-width: 79px; height: 86px;}
+.jeju_service .inner > ul > li p{font-size:17px;}
+/********jeju_point********/
+.jeju_point .inner span strong{font-size: 14px;}
+.jeju_point .inner span em{font-size: 12px;}
+/*********contact_area*********/
+.contact_area .inner .sns{padding:0px 5px 35px 5px;}
+}
+@media screen and (max-width:640px){
+/********jeju_visual********/
+.jeju_visual .visual_txt{max-width: 264px; width:100%; max-height: 156px; height:100%; background-size:cover; padding: 27px 5px 5px 5px;}
+.jeju_visual .visual_txt h1{font-size: 28px;}
+.jeju_visual .visual_txt p{font-size: 16px; margin-top:5px;}
+/********jeju_flight********/
+/*tab1 왕복*/
+.sign_area{top: 51px;}
+.tab_content{margin-top:25px;}
+.tab_content .trip_box .route1_box > div {width: 98%;}
+.tab_content .trip_box .route1_box .desti_box {float: left; width: 98%;}
+.tab_content .trip_box .route2_box {position: absolute; top: 216px; left: 10px; width: 100%; max-width: 96.4%;}
+.tab_content .trip_box .person_inner {width: 100%; float: left; margin: 148px 0 20px 0;}
+.tab_content .trip_box .person_inner .person_area {width: 60%;}
+/*tab2 편도*/
+#tab2 .trip_box .person_inner {margin: 103px 0 20px 0;}
+/*tab3 다구간*/
+#tab3 {height: 34em;}
+#tab3 .trip_box > .route1_box.route1_sizing {margin-top: 84px;}
+#tab3 .trip_box .person_inner {top: 221px;}
+#tab3 .button_inner {margin-top: 144px;}
+/*나이계산기 modal*/
+#modal .modal_con {max-width: 500px;}
+/*********jeju_news*********/
+.jeju_news .inner {margin:0;}
+.more {right: 10px;}
+.news .rolling > li > span:first-child{overflow:hidden;white-space: nowrap; text-overflow: ellipsis;}
+/********jeju_special********/
+.special_area div span {width: 120px;}
+/********jeju_service********/
+.jeju_service .inner > ul {width: 97%;}
+.jeju_service .inner > ul > li p {font-size: 14px;}
+/********jeju_point********/
+.jeju_point .inner div {height: 134px;}
+.jeju_point .inner span {width: 67%; height: 100px; margin-top: 34px; padding: 20px 0 0 14px;}
+.jeju_point .inner span::before {height: 70px;}
+/*********contact_area*********/
+.contact_area .inner .sns{padding:0px 10px 35px 10px;}
+.contact_area .inner .partner{padding-bottom: 4px;}
+.contact_area .inner .cs_center strong{font-size: 2.5em;}
+.partner .part_txt{padding-right:0;}
+}
+@media screen and (max-width:540px){
+/********jeju_visual********/
+.jeju_visual .visual_txt {left:11%;}
+/********jeju_flight********/
+.tab_content .trip_box .route2_box {max-width: 96%;}
+/********jeju_service********/
+.jeju_service .inner > ul > li img {max-width: 57px; height: 62px;}
+.contact_area .inner .sns {padding: 0px 2px 35px 5px;}
+}
+@media screen and (max-width:480px){
+/********jeju_visual********/
+.jeju_visual .visual_txt{left:5%; width: 199px; height: 116px; padding-top:20px;}
+.jeju_visual .visual_txt h1 {font-size: 20px;}
+.jeju_visual .visual_txt p {font-size: 14px; margin-top:2px;}
+.jeju_visual .visual_txt p:last-child {font-size: 12px;}
+/********jeju_flight********/
+/*tab1 왕복*/
+.tab_content .trip_box {padding-left: 13px;}
+.tab_content .trip_box .route1_box > div,
+.tab_content .trip_box .route1_box .desti_box {width: 97%;}
+.tab_content .trip_box .route2_box {top:217px; left: 12px; max-width: 94%;}
+.tab_content .trip_box .person_inner .person_area {width: 84%;}
+/*tab3 다구간*/
+#tab3 .trip_box .person_inner {left: 12px;}
+/*사람계산기 modal*/
+#modal .modal_con {max-width: 400px;}
+/********jeju_news********/
+.news h3 {font-size: 16px;}
+.news .rolling > li {font-size: 14px;}
+.news .rolling > li > span:first-child {width: 74%;}
+.more {top:18px; right: 10px; width: 15px; height: 15px;}
+.more span::before {height: 15px;}
+.more span::after {width: 15px;}
+/********jeju_special********/
+.jeju_special .inner .special_area {display: block; width: 100%;}
+.special_area .brandstory,
+.special_area .aircafe,
+.special_area .hotel{margin:0 auto 30px auto; width:84%; height: 134px;}
+.special_area div span {width: 164px;}
+/********jeju_service********/
+.jeju_service .inner > ul {display:block; margin:0 auto;}
+.jeju_service .inner > ul > li {width:33.3%; float:left; position: relative; padding: 0 20px; box-sizing: border-box;}
+.jeju_service .inner > ul > li:nth-child(4),
+.jeju_service .inner > ul > li:last-child{margin-top:30px;}
+.jeju_service .inner > ul > li:nth-child(4)::before{display:none;}
+/********jeju_point********/
+.jeju_point .inner div {width: 100%; float:none;}
+.jeju_point .inner .point_left{margin-bottom:20px;}
+.jeju_point .inner span {width: 54%;}
+/**************contact area******************/
+.contact_area .inner div{float: none; width: 90%; margin: 0 auto;}
+.contact_area .inner .sns{padding: 35px 0;}
+}
+@media screen and (max-width:414px){
+/********jeju_visual********/
+.jeju_visual .visual_txt {left:11%;}
+/********jeju_flight********/
+/*tab1 왕복*/
+.jeju_flight .inner .group_reserve > a, 
+.flight_tabs > li > a {font-size: 16px;}
+.jeju_flight .inner .group_reserve {left:249px; max-width: 90px;}
+.jeju_flight .inner .group_reserve > a{padding:0;}
+}
+/*나이계산기*/
+#modal .modal_con .cal_con .cal_input label{margin-right:10px;}
+#modal .modal_con .cal_con .cal_input .board_txt{margin-right:24px !important;}
+/********jeju_service********/
+.jeju_service .inner > ul > li::before {top: 6px;}
+@media screen and (max-width:390px){
+.tab_content .trip_box .area_name {left:-12px;}
+}
+@media screen and (max-width:375px){
+/********jeju_visual********/
+.jeju_visual .visual_txt {left:15%; width:150px; height:87px; padding-top:15px;}
+.jeju_visual .visual_txt h1 {font-size: 16px;}
+.jeju_visual .visual_txt p{font-size:0;}
+.jeju_visual .visual_txt p:last-child {font-size: 12px; margin-top:5px;}
+/********jeju_flight********/
+.tab_content .trip_box .area_name {width: 24em; padding:12px; left:0;}
+.area_name .area_tabs, 
+.area_name.destination .desti_tabs {padding: 5px;}
+.area_name .area_tabs > li, 
+.area_name.destination .desti_tabs > li,
+.name_list > ul > li > button, 
+.desti_list > ul > li > button {font-size: 14px;}
+/*tab1 왕복*/
+.flight_tabs > li > a {padding: 0 16px;}
+.jeju_flight .inner .group_reserve {left: 216px; max-width: 114px;}
+.sign_area {right: 14px;}
+.tab_content .trip_box {padding-left: 16px;}
+.tab_content .trip_box .route1_box > div, 
+.tab_content .trip_box .route1_box .desti_box {width: 95%;}
+.tab_content .trip_box .route2_box {left: 16px; max-width: 90%;}
+/*tab3 다구간*/
+#tab3 .trip_box .person_inner {left: 15px; width: 95%;}
+/*나이계산기 modal*/
+#modal .modal_con {max-width: 346px;}
+#modal .modal_con .cal_con .cal_input input[type=text] {width: 148px;}
+/********jeju_news********/
+.news h3 {font-size: 15px;}
+.news .rolling > li > span:first-child {width: 70%;}
+/********jeju_service********/
+.jeju_service .inner > ul > li img {max-width:68px; height: 74px;}
+}
+@media screen and (max-width:360px){
+/********jeju_flight********/
+/*tab1 왕복*/
+.flight_tabs > li > a {padding: 0 14px;}
+.jeju_flight .inner .group_reserve {left: 199px; max-width:90px;}
+/********jeju_news********/
+.news .rolling > li > span:first-child {width: 68%;}
+/********jeju_special********/
+.special_area div{display: block; width: 256px; height: 160px;}
+.special_area div span{width: 128px; height: 87px; padding: 15px 0 0 15px;}
+.special_area div span::before{height: 57px;}
+.special_area div span em{ line-height:18px;}
+.special_area div:hover span::before{height: 100px;}
+/********jeju_service********/
+.jeju_service .inner > ul > li {width: 33.3%; padding: 0 10px;}
+.jeju_service .inner > ul > li img {max-width: 63px; height: 69px;}
+@media screen and (max-width:320px){
+/********jeju_visual********/
+.jeju_visual .visual_txt {left: 20%;}
+/********jeju_flight********/
+.tab_content .trip_box .area_name {width: 20em; padding: 10px;}
+.area_name .area_tabs, 
+.area_name.destination .desti_tabs {padding: 0px;}
+.area_name .area_tabs > li.select::after, 
+.area_name.destination .desti_tabs > li.current::after {right: 4px;}
+.area_name .area_tabs > li, 
+.area_name.destination .desti_tabs > li, 
+.name_list > ul > li > button, 
+.desti_list > ul > li > button {font-size: 13px;}
+/*tab1 왕복*/
+.flight_tabs > li > a {padding: 0 10px;}
+.jeju_flight .inner .group_reserve {left: 169px;}
+.tab_content .trip_box .route2_box {left: 16px; max-width: 89.5%;}
+.tab_content .trip_box .person_inner .person_area {width: 92%;}
+/*tab2 편도*/
+#tab2 .trip_box {padding-left: 15px;}
+/*나이계산기 modal*/
+#modal {overflow-y: auto;}
+#modal .modal_con {top: 63%;}
+#modal .modal_con h2 {font-size: 16px;}
+#modal .modal_con .cal_con .cal_intro,
+#modal .modal_con .cal_con .txt_box > ul > li{font-size: 15px;}
+#modal .modal_con .cal_con .cal_input label {margin-right: 5px; font-size:15px;}
+#modal .modal_con .cal_con .cal_input .board_txt {margin-right: 19px !important;}
+#modal .modal_con .cal_con .cal_input input[type=text] {width: 130px; font-size: 14px;}
+#modal .modal_con .cal_con .cal_input .input_btn {font-size:14px; padding: 10px 18px;}
+#modal .modal_con .cal_con .cal_print {font-size: 15px;}
+/********jeju_news********/
+.news h3 {font-size: 13px;}
+.news .rolling > li {font-size: 13px;}
+.news .rolling > li > span:first-child {width: 66%;}
+.more {right: 6px;}
+/********jeju_service********/
+.jeju_service .inner > ul > li {padding: 0 10px;}
+.jeju_service .inner > ul > li img {max-width: 56px; height: 61px;}
+/********jeju_point********/
+.jeju_point .inner span{height: 90px; margin-top: 42px; padding: 18px 0 0 8px; width:70.4%;}
+.jeju_point .inner span::before {height: 60px;}
+}
+@media screen and (max-width:280px){
+/********jeju_visual********/
+.jeju_visual .visual_txt {left: 23%;}
+/********jeju_flight********/
+.tab_content .trip_box .area_name {left: -21px;}
+/*tab1 왕복*/
+.jeju_flight .inner .group_reserve > a,
+.flight_tabs > li > a{font-size: 14px;}
+.flight_tabs > li > a {padding: 0 7px;}
+.jeju_flight .inner .group_reserve {left: 138px;}
+.checkmark {top: -1px; left: -2px; height: 18px; width: 18px;}
+.sign_inner .checkmark:after {top: 3px; left: 6px;}
+.tab_content .trip_box .route2_box {max-width: 88.5%;}
+.tab_content .trip_box .person_inner {margin-left:-8px;}
+.tab_content .trip_box .person_inner .person_area {width: 100%;}
+.person_area .person_box .person_txt span {font-size: 16px;}
+.button_inner .age_cal a, 
+.reserve_btn{font-size: 14px;}
+.reserve_btn {padding: 10px 20px;}
+/*tab3 다구간*/
+#tab3 .trip_box .person_inner {left: 14px;}
+/*나이계산기 modal*/
+#modal .modal_con {top: 55%;}
+#modal .modal_con .cal_con .cal_print,
+#modal .modal_con .cal_con .cal_input label,
+#modal .modal_con .cal_con .cal_input .input_btn{font-size: 14px;}
+#modal .modal_con .cal_con .cal_input input[type=text] {width: 110px; padding-left:5px;}
+#modal .modal_con .cal_con .cal_input .input_btn {padding: 10px;}
+}

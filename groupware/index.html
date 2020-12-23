@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kone3.0</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+				<link href="css/Kone_main.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+
+
+</head>
+
+<body>
+			<!--wrapper 시작-->
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                             </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <div class="clear"> 
+																															<div class="block m-t-xs"> 
+																																		<p class="font-bold">총무법인국 전산지원부</p>
+																																		<p class="font-bold">일반촉탁 김광포</p>
+																																</div> 
+																													</div> 
+																												</a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="profile.html">웹메일</a></li>
+                                <li><a href="contacts.html">로그아웃</a></li>
+                                <li><a href="mailbox.html">마이페이지</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li style="margin-top:-5px;">
+                        <a href="#"><i class="fa fa-user"></i><span class="nav-label">직원</span> <span class="fa fa-angle-right"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">증명서 발급신청</a></li>
+                            <li><a href="#">휴/공가 신청서</a></li>
+                            <li><a href="#">출장/활동 신청서</a></li>
+																												<li><a href="#">출장/활동 보고서</a></li>
+                            <li><a href="#">복지포인트 신청</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-credit-card"></i><span class="nav-label">전자결재</span><span class="fa fa-angle-right"></span></a>
+																								 <ul class="nav nav-second-level collapse">
+                            <li><a href="#">기안한 문서함</a></li>
+                            <li><a href="#">결재할 문서함</a></li>
+                            <li><a href="#">승인한 문서함</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bell-o"></i><span class="nav-label">CUG</span><span class="fa fa-angle-right"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">업무연락</a></li>
+                            <li><a href="#">자료실</a>
+																																	<ul class="nav collapse">
+																																				<li><a href="#" class="third-level">문서자료실</a></li>
+																																				<li><a href="#" class="third-level">전산자료실</a></li>
+																																				<li><a href="#" class="third-level">교육자료실</a></li>
+																																				<li><a href="#" class="third-level">VTR대본</a></li>
+																																		</ul>
+																												</li>
+                            <li><a href="#">게시판</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-medium"></i><span class="nav-label">마이페이지</span><span class="fa fa-angle-right"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">잔여휴가일수</a></li>
+                            <li><a href="#">잔여복지포인트</a></li>
+                            <li><a href="#">개인별 근태현황</a></li>
+                            <li><a href="#">개인정보수정</a>
+																																	<ul class="nav collapse">
+																																				<li><a href="#" class="third-level">휴대폰</a></li>
+																																				<li><a href="#" class="third-level">집전화</a></li>
+																																				<li><a href="#" class="third-level">집주소</a></li>
+																																				<li><a href="#" class="third-level">비밀번호변경</a></li>
+																																		</ul>
+																												</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="row border-bottom">
+        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0;">
+        <div class="navbar-header">
+            <!--<a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+            <form role="search" class="navbar-form-custom" action="search_results.html">
+                <div class="form-group">
+                    <input type="text" placeholder="검색어를 입력하세요." class="form-control" name="top-search" id="top-search">
+																				<i class="fa fa-search"></i>
+                </div>
+            </form>-->
+        </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown right-color" style="width:110px;">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-file"></i><span>결재건수</span><span class="label label-primary">10</span>
+                    </a>
+                </li>
+																 <li class="dropdown right-color" style="width: 156px;">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell"></i><span>인사미처리건수</span><span class="label label-primary">13</span>
+                    </a>
+                </li>
+																<li class="dropdown right-color" style="width: 123px;">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-book"></i><span>개인도서관리</span>
+                    </a>
+                </li>
+																<li class="dropdown right-color" style="width: 84px;">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope"></i><span>메일</span><span class="label label-primary">16</span>
+                    </a>
+                </li>
+                <li class="right-color">
+                    <a href="login.html">
+                        <i class="fa fa-sign-out"></i> 로그아웃
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        </div>
+				<!-- content 시작-->
+				   		<div class="wrapper wrapper-content" style="overflow:hidden;">
+										<!--row 시작-->
+									  <div class="row">
+              <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+
+                        <div class="ibox-title">
+                            <h5>&nbsp;<strong>업무연락</strong></h5>
+                        </div>
+                        <div class="ibox-content">
+                            <table class="table table-striped">
+                                <thead>
+                                <tr class="table-top">
+                                    <th class="col-xs-6 table-right table-align">제목</th>
+                                    <th class="col-xs-2 table-right table-align">작성자</th>
+                                    <th class="col-xs-2 table-align">날짜</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                 <td class="table-right">(시설관리) 문화회관 무인경비 관련 업체 전수 조사의 건</td>
+                                 <td class="table-right table-align">변창건</td> 
+                                 <td class="table-align">2015-04-15</td>
+                               </tr>
+                               <tr>
+                                 <td class="table-right">(행사지원) 광선유포 대서원의 전당 휴관일 공지의 건</td>
+                                 <td class="table-right table-align">정윤지</td>
+                                 <td class="table-align">2015-04-17</td>
+                               </tr>
+                               <tr>
+                                 <td class="table-right">(조직지원) 2015년 4월 KSGI뉴스 상영시간 안내 </td>
+                                 <td class="table-right table-align">임양균</td>
+                                 <td class="table-align">2015-04-17 </td>
+                               </tr> 
+                               <tr>
+                                 <td class="table-right">(직원인사) 직원 인사발령의 건</td>
+                                 <td class="table-right table-align">권영섭</td>
+                                 <td class="table-align">2015-04-17</td>
+                               </tr>
+                               <tr class="table-bottom">
+                                 <td class="table-right">(전산지원) 4월 인터넷 스피치 방송관련 공지건</td>
+                                 <td class="table-right table-align">신승재</td>
+                                 <td class="table-align">2015-04-20</td>
+                               </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>  
+															<div class="ibox float-e-margins">
+																						<div class="tabs-container">
+                        <ul class="nav nav-share nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#tab-1">전체공지사항</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-2">부서공지사항</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tab-1" class="tab-pane active">
+                                <div class="panel-body">
+                                <table class="table table-bordered table-striped font">
+                                          <tbody>
+                                          <tr>
+                                              <td>총무법인국 공지사항 입니다.</td>
+                                              <td class="table-align">2015-04-23</td>
+                                          </tr>
+                                          <tr>
+                                              <td>건설지원국 공지사항 입니다.</td>
+                                              <td class="table-align">2015-04-24</td>
+                                          </tr>
+                                          <tr>
+                                              <td>문화홍보국 공지사항 입니다.</td>
+                                              <td class="table-align">2015-04-23</td>
+                                          </tr>
+                                          <tr>
+                                              <td>조직사무국 공지사항 입니다. </td>
+                                              <td class="table-align">2015-04-20</td>
+                                          </tr>
+                                          <tr>
+                                              <td>본부 사무센터 직원여러분 공지사항 입니다.</td>
+                                              <td class="table-align">2015-04-25</td>
+                                          </tr>
+                                          </tbody>
+                                      </table>
+                                </div>
+                            </div>
+                            <div id="tab-2" class="tab-pane">
+                                <div class="panel-body">
+    																											 <table class="table table-bordered table-striped font">
+                                          <tbody>
+                                          <tr>
+                                              <td>건설지원국 공지사항 입니다</td>
+                                              <td class="table-align">2015-04-23</td>
+                                          </tr>
+                                          <tr>
+                                              <td>건설지원국 공지사항 입니다.</td>
+                                              <td class="table-align">2015-04-24</td>
+                                          </tr>
+                                          <tr>
+                                              <td>건설지원국 공지사항 입니다</td>
+                                              <td class="table-align">2015-04-23</td>
+                                          </tr>
+                                          <tr>
+                                              <td>건설지원국 공지사항 입니다 </td>
+                                              <td class="table-align">2015-04-20</td>
+                                          </tr>
+                                          <tr>
+                                              <td>본부 사무센터 직원여러분 공지사항 입니다.</td>
+                                              <td class="table-align">2015-04-25</td>
+                                          </tr>
+                                          </tbody>
+                                      </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+															</div>
+																				<div class="ibox float-e-margins">
+																							<div class="tabs-container">
+                        <ul class="nav nav-share nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#tab-3">지식공유자료실</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-4">제안함</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tab-3" class="tab-pane active">
+                                <div class="panel-body">
+                                   <table class="table table-striped">
+                                <thead>
+                                <tr class="table-top">
+                                    <th class="col-xs-1 table-right table-align">번호</th>
+                                    <th class="col-xs-7 table-right table-align">제목</th>
+                                    <th class="col-xs-2 table-right table-align">작성자</th>
+																																				<th class="col-xs-2 table-align">등록일</th>
+                                </tr>
+                                </thead>
+                              <tbody>
+                                <tr>
+                                 <td class="table-right table-align">4555</td>
+                                 <td class="table-right">생각하는 인문학 소감문</td> 
+                                 <td class="table-right table-align">장우주</td>
+																																	<td class="table-align">2015-07-13</td>
+                               </tr>
+                               <tr>
+                                 <td class="table-right table-align">4555</td>
+                                 <td class="table-right">생각하는 인문학 소감문</td> 
+                                 <td class="table-right table-align">장우주</td>
+																																	<td class="table-align">2015-07-13</td>
+                               </tr>
+                               <tr>
+                                 <td class="table-right table-align">4555</td>
+                                 <td class="table-right">생각하는 인문학 소감문</td> 
+                                 <td class="table-right table-align">장우주</td>
+																																	<td class="table-align">2015-07-13</td>
+                               </tr> 
+                               <tr>
+                                 <td class="table-right table-align">4555</td>
+                                 <td class="table-right">생각하는 인문학 소감문</td> 
+                                 <td class="table-right table-align">장우주</td>
+																																	<td class="table-align">2015-07-13</td>
+                               </tr>
+                               <tr class="table-bottom">
+                                 <td class="table-right table-align">4555</td>
+                                 <td class="table-right">생각하는 인문학 소감문</td> 
+                                 <td class="table-right table-align">장우주</td>
+																																	<td class="table-align">2015-07-13</td>                              
+																																 </tr>
+                              </tbody>
+                             </table>
+                                </div>
+                            </div>
+                            <div id="tab-4" class="tab-pane">
+                                <div class="panel-body">
+    																											 <table class="table table-striped">
+                                <thead>
+                                <tr class="table-top">
+                                    <th class="col-xs-1 table-right table-align">번호</th>
+                                    <th class="col-xs-4 table-right table-align">제목</th>
+                                    <th class="col-xs-1 table-right table-align">추천</th>
+																																				<th class="col-xs-1 table-right table-align">보류</th>
+                                    <th class="col-xs-1 table-right table-align">평점</th>
+                                    <th class="col-xs-2 table-right table-align">제안일</th>
+																																				<th class="col-xs-2 table-align">조회수</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                 <td class="table-right table-align">520</td>
+                                 <td class="table-right table-align">인사발령자 리스트 자동 출력</td> 
+                                 <td class="table-right table-align">1</td>
+																																	<td class="table-right table-align">0</td>
+                                 <td class="table-right table-align">10.0</td> 
+                                 <td class="table-right table-align">2015-07-30</td>
+																																	<td class="table-align">200</td>
+																																
+                               </tr>
+                               <tr>
+                                	<td class="table-right table-align">520</td>
+                                 <td class="table-right table-align">인사발령자 리스트 자동 출력</td> 
+                                 <td class="table-right table-align">1</td>
+																																	<td class="table-right table-align">0</td>
+                                 <td class="table-right table-align">10.0</td> 
+                                 <td class="table-right table-align">2015-07-30</td>
+																																	<td class="table-align">200</td>
+                               </tr>
+                               <tr>
+                                 <td class="table-right table-align">520</td>
+                                 <td class="table-right table-align">인사발령자 리스트 자동 출력</td> 
+                                 <td class="table-right table-align">1</td>
+																																	<td class="table-right table-align">0</td>
+                                 <td class="table-right table-align">10.0</td> 
+                                 <td class="table-right table-align">2015-07-30</td>
+																																	<td class="table-align">200</td>
+                               </tr> 
+                               <tr>
+                                  <td class="table-right table-align">520</td>
+                                 <td class="table-right table-align">인사발령자 리스트 자동 출력</td> 
+                                 <td class="table-right table-align">1</td>
+																																	<td class="table-right table-align">0</td>
+                                 <td class="table-right table-align">10.0</td> 
+                                 <td class="table-right table-align">2015-07-30</td>
+																																	<td class="table-align">200</td>
+                               </tr>
+                               <tr class="table-bottom">
+                                 <td class="table-right table-align">520</td>
+                                 <td class="table-right table-align">인사발령자 리스트 자동 출력</td> 
+                                 <td class="table-right table-align">1</td>
+																																	<td class="table-right table-align">0</td>
+                                 <td class="table-right table-align">10.0</td> 
+                                 <td class="table-right table-align">2015-07-30</td>
+																																	<td class="table-align">200</td>
+                               </tr>
+                                </tbody>
+                               </table>
+                                </div>
+                            </div>
+                        </div>
+		                 			</div> 
+                		</div>
+													</div> 
+													 <div class="col-lg-6">
+																		<!--widget 시작-->
+																		<div class="widget style1 navy-bg">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <i class="fa fa-cloud fa-5x"></i>
+                        </div>
+                        <div class="col-xs-8 text-right">
+                            <span> 오늘의 날씨 </span>
+                            <h2 class="font-bold">26'C</h2>
+                        </div>
+																					</div>
+																			</div>
+																			<!--widget 끝-->
+																			<div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>&nbsp;<strong>자주쓰는메뉴</strong></h5>
+                        </div>
+                        <div class="ibox-content-ico">
+                          <ul>
+																										 	<li class="col-xs-3 border-r">
+																														<a href="#">  
+																																<button type="button" class="btn btn-ico btn-block btn-outline btn-primary"><i class="fa fa-inbox i-posi"></i><span class="label label-primary">13</span><p>전자결재</p></button>
+																														</a>
+																													</li>
+																												<li class="col-xs-3 border-r">
+																														<a href="#">  
+																																<button type="button" class="btn btn-ico btn-block btn-outline btn-primary"><i class="fa fa-list-alt"></i><p>CUG</p></button>
+																														</a>
+																												</li>
+																												<li class="col-xs-3 border-r">
+																															<a href="#">  
+																																<button type="button" class="btn btn-ico btn-block btn-outline btn-primary"><i class="fa fa-heart"></i><p>제안함</p></button>
+																														</a>
+																												</li>
+																												<li class="col-xs-3">
+																															<a href="#">  
+																																<button type="button" class="btn btn-ico btn-block btn-outline btn-primary"><i class="fa fa-slideshare"></i><p>지식공유자료실</p></button>
+																														</a>
+																												</li>
+																										</ul>
+                          <ul>
+																										 <li class="col-xs-3 border-r">
+																													<a href="#">  
+																																<button type="button" class="btn btn-ico btn-block btn-outline btn-primary"><i class="fa fa-building"></i><p>문화회관 정보</p></button>
+																														</a>
+																												</li>
+																												<li class="col-xs-3 border-r">
+																													<a href="#">  
+																																<button type="button" class="btn btn-ico btn-block btn-outline btn-primary"><i class="fa fa-phone"></i><p>직원 연락처</p></button>
+																														</a>
+																												</li>
+																												 <li class="col-xs-3 border-r">
+																														<a href="#">  
+																																<button type="button" class="btn btn-ico btn-block btn-outline btn-primary"><i class="fa fa-folder-open"></i><p>증명서발급 신청</p></button>
+																														</a>
+																												</li>
+																												<li class="col-xs-3">
+																													<a href="#">  
+																															<button type="button" class="btn btn-ico btn-block btn-outline btn-primary"><i class="fa fa-plane"></i><p>휴/공가 신청</p></button>
+																														</a>
+																												</li>
+																										</ul>
+																										 <ul>
+																										 	<li class="col-xs-3 border-r">
+																													<a href="#">  
+																																	<button type="button" class="btn btn-ico btn-block btn-outline btn-primary"><i class="fa fa-gift"></i><p>복지포인트 신청</p></button>
+																														</a>
+																												</li>
+																												<li class="col-xs-3 border-r">
+																														<a href="#">  
+																																<button type="button" class="btn btn-ico btn-block btn-outline btn-primary"><i class="fa fa-suitcase"></i><p>출장/활동 신청</p></button>
+																														</a>
+																												</li>
+																												<li class="col-xs-3 border-r">
+																													<a href="#">  
+																																<button type="button" class="btn btn-ico btn-block btn-outline btn-primary"><i class="fa fa-file-text-o"></i><p>출장/활동 보고</p></button>
+																														</a>
+																												</li>
+																												<li class="col-xs-3">
+																													<a href="#">  
+																																<button type="button" class="btn btn-ico btn-block btn-outline btn-primary"><i class="fa fa-user"></i><p>마이페이지</p></button>
+																														</a>
+																												</li>
+																										</ul>
+
+                        </div>
+                    </div>                  
+
+													</div> 
+        		</div>
+										<!-- row 끝-->				
+					</div>
+					<!-- content 끝-->
+    </div>
+				<!--wrapper 끝-->
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Flot -->
+    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/demo/peity-demo.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- GITTER -->
+    <script src="js/plugins/gritter/jquery.gritter.min.js"></script>
+
+    <!-- Sparkline -->
+    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Sparkline demo data  -->
+    <script src="js/demo/sparkline-demo.js"></script>
+
+    <!-- ChartJS-->
+    <script src="js/plugins/chartJs/Chart.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            setTimeout(function() {
+                toastr.options = {
+                    closeButton: true,
+                    progressBar: true,
+                    showMethod: 'slideDown',
+                    timeOut: 4000
+                };
+                toastr.success('Responsive Admin Theme', 'Welcome to INSPINIA');
+
+            }, 1300);
+
+
+            var data1 = [
+                [0,4],[1,8],[2,5],[3,10],[4,4],[5,16],[6,5],[7,11],[8,6],[9,11],[10,30],[11,10],[12,13],[13,4],[14,3],[15,3],[16,6]
+            ];
+            var data2 = [
+                [0,1],[1,0],[2,2],[3,0],[4,1],[5,3],[6,1],[7,5],[8,2],[9,3],[10,2],[11,1],[12,0],[13,2],[14,8],[15,0],[16,0]
+            ];
+            $("#flot-dashboard-chart").length && $.plot($("#flot-dashboard-chart"), [
+                data1, data2
+            ],
+                    {
+                        series: {
+                            lines: {
+                                show: false,
+                                fill: true
+                            },
+                            splines: {
+                                show: true,
+                                tension: 0.4,
+                                lineWidth: 1,
+                                fill: 0.4
+                            },
+                            points: {
+                                radius: 0,
+                                show: true
+                            },
+                            shadowSize: 2
+                        },
+                        grid: {
+                            hoverable: true,
+                            clickable: true,
+                            tickColor: "#d5d5d5",
+                            borderWidth: 1,
+                            color: '#d5d5d5'
+                        },
+                        colors: ["#1ab394", "#464f88"],
+                        xaxis:{
+                        },
+                        yaxis: {
+                            ticks: 4
+                        },
+                        tooltip: false
+                    }
+            );
+
+            var doughnutData = [
+                {
+                    value: 300,
+                    color: "#a3e1d4",
+                    highlight: "#1ab394",
+                    label: "App"
+                },
+                {
+                    value: 50,
+                    color: "#dedede",
+                    highlight: "#1ab394",
+                    label: "Software"
+                },
+                {
+                    value: 100,
+                    color: "#b5b8cf",
+                    highlight: "#1ab394",
+                    label: "Laptop"
+                }
+            ];
+
+            var doughnutOptions = {
+                segmentShowStroke: true,
+                segmentStrokeColor: "#fff",
+                segmentStrokeWidth: 2,
+                percentageInnerCutout: 45, // This is 0 for Pie charts
+                animationSteps: 100,
+                animationEasing: "easeOutBounce",
+                animateRotate: true,
+                animateScale: false
+            };
+
+            var ctx = document.getElementById("doughnutChart").getContext("2d");
+            var DoughnutChart = new Chart(ctx).Doughnut(doughnutData, doughnutOptions);
+
+            var polarData = [
+                {
+                    value: 300,
+                    color: "#a3e1d4",
+                    highlight: "#1ab394",
+                    label: "App"
+                },
+                {
+                    value: 140,
+                    color: "#dedede",
+                    highlight: "#1ab394",
+                    label: "Software"
+                },
+                {
+                    value: 200,
+                    color: "#b5b8cf",
+                    highlight: "#1ab394",
+                    label: "Laptop"
+                }
+            ];
+
+            var polarOptions = {
+                scaleShowLabelBackdrop: true,
+                scaleBackdropColor: "rgba(255,255,255,0.75)",
+                scaleBeginAtZero: true,
+                scaleBackdropPaddingY: 1,
+                scaleBackdropPaddingX: 1,
+                scaleShowLine: true,
+                segmentShowStroke: true,
+                segmentStrokeColor: "#fff",
+                segmentStrokeWidth: 2,
+                animationSteps: 100,
+                animationEasing: "easeOutBounce",
+                animateRotate: true,
+                animateScale: false
+            };
+            var ctx = document.getElementById("polarChart").getContext("2d");
+            var Polarchart = new Chart(ctx).PolarArea(polarData, polarOptions);
+
+        });
+    </script>
+</body>
+</html>

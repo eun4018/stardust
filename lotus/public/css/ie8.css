@@ -1,0 +1,70 @@
+
+/*========================================================================
+portfolio
+========================================================================*/
+.portfolio-list li{float:left; width:33%; height:340px; margin-right:0px; padding-bottom:60px; text-align:center;}
+.portfolio-recent li{float:left; width:50%; padding-bottom:60px; text-align:center;}
+
+
+
+/*========================================================================
+item
+========================================================================*/
+.item-wrap{position:relative; width:96%;}
+
+
+
+/* WIDE DESKTOP */
+@media screen and (min-width: 1024px) {	
+	
+	
+
+}
+
+/* SMALL DESKTOP */
+@media screen and (max-width: 1023px) {
+	
+
+
+}
+
+
+
+/* ALL MOBILE SIZES */
+@media screen and (max-width: 767px) {
+	
+	.portfolio-list li{width:50%; margin-right:0%;}	
+
+}
+
+
+/* ALL MOBILE SIZES */
+@media screen and (max-width: 639px) {
+
+}
+
+
+
+
+/* MOBILE PORTRAIT TO MOBILE LANDSCAPE */
+@media screen and (max-width: 479px) {
+	
+	.portfolio-list li{width:100%; margin-right:0;}
+	.portfolio-recent{padding:60px 0 0 0;}
+	.portfolio-recent li{width:100%; margin-right:0;}
+	
+
+}
+
+
+
+
+/* MOBILE PORTRAIT TO MOBILE LANDSCAPE */
+@media screen and (max-width: 360px) {
+
+}
+
+article, aside, figure, figure img,
+figcaption, hgroup, footer, header, 
+nav, section, video, object {display:block;}
+

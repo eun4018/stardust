@@ -1,0 +1,137 @@
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
+@media all and (max-width:3840px){
+ul,li{
+list-style:none;
+}
+body,p,span{
+font-family: 'Noto Sans', sans-serif;
+}
+#wrapper{
+position: inherit;
+margin: 0px;
+height:100%;
+padding-top:!0px;
+min-height: 100%;
+background: #e9e9e9 url("../img/body_bg.png") repeat scroll 0px 0px;
+}
+.ibox-content{
+padding:0;
+-webkit-border-top-left-radius: 0px;
+-webkit-border-top-right-radius: 0px;
+-moz-border-radius-topleft:0px;
+-moz-border-radius-topright: 0px;
+border-top-left-radius: 0px;
+border-top-right-radius: 0px;
+-webkit-border-bottom-left-radius: 3px;
+-webkit-border-bottom-right-radius: 3px;
+-moz-border-radius-bottomleft:3px;
+-moz-border-radius-bottomright: 3px;
+border-bottom-left-radius: 3px;
+border-bottom-right-radius: 3px;
+overflow:hidden; 
+border: 1px solid #D5D5D5;
+border-top:0px;
+}
+.ibox{
+background: #FFF;
+border: 1px solid #D5D5D5;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+-webkit-box-shadow: 3px 6px 5px 0px rgba(235,235,235,1);
+-moz-box-shadow: 3px 6px 5px 0px rgba(235,235,235,1);
+box-shadow: 3px 6px 5px 0px rgba(235,235,235,1);
+}
+.box-shadow{
+-webkit-box-shadow: 3px 6px 5px 0px rgba(235,235,235,1);
+-moz-box-shadow: 3px 6px 5px 0px rgba(235,235,235,1);
+box-shadow: 3px 6px 5px 0px rgba(235,235,235,1);
+background:#fff; height:98px; padding:18px; margin-bottom:10px;
+border-bottom:1px solid #d5d5d5;
+}
+.box-shadow{
+-webkit-box-shadow: 3px 6px 5px 0px rgba(235,235,235,1);
+-moz-box-shadow: 3px 6px 5px 0px rgba(235,235,235,1);
+box-shadow: 3px 6px 5px 0px rgba(235,235,235,1);
+}
+table-title{
+vertical-align:middle; 
+text-align:center; 
+font-size:2.6rem;
+}
+.title2{
+font-weight:bold; 
+coloer:#555;
+font-size:3.8rem;
+text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+margin-bottom:0px;
+text-align:center;
+}
+.title{
+font-weight:bold; 
+coloer:#555;
+font-size:3.8rem;
+text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+margin-bottom:0px;
+text-align:center;
+float:left; 
+text-align:center; 
+color:#333; 
+padding-left:30px;
+}
+.tit-mark{
+padding-right:15px; 
+padding-top:10px; 
+color:#555;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+font-size: 2.76rem;
+text-align:center;
+border: 1px solid #ccc;
+}
+table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+border-top: 1px solid #e7eaec;
+line-height: 1.42857;
+padding: 7px 8px;
+vertical-align: top;
+}
+/*.table-bordered > tbody > tr:nth-child(2n+1) > td, .table-bordered > tbody > tr:nth-child(2n+1) > th {
+background-color: #f9f9f9;
+}*/
+.table-bordered thead tr th{
+color:#444;
+}
+.table-bordered {
+border: 1px solid #ccc;
+border-left:0; border-right:0; border-bottom:0;
+}
+.table{
+margin-bottom:0; 
+}
+.table-bordered > thead > tr > th, .table-bordered > thead > tr > td {
+background-image: -webkit-gradient(linear, left 0%, left 100%, from(#f5f5f5), to(#e2e2e2));
+background-image: -webkit-linear-gradient(top, #f5f5f5, 0%, #e2e2e2, 100%);
+background-image: -moz-linear-gradient(top, #f5f5f5 0%, #e2e2e2 100%);
+background-image: linear-gradient(to bottom, #f5f5f5 0%, #e2e2e2 100%);
+background-repeat: repeat-x;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#ffe2e2e2', GradientType=0);
+}
+.table>tbody>tr.success>td, .table>tbody>tr.success>th, .table>tbody>tr>td.success, .table>tbody>tr>th.success, .table>tfoot>tr.success>td, .table>tfoot>tr.success>th, .table>tfoot>tr>td.success, .table>tfoot>tr>th.success, .table>thead>tr.success>td, .table>thead>tr.success>th, .table>thead>tr>td.success, .table>thead>tr>th.success {
+background-color: #f2feed;
+}
+.table>tbody>tr.warning>td, .table>tbody>tr.warning>th, .table>tbody>tr>td.warning, .table>tbody>tr>th.warning, .table>tfoot>tr.warning>td, .table>tfoot>tr.warning>th, .table>tfoot>tr>td.warning, .table>tfoot>tr>th.warning, .table>thead>tr.warning>td, .table>thead>tr.warning>th, .table>thead>tr>td.warning, .table>thead>tr>th.warning {
+background-color: #eaf9ff;
+}
+.table > tbody > tr > th, .table > tfoot > tr > th, .table > tbody > tr > td, .table > tfoot > tr > td {
+ background:#ffffff;
+}
+.sub_title{
+font-size:2.2rem; 
+padding-left:6px; 
+color:#a2a2a2;
+}
+.main{
+padding:20px; 
+margin:0; 
+}
+}

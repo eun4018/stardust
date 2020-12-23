@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="img/jejuair_favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" type="text/css" href="css/bxslider.visual.css">
+    <link rel="stylesheet" type="text/css" href="css/bxslider.modi.css">
+    <link rel="stylesheet" type="text/css" href="css/datepicker.modi.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script src="js/jquery.common.js"></script>
+    <script src="js/jquery.main.js"></script>
+    <script src="js/jquery.visual.js"></script>
+    <title>제주항공</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="gnbmenu">
+                <div class="inner">
+                    <ul class="left_gnb">
+                        <li><a href="javascript:">기업우대</a></li>
+                        <li class="select_area">
+                            <button class="travelbtn">여행사우대</button>
+                            <ul class="planeline">
+                                <li><a href="javascript:">국내선</a></li>
+                                <li><a href="javascript:">국제선</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="right_gnb">
+                        <li><a href="javascript:">로그인</a></li>
+                        <li><a href="javascript:">회원가입</a></li>
+                        <li><a href="javascript:">고객센터</a></li>
+                        <li class="select_area">
+                            <button class="langset">KOREAN</button>
+                            <ul class="lang_content">
+                                <li><a href="javascript:">KOREAN</a></li>
+                                <li><a href="javascript:">JAPANESE</a></li>
+                                <li><a href="javascript:">CHINESE</a></li>
+                                <li><a href="javascript:">ENGLISH</a></li>
+                                <li><a href="javascript:">FRENCH</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <input type="text">
+                            <button>검색</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="mainmenu">
+                <div class="inner">
+                    <div class="logo">
+                        <h1><a href="javascript:">제주항공</a></h1>
+                        <div class="mobile_menu">
+                            <a class="menu_icon" href="javascript:">
+                                <span>메뉴</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu_list">
+                        <div class="mobile_close">
+                            <a class="close_icon" href="javascript:">
+                                <span>닫기</span>
+                            </a>
+                        </div>
+                        <ul>
+                            <li class="search">
+                                <input type="text">
+                                <button>검색</button>
+                            </li>
+                            <li class="login_menu">
+                                <ul>
+                                    <li><a href="javascript:">로그인</a></li>
+                                    <li><a href="javascript:">회원가입</a></li>
+                                    <li><a href="javascript:">고객센터</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:">항공권예매</a>
+                                <div class="submenu_box">
+                                    <ul>
+                                        <li class="small_ico">
+                                            <a href="javascript:">항공권예매</a>
+                                            <ul class="small_submenu">
+                                                <li><a href="javascript:">최저 운임 항공권</a></li>
+                                                <li><a href="javascript:">서울 출발 항공권</a></li>
+                                                <li><a href="javascript:">제주 출발 항공권</a></li>
+                                                <li><a href="javascript:">부산 출발 항공권</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="small_ico">
+                                            <a href="javascript:">운항일정</a>
+                                            <ul class="small_submenu">
+                                                <li><a href="javascript:">운항스케줄</a></li>
+                                                <li><a href="javascript:">출발/도착 조회</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="small_ico">
+                                            <a href="javascript:">운임안내</a>
+                                            <ul class="small_submenu">
+                                                <li><a href="javascript:">국제선 운임</a></li>
+                                                <li><a href="javascript:">국내선 운임</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="small_ico">
+                                            <a href="javascript:">단체예약신청</a>
+                                            <ul class="small_submenu">
+                                                <li><a href="javascript:">단체예약 신청</a></li>
+                                                <li><a href="javascript:">민항공후급증 예약신청</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="javascript:">모바일 탑승권</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="javascript:">서비스안내</a>
+                                <div class="submenu_box submenu_h">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:">New Class</a>
+                                            <a href="javascript:">JJ 라운지</a>
+                                        </li>
+                                        <li class="small_ico">
+                                            <a href="javascript:">예약안내</a>
+                                            <ul class="small_submenu">
+                                                <li><a href="javascript:">항공권 예매</a></li>
+                                                <li><a href="javascript:">항공권 환불</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="small_ico">
+                                            <a href="javascript:">기내서비스</a>
+                                            <ul class="small_submenu">
+                                                <li><a href="javascript:">기내서비스</a></li>
+                                                <li><a href="javascript:">Air Cafe</a></li>
+                                                <li><a href="javascript:">기내면세품 판매</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="small_ico">
+                                            <a href="javascript:">부가서비스</a>
+                                            <ul class="small_submenu">
+                                                <li><a href="javascript:">사전 수하물 구매</a></li>
+                                                <li><a href="javascript:">사전 좌석 구매</a></li>
+                                                <li><a href="javascript:">사전 기내식 주문</a></li>
+                                                <li><a href="javascript:">프리패스</a></li>
+                                                <li><a href="javascript:">JJ라운지 이용권</a></li>
+                                                <li><a href="javascript:">J pass</a></li>
+                                                <li><a href="javascript:">스포츠멤버쉽</a></li>
+                                                <li><a href="javascript:">옆 좌석 구매</a></li>
+                                                <li><a href="javascript:">기타 유료 아이템</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="small_ico">
+                                            <a href="javascript:">공항서비스</a>
+                                            <ul class="small_submenu">
+                                                <li><a href="javascript:">탑승수속 안내</a></li>
+                                                <li><a href="javascript:">모바일 탑승권</a></li>
+                                                <li><a href="javascript:">수하물</a></li>
+                                                <li><a href="javascript:">제주항공 카운터</a></li>
+                                                <li><a href="javascript:">도움이 필요한 고객</a></li>
+                                                <li><a href="javascript:">기내유실물 조회</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="small_ico">
+                                            <a href="javascript:">회원혜택존</a>
+                                            <ul class="small_submenu">
+                                                <li><a href="javascript:">쿠폰혜택</a></li>
+                                                <li><a href="javascript:">쿠폰안내</a></li>
+                                                <li><a href="javascript:">국내선 스탬프 랠리</a></li>
+                                                <li><a href="javascript:">일본 스탬프 랠리</a></li>
+                                                <li><a href="javascript:">지방발 스탬프 랠리</a></li>
+                                                <li><a href="javascript:">제휴혜택</a></li>
+                                                <li><a href="javascript:">카드 및 환전혜택</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="javascript:">이벤트/새소식</a>
+                                <div class="submenu_box small_box">
+                                    <ul>
+                                        <li><a href="javascript:">JJ여정클럽</a></li>
+                                        <li><a href="javascript:">여행가중계</a></li>
+                                        <li class="small_ico">
+                                            <a href="javascript:">이벤트</a>
+                                            <ul class="small_submenu">
+                                                <li><a href="javascript:">진행중인 이벤트</a></li>
+                                                <li><a href="javascript:">종료된 이벤트</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="javascript:">새소식</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="javascript:">여행상품</a>
+                                <div class="submenu_box small_box1">
+                                    <ul>
+                                        <li><a href="javascript:">호텔</a></li>
+                                        <li><a href="javascript:">렌터카</a></li>
+                                        <li class="small_ico">
+                                            <a href="javascript:">제휴상품</a>
+                                            <ul class="small_submenu">
+                                                <li><a href="javascript:">여행자 보험</a></li>
+                                                <li><a href="javascript:">포켓 와이파이</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="javascript:">리프레시포인트</a>
+                                <div class="submenu_box submenu_h">
+                                    <ul>
+                                        <li class="small_ico">
+                                            <a href="javascript:">리프레시포인트</a>
+                                            <ul class="small_submenu">
+                                                <li><a href="javascript:">소개</a></li>
+                                                <li><a href="javascript:">회원등급</a></li>
+                                                <li><a href="javascript:">포인트적립</a></li>
+                                                <li><a href="javascript:">포인트사용</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="javascript:">포인트내역조회</a></li>
+                                        <li><a href="javascript:">포인트구매</a></li>
+                                        <li><a href="javascript:">포인트선물</a></li>
+                                        <li><a href="javascript:">포인트양도</a></li>
+                                        <li><a href="javascript:">제휴포인트</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="javascript:">마이페이지</a>
+                                <div class="submenu_box submenu_h">
+                                    <ul>
+                                        <li><a href="javascript:">나의예약조회</a></li>
+                                        <li><a href="javascript:">나의포인트</a></li>
+                                        <li><a href="javascript:">나의쿠폰</a></li>
+                                        <li><a href="javascript:">나의JJ라운지</a></li>
+                                        <li><a href="javascript:">나의J Pass</a></li>
+                                        <li><a href="javascript:">나의정보수정</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <article class="jeju_visual">
+            <div class="visual">
+                <ul>
+                    <li>
+                        <div class="visual_txt">
+                            <h1>[NEWs]신규, 증편<br> 노선소식 알아보기</h1>
+                            <p>김포-광주, 무안-제주 동계편<br> 오픈!</p>
+                            <p>10.07 ~ 12.31, 2020</p>
+                        </div>
+                        <a href="javascript" title="김포-광주, 무안-제주 동계편 오픈! [NEWs]신규, 증편
+                        노선소식 알아보기">
+                            <img src="img/img_main_visual1.jpg" alt="[NEWs]신규, 증편
+                            노선소식 알아보기">
+                        </a>
+                    </li>
+                    <li>
+                        <div class="visual_txt">
+                            <h1>일본노선 이용고객<br> 알짜배기 혜택모음</h1>
+                            <p>2종 무료 혜택+포인트 추가적립+프리미엄클래스 할인</p>
+                            <p>11.06 ~ 12.31, 2020</p>
+                        </div>
+                        <a href="javascript" title="2종 무료 혜택+포인트 추가적립+프리미엄클래스 할인 일본노선 이용고객
+                        알짜배기 혜택모음">
+                            <img src="img/img_main_visual2.jpg" alt="일본노선 이용고객 알짜배기 혜택모음">
+                        </a>
+                    </li>
+                    <li>
+                        <div class="visual_txt">
+                            <h1>카카오페이<br> 최대 3만원 할인</h1>
+                            <p>11월 카카오페이 결제 혜택</p>
+                            <p>11.16 ~ 12.11, 2020</p>
+                        </div>
+                        <a href="javascript" title="11월 카카오페이 결제 혜택 카카오페이 최대 3만원 할인">
+                            <img src="img/img_main_visual3.png" alt="카카오페이 최대 3만원 할인">
+                        </a>
+                    </li>
+                    <li>
+                        <div class="visual_txt">
+                            <h1>제주도의 새로운<br>감성휴식공간</h1>
+                            <p>JJ LOUNGE x SPACE ZERO 오픈</p>
+                            <p>11.09 ~ 02.09, 2021</p>
+                        </div>
+                        <a href="javascript" title="JJ LOUNGE x SPACE ZERO 오픈 제주도의 새로운 감성휴식공간">
+                            <img src="img/img_main_visual4.jpg" alt="제주도의 새로운 감성휴식공간">
+                        </a>
+                    </li>
+                    <li>
+                        <div class="visual_txt">
+                            <h1>회원전용<br>쿠폰혜택</h1>
+                            <p>신규가입 즉시, 필수 3종 혜택 100% 증정!</p>
+                        </div>
+                        <a href="javascript" title="신규가입 즉시, 필수 3종 혜택 100% 증정! 회원전용 쿠폰혜택">
+                            <img src="img/img_main_visual5.jpg" alt="회원전용 쿠폰혜택">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <article class="jeju_flight">
+            <div class="inner">
+                <ul class="flight_tabs">
+                    <li><a href="#tab1">왕복</a></li>
+                    <li><a href="#tab2">편도</a></li>
+                    <li><a href="#tab3">다구간</a></li>
+                </ul>
+                <span class="group_reserve">
+                    <a href="javascript:">단체예약신청</a>
+                </span>
+                <div class="sign_area">
+                    <label class="sign_inner">일반결재
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="sign_inner">포인트결재
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="tab_container">
+                    <div id="tab1" class="tab_content">
+                        <!--선택부분 시작-->
+                        <div class="trip_box">
+                            <!--루트1 시작-->
+                            <div class="route1_box">
+                                <div class="depart_box">
+                                    <input type="text" id="depart" title="출발지" disabled="true" placeholder="출발지">
+                                    <button>출발</button>
+                                    <div id="depart_name" class="area_name">
+                                        <ul class="area_tabs">
+                                            <li data-tab="korea">한국</li>
+                                            <li data-tab="east_asia">동북아시아</li>
+                                            <li data-tab="south_asia">동남아시아</li>
+                                            <li data-tab="oceania">대양주</li>
+                                            <li data-tab="russia">러시아</li>
+                                        </ul>
+                                        <div class="name_container">
+                                            <div id="korea" class="name_list">
+                                                <ul>
+                                                    <li><button>서울(인천)(ICN)</button></li>
+                                                    <li><button>서울(김포)(GMP)</button></li>
+                                                    <li><button>제주(CJU)</button></li>
+                                                    <li><button>광주(KWJ)</button></li>
+                                                    <li><button>군산(KUV)</button></li>
+                                                    <li><button>무안(MWX)</button></li>
+                                                    <li><button>여수(RSU)</button></li>
+                                                    <li><button>청주(CJJ)</button></li>
+                                                </ul>
+                                            </div>
+                                            <div id="east_asia" class="name_list">
+                                                <ul>
+                                                    <li><button>나고야(NGO)</button></li>
+                                                    <li><button>도쿄(나리타)(NRT)</button></li>
+                                                    <li><button>마쓰야마(MYJ)</button></li>
+                                                    <li><button>삿포로(CTS)</button></li>
+                                                    <li><button>시즈오카(FSZ)</button></li>
+                                                    <li><button>오사카(간사이)(KIX)</button></li>
+                                                    <li><button>오키나와(OKA)</button></li>
+                                                    <li><button>후쿠오카(FUK)</button></li>
+                                                    <li><button>마카오(MFM)</button></li>
+                                                    <li><button>싼야(SYX)</button></li>
+                                                    <li><button>하얼빈(HRB)</button></li>
+                                                    <li><button>옌타이(YNT)</button></li>
+                                                    <li><button>웨이하이(WEH)</button></li>
+                                                    <li><button>칭다오(TAO)</button></li>
+                                                    <li><button>타이베이(타오위안)(TPE)</button></li>
+                                                    <li><button>홍콩(HKG)</button></li>
+                                                </ul>
+                                            </div>
+                                            <div id="south_asia" class="name_list">
+                                                <ul>
+                                                    <li><button>나트랑/냐짱(CXR)</button></li>
+                                                    <li><button>다낭(DAD)</button></li>
+                                                    <li><button>마닐라(MNL)</button></li>
+                                                    <li><button>방콕(수완나품)(BKK)</button></li>
+                                                    <li><button>보홀(TAG)</button></li>
+                                                    <li><button>비엔티안(VTE)</button></li>
+                                                    <li><button>세부(CEB)</button></li>
+                                                    <li><button>싱가포르(SIN)</button></li>
+                                                    <li><button>치앙마이(CNX)</button></li>
+                                                    <li><button>코타키나발루(BKI)</button></li>
+                                                    <li><button>클락(CRK)</button></li>
+                                                    <li><button>푸꾸옥(PQC)</button></li>
+                                                    <li><button>하노이(HAN)</button></li>
+                                                    <li><button>호찌민(SGN)</button></li>
+                                                </ul>
+                                            </div>
+                                            <div id="oceania" class="name_list">
+                                                <ul>
+                                                    <li><button>괌(GUM)</button></li>
+                                                    <li><button>사이판(SPN)</button></li>
+                                                </ul>
+                                            </div>
+                                            <div id="russia" class="name_list">
+                                                <ul>
+                                                    <li><button>블라디보스토크(VVO)</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desti_box">
+                                    <input type="text" id="desti" title="도착지" disabled="true" placeholder="도착지">
+                                    <button>도착</button>
+                                    <div id="desti_name" class="area_name destination">
+                                        <ul class="desti_tabs">
+                                            <li class="current" data-tab="des_korea">한국</li>
+                                            <li data-tab="des_eastasia">동북아시아</li>
+                                            <li data-tab="des_southasia">동남아시아</li>
+                                            <li data-tab="des_oceania">오세아니아</li>
+                                            <li data-tab="des_russia">러시아</li>
+                                        </ul>
+                                        <div id="des_korea" class="desti_list current">
+                                            <ul>
+                                                <li><button>인천(체험)(YEC)</button></li>
+                                            </ul>
+                                        </div>
+                                        <div id="des_eastasia" class="desti_list">
+                                            <ul>
+                                                <li><button>나고야(NGO)</button></li>
+                                                <li><button>도쿄(나리타)(NRT)</button></li>
+                                                <li><button>마쓰야마(MYJ)</button></li>
+                                                <li><button>삿포로(CTS)</button></li>
+                                                <li><button>시즈오카(FSZ)</button></li>
+                                                <li><button>오사카(간사이)(KIX)</button></li>
+                                                <li><button>오키나와(OKA)</button></li>
+                                                <li><button>후쿠오카(FUK)</button></li>
+                                                <li><button>마카오(MFM)</button></li>
+                                                <li><button>싼야(SYX)</button></li>
+                                                <li><button>하얼빈(HRB)</button></li>
+                                                <li><button>옌타이(YNT)</button></li>
+                                                <li><button>웨이하이(WEH)</button></li>
+                                                <li><button>칭다오(TAO)</button></li>
+                                                <li><button>타이베이(타오위안)(TPE)</button></li>
+                                                <li><button>홍콩(HKG)</button></li>
+                                            </ul>
+                                        </div>
+                                        <div id="des_southasia" class="desti_list">
+                                            <ul>
+                                                <li><button>나트랑/냐짱(CXR)</button></li>
+                                                <li><button>다낭(DAD)</button></li>
+                                                <li><button>마닐라(MNL)</button></li>
+                                                <li><button>방콕(수완나품)(BKK)</button></li>
+                                                <li><button>보홀(TAG)</button></li>
+                                                <li><button>비엔티안(VTE)</button></li>
+                                                <li><button>세부(CEB)</button></li>
+                                                <li><button>싱가포르(SIN)</button></li>
+                                                <li><button>치앙마이(CNX)</button></li>
+                                                <li><button>코타키나발루(BKI)</button></li>
+                                                <li><button>클락(CRK)</button></li>
+                                                <li><button>푸꾸옥(PQC)</button></li>
+                                                <li><button>하노이(HAN)</button></li>
+                                                <li><button>호찌민(SGN)</button></li>
+                                            </ul>
+                                        </div>
+                                        <div id="des_oceania" class="desti_list">
+                                            <ul>
+                                                <li><button>괌(GUM)</button></li>
+                                                <li><button>사이판(SPN)</button></li>
+                                            </ul>
+                                        </div>
+                                        <div id="des_russia" class="desti_list">
+                                            <ul>
+                                                <li><button>블라디보스토크(VVO)</button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calender_box">
+                                    <input type="text" value="2020-11-30" id="Datepicker" />
+                                    <label for="Datepicker" class="datelabel">달력</label>
+                                </div>
+                            </div>
+                            <!--루트1 끝-->
+                            <!--루트2 시작-->
+                            <div class="route2_box">
+                                <div class="calender_box">
+                                    <input type="text" value="2020-11-30" id="Datepicker1" />
+                                    <label for="Datepicker1" class="datelabel">달력</label>
+                                </div>
+                            </div>
+                            <!--루트2 끝-->
+                            <!--인원수 선택부분-->
+                            <div class="person_inner">
+                                <div class="person_area">
+                                    <div class="person_box">
+                                        <p>성인</p>
+                                        <div class="person_txt">
+                                            <a id="adult_mi" class="minus" href="javascript:">인원수내림</a>
+                                            <span id="adult_val">1</span>
+                                            <a id="adult_pl" class="plus" href="javascript:">인원수올림</a>
+                                        </div>
+                                    </div>
+                                    <div class="person_box">
+                                        <p>소아</p>
+                                        <div class="person_txt">
+                                            <a id="kids_mi" class="minus" href="javascript:">인원수내림</a>
+                                            <span id="kids_val">0</span>
+                                            <a id="kids_pl" class="plus" href="javascript:">인원수올림</a>
+                                        </div>
+                                    </div>
+                                    <div class="person_box">
+                                        <p>유아</p>
+                                        <div class="person_txt person_txt2">
+                                            <a id="baby_mi" class="minus" href="javascript:">인원수내림</a>
+                                            <span id="baby_val">0</span>
+                                            <a id="baby_pl" class="plus" href="javascript:">인원수올림</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--인원수 선택부분 끝-->
+                        </div>
+                        <!--선택부분 끝-->
+                        <div class="button_inner">
+                            <span class="age_cal">
+                                <a href="javascript:">나이 계산기</a>
+                            </span>
+                            <button class="reserve_btn">예매하기</button>
+                        </div>
+                    </div>
+                    <div id="tab2" class="tab_content">
+                        <!--선택부분 시작-->
+                        <div class="trip_box">
+                            <!--루트1 시작-->
+                            <div class="route1_box">
+                                <div class="depart_box">
+                                    <input type="text" id="depart2" title="출발지" disabled="true" placeholder="출발지">
+                                    <button>출발</button>
+                                    <div id="depart_name" class="area_name">
+                                        <ul class="area_tabs">
+                                            <li data-tab="korea2">한국</li>
+                                            <li data-tab="east_asia2">동북아시아</li>
+                                            <li data-tab="south_asia2">동남아시아</li>
+                                            <li data-tab="oceania2">대양주</li>
+                                            <li data-tab="russia2">러시아</li>
+                                        </ul>
+                                        <div class="name_container">
+                                            <div id="korea2" class="name_list">
+                                                <ul>
+                                                    <li><button>서울(인천)(ICN)</button></li>
+                                                    <li><button>서울(김포)(GMP)</button></li>
+                                                    <li><button>제주(CJU)</button></li>
+                                                    <li><button>광주(KWJ)</button></li>
+                                                    <li><button>군산(KUV)</button></li>
+                                                    <li><button>무안(MWX)</button></li>
+                                                    <li><button>여수(RSU)</button></li>
+                                                    <li><button>청주(CJJ)</button></li>
+                                                </ul>
+                                            </div>
+                                            <div id="east_asia2" class="name_list">
+                                                <ul>
+                                                    <li><button>나고야(NGO)</button></li>
+                                                    <li><button>도쿄(나리타)(NRT)</button></li>
+                                                    <li><button>마쓰야마(MYJ)</button></li>
+                                                    <li><button>삿포로(CTS)</button></li>
+                                                    <li><button>시즈오카(FSZ)</button></li>
+                                                    <li><button>오사카(간사이)(KIX)</button></li>
+                                                    <li><button>오키나와(OKA)</button></li>
+                                                    <li><button>후쿠오카(FUK)</button></li>
+                                                    <li><button>마카오(MFM)</button></li>
+                                                    <li><button>싼야(SYX)</button></li>
+                                                    <li><button>하얼빈(HRB)</button></li>
+                                                    <li><button>옌타이(YNT)</button></li>
+                                                    <li><button>웨이하이(WEH)</button></li>
+                                                    <li><button>칭다오(TAO)</button></li>
+                                                    <li><button>타이베이(타오위안)(TPE)</button></li>
+                                                    <li><button>홍콩(HKG)</button></li>
+                                                </ul>
+                                            </div>
+                                            <div id="south_asia2" class="name_list">
+                                                <ul>
+                                                    <li><button>나트랑/냐짱(CXR)</button></li>
+                                                    <li><button>다낭(DAD)</button></li>
+                                                    <li><button>마닐라(MNL)</button></li>
+                                                    <li><button>방콕(수완나품)(BKK)</button></li>
+                                                    <li><button>보홀(TAG)</button></li>
+                                                    <li><button>비엔티안(VTE)</button></li>
+                                                    <li><button>세부(CEB)</button></li>
+                                                    <li><button>싱가포르(SIN)</button></li>
+                                                    <li><button>치앙마이(CNX)</button></li>
+                                                    <li><button>코타키나발루(BKI)</button></li>
+                                                    <li><button>클락(CRK)</button></li>
+                                                    <li><button>푸꾸옥(PQC)</button></li>
+                                                    <li><button>하노이(HAN)</button></li>
+                                                    <li><button>호찌민(SGN)</button></li>
+                                                </ul>
+                                            </div>
+                                            <div id="oceania2" class="name_list">
+                                                <ul>
+                                                    <li><button>괌(GUM)</button></li>
+                                                    <li><button>사이판(SPN)</button></li>
+                                                </ul>
+                                            </div>
+                                            <div id="russia2" class="name_list">
+                                                <ul>
+                                                    <li><button>블라디보스토크(VVO)</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desti_box">
+                                    <input type="text" id="desti2" title="도착지" disabled="true" placeholder="도착지">
+                                    <button>도착</button>
+                                    <div id="desti_name" class="area_name destination">
+                                        <ul class="desti_tabs">
+                                            <li class="current" data-tab="des_korea2">한국</li>
+                                            <li data-tab="des_eastasia2">동북아시아</li>
+                                            <li data-tab="des_southasia2">동남아시아</li>
+                                            <li data-tab="des_oceania2">오세아니아</li>
+                                            <li data-tab="des_russia2">러시아</li>
+                                        </ul>
+                                        <div id="des_korea2" class="desti_list current">
+                                            <ul>
+                                                <li><button>인천(체험)(YEC)</button></li>
+                                            </ul>
+                                        </div>
+                                        <div id="des_eastasia2" class="desti_list">
+                                            <ul>
+                                                <li><button>나고야(NGO)</button></li>
+                                                <li><button>도쿄(나리타)(NRT)</button></li>
+                                                <li><button>마쓰야마(MYJ)</button></li>
+                                                <li><button>삿포로(CTS)</button></li>
+                                                <li><button>시즈오카(FSZ)</button></li>
+                                                <li><button>오사카(간사이)(KIX)</button></li>
+                                                <li><button>오키나와(OKA)</button></li>
+                                                <li><button>후쿠오카(FUK)</button></li>
+                                                <li><button>마카오(MFM)</button></li>
+                                                <li><button>싼야(SYX)</button></li>
+                                                <li><button>하얼빈(HRB)</button></li>
+                                                <li><button>옌타이(YNT)</button></li>
+                                                <li><button>웨이하이(WEH)</button></li>
+                                                <li><button>칭다오(TAO)</button></li>
+                                                <li><button>타이베이(타오위안)(TPE)</button></li>
+                                                <li><button>홍콩(HKG)</button></li>
+                                            </ul>
+                                        </div>
+                                        <div id="des_southasia2" class="desti_list">
+                                            <ul>
+                                                <li><button>나트랑/냐짱(CXR)</button></li>
+                                                <li><button>다낭(DAD)</button></li>
+                                                <li><button>마닐라(MNL)</button></li>
+                                                <li><button>방콕(수완나품)(BKK)</button></li>
+                                                <li><button>보홀(TAG)</button></li>
+                                                <li><button>비엔티안(VTE)</button></li>
+                                                <li><button>세부(CEB)</button></li>
+                                                <li><button>싱가포르(SIN)</button></li>
+                                                <li><button>치앙마이(CNX)</button></li>
+                                                <li><button>코타키나발루(BKI)</button></li>
+                                                <li><button>클락(CRK)</button></li>
+                                                <li><button>푸꾸옥(PQC)</button></li>
+                                                <li><button>하노이(HAN)</button></li>
+                                                <li><button>호찌민(SGN)</button></li>
+                                            </ul>
+                                        </div>
+                                        <div id="des_oceania2" class="desti_list">
+                                            <ul>
+                                                <li><button>괌(GUM)</button></li>
+                                                <li><button>사이판(SPN)</button></li>
+                                            </ul>
+                                        </div>
+                                        <div id="des_russia2" class="desti_list">
+                                            <ul>
+                                                <li><button>블라디보스토크(VVO)</button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calender_box">
+                                    <input type="text" value="2020-11-11" id="Datepicker2" />
+                                    <label for="Datepicker2" class="datelabel">달력</label>
+                                </div>
+                            </div>
+                            <!--루트1 끝-->
+                            <!--인원수 선택부분-->
+                            <div class="person_inner">
+                                <div class="person_area">
+                                    <div class="person_box">
+                                        <p>성인</p>
+                                        <div class="person_txt">
+                                            <a id="adult_mi2" class="minus" href="javascript:">인원수내림</a>
+                                            <span id="adult_val2">1</span>
+                                            <a id="adult_pl2" class="plus" href="javascript:">인원수올림</a>
+                                        </div>
+                                    </div>
+                                    <div class="person_box">
+                                        <p>소아</p>
+                                        <div class="person_txt">
+                                            <a id="kids_mi2" class="minus" href="javascript:">인원수내림</a>
+                                            <span id="kids_val2">0</span>
+                                            <a id="kids_pl2" class="plus" href="javascript:">인원수올림</a>
+                                        </div>
+                                    </div>
+                                    <div class="person_box">
+                                        <p>유아</p>
+                                        <div class="person_txt person_txt2">
+                                            <a id="baby_mi2" class="minus" href="javascript:">인원수내림</a>
+                                            <span id="baby_val2">0</span>
+                                            <a id="baby_pl2" class="plus" href="javascript:">인원수올림</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--인원수 선택부분 끝-->
+                        </div>
+                        <!--선택부분 끝-->
+                        <div class="button_inner">
+                            <span class="age_cal">
+                                <a href="javascript:">나이 계산기</a>
+                            </span>
+                            <button class="reserve_btn">예매하기</button>
+                        </div>
+                    </div>
+                    <div id="tab3" class="tab_content">
+                        <!--선택부분 시작-->
+                        <div class="trip_box">
+                            <!--루트1 시작-->
+                            <div class="route1_box">
+                                <div class="depart_box">
+                                    <input type="text" id="depart3" title="출발지" disabled="true" placeholder="출발지">
+                                    <button class="depart_btn">출발</button>
+                                    <div id="depart_name3" class="area_name">
+                                        <ul class="area_tabs">
+                                            <li data-tab="korea3">한국</li>
+                                            <li data-tab="east_asia3">동북아시아</li>
+                                            <li data-tab="south_asia3">동남아시아</li>
+                                            <li data-tab="oceania3">대양주</li>
+                                            <li data-tab="russia3">러시아</li>
+                                        </ul>
+                                        <div class="name_container">
+                                            <div id="korea3" class="name_list">
+                                                <ul>
+                                                    <li><button>서울(인천)(ICN)</button></li>
+                                                    <li><button>서울(김포)(GMP)</button></li>
+                                                    <li><button>제주(CJU)</button></li>
+                                                    <li><button>광주(KWJ)</button></li>
+                                                    <li><button>군산(KUV)</button></li>
+                                                    <li><button>무안(MWX)</button></li>
+                                                    <li><button>여수(RSU)</button></li>
+                                                    <li><button>청주(CJJ)</button></li>
+                                                </ul>
+                                            </div>
+                                            <div id="east_asia3" class="name_list">
+                                                <ul>
+                                                    <li><button>나고야(NGO)</button></li>
+                                                    <li><button>도쿄(나리타)(NRT)</button></li>
+                                                    <li><button>마쓰야마(MYJ)</button></li>
+                                                    <li><button>삿포로(CTS)</button></li>
+                                                    <li><button>시즈오카(FSZ)</button></li>
+                                                    <li><button>오사카(간사이)(KIX)</button></li>
+                                                    <li><button>오키나와(OKA)</button></li>
+                                                    <li><button>후쿠오카(FUK)</button></li>
+                                                    <li><button>마카오(MFM)</button></li>
+                                                    <li><button>싼야(SYX)</button></li>
+                                                    <li><button>하얼빈(HRB)</button></li>
+                                                    <li><button>옌타이(YNT)</button></li>
+                                                    <li><button>웨이하이(WEH)</button></li>
+                                                    <li><button>칭다오(TAO)</button></li>
+                                                    <li><button>타이베이(타오위안)(TPE)</button></li>
+                                                    <li><button>홍콩(HKG)</button></li>
+                                                </ul>
+                                            </div>
+                                            <div id="south_asia3" class="name_list">
+                                                <ul>
+                                                    <li><button>나트랑/냐짱(CXR)</button></li>
+                                                    <li><button>다낭(DAD)</button></li>
+                                                    <li><button>마닐라(MNL)</button></li>
+                                                    <li><button>방콕(수완나품)(BKK)</button></li>
+                                                    <li><button>보홀(TAG)</button></li>
+                                                    <li><button>비엔티안(VTE)</button></li>
+                                                    <li><button>세부(CEB)</button></li>
+                                                    <li><button>싱가포르(SIN)</button></li>
+                                                    <li><button>치앙마이(CNX)</button></li>
+                                                    <li><button>코타키나발루(BKI)</button></li>
+                                                    <li><button>클락(CRK)</button></li>
+                                                    <li><button>푸꾸옥(PQC)</button></li>
+                                                    <li><button>하노이(HAN)</button></li>
+                                                    <li><button>호찌민(SGN)</button></li>
+                                                </ul>
+                                            </div>
+                                            <div id="oceania3" class="name_list">
+                                                <ul>
+                                                    <li><button>괌(GUM)</button></li>
+                                                    <li><button>사이판(SPN)</button></li>
+                                                </ul>
+                                            </div>
+                                            <div id="russia3" class="name_list">
+                                                <ul>
+                                                    <li><button>블라디보스토크(VVO)</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desti_box">
+                                    <input type="text" id="desti3" title="도착지" disabled="true" placeholder="도착지">
+                                    <button class='desti_btn'>도착</button>
+                                    <div id="desti_name3" class="area_name destination">
+                                        <ul class="desti_tabs">
+                                            <li class="current" data-tab="des_korea3">한국</li>
+                                            <li data-tab="des_eastasia3">동북아시아</li>
+                                            <li data-tab="des_southasia3">동남아시아</li>
+                                            <li data-tab="des_oceania3">오세아니아</li>
+                                            <li data-tab="des_russia3">러시아</li>
+                                        </ul>
+                                        <div id="des_korea3" class="desti_list current">
+                                            <ul>
+                                                <li><button>인천(체험)(YEC)</button></li>
+                                            </ul>
+                                        </div>
+                                        <div id="des_eastasia3" class="desti_list">
+                                            <ul>
+                                                <li><button>나고야(NGO)</button></li>
+                                                <li><button>도쿄(나리타)(NRT)</button></li>
+                                                <li><button>마쓰야마(MYJ)</button></li>
+                                                <li><button>삿포로(CTS)</button></li>
+                                                <li><button>시즈오카(FSZ)</button></li>
+                                                <li><button>오사카(간사이)(KIX)</button></li>
+                                                <li><button>오키나와(OKA)</button></li>
+                                                <li><button>후쿠오카(FUK)</button></li>
+                                                <li><button>마카오(MFM)</button></li>
+                                                <li><button>싼야(SYX)</button></li>
+                                                <li><button>하얼빈(HRB)</button></li>
+                                                <li><button>옌타이(YNT)</button></li>
+                                                <li><button>웨이하이(WEH)</button></li>
+                                                <li><button>칭다오(TAO)</button></li>
+                                                <li><button>타이베이(타오위안)(TPE)</button></li>
+                                                <li><button>홍콩(HKG)</button></li>
+                                            </ul>
+                                        </div>
+                                        <div id="des_southasia3" class="desti_list">
+                                            <ul>
+                                                <li><button>나트랑/냐짱(CXR)</button></li>
+                                                <li><button>다낭(DAD)</button></li>
+                                                <li><button>마닐라(MNL)</button></li>
+                                                <li><button>방콕(수완나품)(BKK)</button></li>
+                                                <li><button>보홀(TAG)</button></li>
+                                                <li><button>비엔티안(VTE)</button></li>
+                                                <li><button>세부(CEB)</button></li>
+                                                <li><button>싱가포르(SIN)</button></li>
+                                                <li><button>치앙마이(CNX)</button></li>
+                                                <li><button>코타키나발루(BKI)</button></li>
+                                                <li><button>클락(CRK)</button></li>
+                                                <li><button>푸꾸옥(PQC)</button></li>
+                                                <li><button>하노이(HAN)</button></li>
+                                                <li><button>호찌민(SGN)</button></li>
+                                            </ul>
+                                        </div>
+                                        <div id="des_oceania3" class="desti_list">
+                                            <ul>
+                                                <li><button>괌(GUM)</button></li>
+                                                <li><button>사이판(SPN)</button></li>
+                                            </ul>
+                                        </div>
+                                        <div id="des_russia3" class="desti_list">
+                                            <ul>
+                                                <li><button>블라디보스토크(VVO)</button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calender_box">
+                                    <input type="text" value="2020-11-11" id="Datepicker3" />
+                                    <label for="Datepicker3" class="datelabel">달력</label>
+                                </div>
+                            </div>
+                            <!--루트1 끝-->
+                            <!--루트1 시작-->
+                            <div class="route1_box route1_sizing">
+                                <div class="depart_box">
+                                    <input type="text" id="depart4" title="출발지" disabled="true" placeholder="출발지">
+                                    <button class="depart_btn2">출발</button>
+                                    <div id="depart_name4" class="area_name">
+                                        <ul class="area_tabs">
+                                            <li data-tab="korea4">한국</li>
+                                            <li data-tab="east_asia4">동북아시아</li>
+                                            <li data-tab="south_asia4">동남아시아</li>
+                                            <li data-tab="oceania4">대양주</li>
+                                            <li data-tab="russia4">러시아</li>
+                                        </ul>
+                                        <div class="name_container">
+                                            <div id="korea4" class="name_list">
+                                                <ul>
+                                                    <li><button>서울(인천)(ICN)</button></li>
+                                                    <li><button>서울(김포)(GMP)</button></li>
+                                                    <li><button>제주(CJU)</button></li>
+                                                    <li><button>광주(KWJ)</button></li>
+                                                    <li><button>군산(KUV)</button></li>
+                                                    <li><button>무안(MWX)</button></li>
+                                                    <li><button>여수(RSU)</button></li>
+                                                    <li><button>청주(CJJ)</button></li>
+                                                </ul>
+                                            </div>
+                                            <div id="east_asia4" class="name_list">
+                                                <ul>
+                                                    <li><button>나고야(NGO)</button></li>
+                                                    <li><button>도쿄(나리타)(NRT)</button></li>
+                                                    <li><button>마쓰야마(MYJ)</button></li>
+                                                    <li><button>삿포로(CTS)</button></li>
+                                                    <li><button>시즈오카(FSZ)</button></li>
+                                                    <li><button>오사카(간사이)(KIX)</button></li>
+                                                    <li><button>오키나와(OKA)</button></li>
+                                                    <li><button>후쿠오카(FUK)</button></li>
+                                                    <li><button>마카오(MFM)</button></li>
+                                                    <li><button>싼야(SYX)</button></li>
+                                                    <li><button>하얼빈(HRB)</button></li>
+                                                    <li><button>옌타이(YNT)</button></li>
+                                                    <li><button>웨이하이(WEH)</button></li>
+                                                    <li><button>칭다오(TAO)</button></li>
+                                                    <li><button>타이베이(타오위안)(TPE)</button></li>
+                                                    <li><button>홍콩(HKG)</button></li>
+                                                </ul>
+                                            </div>
+                                            <div id="south_asia4" class="name_list">
+                                                <ul>
+                                                    <li><button>나트랑/냐짱(CXR)</button></li>
+                                                    <li><button>다낭(DAD)</button></li>
+                                                    <li><button>마닐라(MNL)</button></li>
+                                                    <li><button>방콕(수완나품)(BKK)</button></li>
+                                                    <li><button>보홀(TAG)</button></li>
+                                                    <li><button>비엔티안(VTE)</button></li>
+                                                    <li><button>세부(CEB)</button></li>
+                                                    <li><button>싱가포르(SIN)</button></li>
+                                                    <li><button>치앙마이(CNX)</button></li>
+                                                    <li><button>코타키나발루(BKI)</button></li>
+                                                    <li><button>클락(CRK)</button></li>
+                                                    <li><button>푸꾸옥(PQC)</button></li>
+                                                    <li><button>하노이(HAN)</button></li>
+                                                    <li><button>호찌민(SGN)</button></li>
+                                                </ul>
+                                            </div>
+                                            <div id="oceania4" class="name_list">
+                                                <ul>
+                                                    <li><button>괌(GUM)</button></li>
+                                                    <li><button>사이판(SPN)</button></li>
+                                                </ul>
+                                            </div>
+                                            <div id="russia4" class="name_list">
+                                                <ul>
+                                                    <li><button>블라디보스토크(VVO)</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desti_box">
+                                    <input type="text" id="desti4" title="도착지" disabled="true" placeholder="도착지">
+                                    <button class="desti_btn2">도착</button>
+                                    <div id="desti_name4" class="area_name destination">
+                                        <ul class="desti_tabs">
+                                            <li class="current" data-tab="des_korea4">한국</li>
+                                            <li data-tab="des_eastasia4">동북아시아</li>
+                                            <li data-tab="des_southasia4">동남아시아</li>
+                                            <li data-tab="des_oceania4">오세아니아</li>
+                                            <li data-tab="des_russia4">러시아</li>
+                                        </ul>
+                                        <div id="des_korea4" class="desti_list current">
+                                            <ul>
+                                                <li><button>인천(체험)(YEC)</button></li>
+                                            </ul>
+                                        </div>
+                                        <div id="des_eastasia4" class="desti_list">
+                                            <ul>
+                                                <li><button>나고야(NGO)</button></li>
+                                                <li><button>도쿄(나리타)(NRT)</button></li>
+                                                <li><button>마쓰야마(MYJ)</button></li>
+                                                <li><button>삿포로(CTS)</button></li>
+                                                <li><button>시즈오카(FSZ)</button></li>
+                                                <li><button>오사카(간사이)(KIX)</button></li>
+                                                <li><button>오키나와(OKA)</button></li>
+                                                <li><button>후쿠오카(FUK)</button></li>
+                                                <li><button>마카오(MFM)</button></li>
+                                                <li><button>싼야(SYX)</button></li>
+                                                <li><button>하얼빈(HRB)</button></li>
+                                                <li><button>옌타이(YNT)</button></li>
+                                                <li><button>웨이하이(WEH)</button></li>
+                                                <li><button>칭다오(TAO)</button></li>
+                                                <li><button>타이베이(타오위안)(TPE)</button></li>
+                                                <li><button>홍콩(HKG)</button></li>
+                                            </ul>
+                                        </div>
+                                        <div id="des_southasia4" class="desti_list">
+                                            <ul>
+                                                <li><button>나트랑/냐짱(CXR)</button></li>
+                                                <li><button>다낭(DAD)</button></li>
+                                                <li><button>마닐라(MNL)</button></li>
+                                                <li><button>방콕(수완나품)(BKK)</button></li>
+                                                <li><button>보홀(TAG)</button></li>
+                                                <li><button>비엔티안(VTE)</button></li>
+                                                <li><button>세부(CEB)</button></li>
+                                                <li><button>싱가포르(SIN)</button></li>
+                                                <li><button>치앙마이(CNX)</button></li>
+                                                <li><button>코타키나발루(BKI)</button></li>
+                                                <li><button>클락(CRK)</button></li>
+                                                <li><button>푸꾸옥(PQC)</button></li>
+                                                <li><button>하노이(HAN)</button></li>
+                                                <li><button>호찌민(SGN)</button></li>
+                                            </ul>
+                                        </div>
+                                        <div id="des_oceania4" class="desti_list">
+                                            <ul>
+                                                <li><button>괌(GUM)</button></li>
+                                                <li><button>사이판(SPN)</button></li>
+                                            </ul>
+                                        </div>
+                                        <div id="des_russia4" class="desti_list">
+                                            <ul>
+                                                <li><button>블라디보스토크(VVO)</button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calender_box">
+                                    <input type="text" value="2020-11-11" id="Datepicker4" />
+                                    <label for="Datepicker4" class="datelabel">달력</label>
+                                </div>
+                            </div>
+                            <!--루트1 끝-->
+                            <!--인원수 선택부분-->
+                            <div class="person_inner">
+                                <div class="person_area">
+                                    <div class="person_box">
+                                        <p>성인</p>
+                                        <div class="person_txt">
+                                            <a id="adult_mi3" class="minus" href="javascript:">인원수내림</a>
+                                            <span id="adult_val3">1</span>
+                                            <a id="adult_pl3" class="plus" href="javascript:">인원수올림</a>
+                                        </div>
+                                    </div>
+                                    <div class="person_box">
+                                        <p>소아</p>
+                                        <div class="person_txt">
+                                            <a id="kids_mi3" class="minus" href="javascript:">인원수내림</a>
+                                            <span id="kids_val3">0</span>
+                                            <a id="kids_pl3" class="plus" href="javascript:">인원수올림</a>
+                                        </div>
+                                    </div>
+                                    <div class="person_box">
+                                        <p>유아</p>
+                                        <div class="person_txt">
+                                            <a id="baby_mi3" class="minus" href="javascript:">인원수내림</a>
+                                            <span id="baby_val3">0</span>
+                                            <a id="baby_pl3" class="plus" href="javascript:">인원수올림</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--인원수 선택부분 끝-->
+                        </div>
+                        <!--선택부분 끝-->
+                        <div class="button_inner">
+                            <span class="age_cal">
+                                <a href="javascript:">나이 계산기</a>
+                            </span>
+                            <button class="reserve_btn">예매하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--나이계산기 modal 시작-->
+            <div id="modal">
+                <div class="modal_con">
+                    <div class="modal_close">
+                        <span>닫기</span>
+                    </div>
+                    <h2>나이계산기</h2>
+                    <div class="cal_con">
+                        <p class="cal_intro">탑승일과 생년월일을 입력하시면, 소아/유아를 구분하실 수 있습니다.</p>
+                        <div class="cal_input">
+                            <label class="board_txt">탑승일&nbsp;:</label>
+                            <input type="text" id="boardDate" value="ex) 2020-11-30" />
+                        </div>
+                        <div class="cal_input">
+                            <label>생년월일&nbsp;:</label>
+                            <input type="text" id="birthDay" value="ex) 2020-11-30" />
+                            <button class="input_btn">계산</button>
+                        </div>
+                        <div class="cal_print">
+                            <p>
+                                탑승일&nbsp;(<span id="Date"></span>)&nbsp;기준으로<br>
+                                국내선은 <span id="kids_age">아이</span>입니다.
+                                국제선은 <span id="kids_age2">아이</span>입니다.
+                            </p>
+                        </div>
+                        <div class="txt_box">
+                            <ul>
+                                <li>
+                                    <strong>생년월일 확인 가능한 서류</strong>를 반드시 지참하여 주시기 바랍니다.<br>
+                                    좌석점유 유아고객은 소아를 선택하시기 바립니다.
+                                </li>
+                                <li>
+                                    첫 구간 탑승일 기준으로 소아 및 유아 운임이 적용됩니다.<br>
+                                    (만2세 미만은 유아 운임이 적용되며 좌석 미점유)
+                                </li>
+                                <li>
+                                    소아 적용 기준<br>
+                                    국내선 : 만 2세 이상 ~ 만 13세 미만<br>
+                                    국제선 : 만 2세 이상 ~ 만 12세 미만
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="button_area">
+                        <button>확인</button>
+                    </div>
+                </div>
+            </div>
+            <!--나이계산기 modal 끝-->
+        </article>
+        <article class="jeju_event">
+            <div class="inner">
+                <h3>이벤트</h3>
+                <ul>
+                    <li>
+                        <a href="javascript:">
+                            <img src="img/img_event_banner.jpg" alt="부산항공여행마켓">
+                            <span>
+                                <strong>부산항공 여행마켓</strong>
+                                <em>2020.11.05 ~ 2020.11.14</em>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:">
+                            <img src="img/img_event_banner2.jpg" alt="제주항공특별이벤트">
+                            <span>
+                                <strong>오직 제주항공만 가능한 것</strong>
+                                <em>2020.11.02 ~ 2020.12.20</em>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:">
+                            <img src="img/img_event_banner3.jpg" alt="하나카드 할인혜택">
+                            <span>
+                                <strong>하나카드 결제 시 최대 1만원 할인 혜택</strong>
+                                <em>2020.10.19 ~ 2020.11.18</em>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:">
+                            <img src="img/img_event_banner4.jpg" alt="트립닷컴예약">
+                            <span>
+                                <strong>트립닷컴에서 예약하고, 리프레시포인트 적립 받으세요!</strong>
+                                <em>2020.08.10 ~ 2020.12.31</em>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:">
+                            <img src="img/img_event_banner5.jpg" alt="일본노선 특별혜택">
+                            <span>
+                                <strong>일본노선 탑승객을 위한 특별한 혜택!</strong>
+                                <em>2020.11.06 ~ 2020.12.31</em>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:">
+                            <img src="img/img_event_banner6.jpg" alt="제주항공안전여행캠페인">
+                            <span>
+                                <strong>제주항공 안전여행캠페인</strong>
+                                <em>2020.11.02 ~ 2020.12.31</em>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:">
+                            <img src="img/img_event_banner7.jpg" alt="신규노선오픈안내">
+                            <span>
+                                <strong>신규 오픈 노선소식</strong>
+                                <em>2020.10.07 ~ 2020.12.31</em>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:">
+                            <img src="img/img_event_banner8.jpg" alt="코리아세일페스타">
+                            <span>
+                                <strong>2020 코리아세일페스타!</strong>
+                                <em>2020.10.21 ~ 2020.11.15</em>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <article class="jeju_news">
+            <div class="inner">
+                <div class="news">
+                    <h3>새소식</h3>
+                    <ul class="rolling">
+                        <li>
+                            <span>국내선 군산시민 대상 신분할인 신설</span>
+                            <span>2020.11.06</span>
+                        </li>
+                        <li>
+                            <span>국내선 유류할증료 공지 (2020년 12월)</span>
+                            <span>2020.11.05</span>
+                        </li>
+                        <li>
+                            <span>코로나 바이러스 각 국가 입출국제한 안내 (11/04 기준)</span>
+                            <span>2020.11.04</span>
+                        </li>
+                        <li>
+                            <span>스포츠멤버십 판매 임시 중단 안내</span>
+                            <span>2020.11.03</span>
+                        </li>
+                        <li>
+                            <span>제주항공의 진화, 쇼 미 더 업그레이드 당첨자 발표</span>
+                            <span>2020.10.27</span>
+                        </li>
+                        <li>
+                            <span>전라남도 X 제주항공 '남도 친환경 여행 체험 공모전' 최종 수상작 발표</span>
+                            <span>2020.10.26</span>
+                        </li>
+                        <li>
+                            <span>제4회 제주항공 랜선 기내 하늘길 그림 그리기 대회 최종 수상작 발표</span>
+                            <span>2020.10.26</span>
+                        </li>
+                        <li>
+                            <span>코로나-19시대 모두의 건강과 안전한 항공여행을 위해 지켜주세요!</span>
+                            <span>2020.10.22</span>
+                        </li>
+                    </ul>
+                    <a class="more" href="javascript:">
+                        <span>더보기</span>
+                    </a>
+                </div>
+            </div>
+        </article>
+        <article class="jeju_special">
+            <div class="inner">
+                <h3>제주항공만의 Special</h3>
+                <div class="special_area">
+                    <div class="brandstory">
+                        <a href="javascript:">
+                            <span>
+                                <strong>브랜드스토리</strong>
+                                <em>제주항공x동방신기<br>글로벌 모델 메이킹</em>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="aircafe">
+                        <a href="javascript:">
+                            <span>
+                                <strong>에어카페</strong>
+                                <em>어머? 이건 사야해!<br>어머! 이건 맛봐야해!</em>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="hotel">
+                        <a href="javascript:">
+                            <span>
+                                <strong>호텔예약</strong>
+                                <em>최대 80%할인~<br>전세계 200백만 호텔</em>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="jeju_service">
+            <div class="inner">
+                <h3>제주항공의 부가서비스</h3>
+                <ul>
+                    <li>
+                        <a href="javascript:">
+                            <img src="img/reservation.png" alt="사전좌석구매" />
+                            <p>사전 좌석 구매</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:">
+                            <img src="img/baggage.png" alt="사전수하물예약" />
+                            <p>사전 수하물 예약</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:">
+                            <img src="img/meal.png" alt="티켓" />
+                            <p>사전 기내식 주문</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:">
+                            <img src="img/dutyfree.png" alt="티켓" />
+                            <p>기내 면세품</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:">
+                            <img src="img/rentcar.png" alt="티켓" />
+                            <p>렌터카 예약</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <article class="jeju_point">
+            <div class="inner">
+                <h3>제주항공의 리프레시포인트</h3>
+                <div class="point_left">
+                    <span>
+                        <strong>제주항공 리프레시포인트</strong>
+                        <em>부족한 포인트는<br>지금 바로 구매할 수 있어요!</em>
+                    </span>
+                </div>
+                <div class="point_right">
+                    <span>
+                        <strong>리프레시포인트 제휴카드</strong>
+                        <em>쓸수록 쌓이는 리프레시포인트<br>프리미엄 공항라운지 FREE!</em>
+                    </span>
+                </div>
+            </div>
+        </article>
+        <article class="contact_area">
+            <div class="inner">
+                <div class="cs_center">
+                    <h4>고객센터</h4>
+                    <strong>1599-1500</strong>
+                    <p>(한국)09:00~19:00<br>(일본)월~금 14:00~18:00/토,일 휴무</p>
+                </div>
+                <div class="sns">
+                    <h4>SNS</h4>
+                    <ul>
+                        <li><a href="#">페이스북 바로가기</a></li>
+                        <li><a href="#">인스타그램 바로가기</a></li>
+                        <li><a href="#">유튜브 바로가기</a></li>
+                        <li><a href="#">웨이보 바로가기</a></li>
+                    </ul>
+                </div>
+                <div class="partner">
+                    <p class="part_tit">
+                        마케팅제휴
+                        <span>branding@jejuair.net</span>
+                    </p>
+                    <p class="part_txt">
+                        브랜드 협업, 미디어 노출, 제휴 프로모션 등 제안을 기다립니다.<br>
+                        제안 별 담당자 검토 후 제휴가 진행됩니다.
+                    </p>
+                    <button><a href="#">이메일 무단수집거부</a></button>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <div class="footerlogo">
+            <div class="inner">
+                <div class="logo_top">
+                    <h3><a href="index.html">제주항공푸터로고</a></h3>
+                    <div class="company_menu">
+                        <ul>
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">투자정보</a></li>
+                            <li><a href="#">채용안내</a></li>
+                            <li><a href="#">여객운송약관</a></li>
+                            <li><a href="#">홈페이지이용약관</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">사이트맵</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">항공교통이용자서비스계획</a></li>
+                            <li><a href="#">항공교통이용자피해구제계획</a></li>
+                            <li><a href="#">항공위험물안내</a></li>
+                        </ul>
+                    </div>
+                    <div class="family_site">
+                        <a href="javascript:">아이폰 다운로드 바로가기</a>
+                        <a class="android" href="javascript:">안드로이드 다운로드 바로가기</a>
+                        <span class="btn_site">
+                            <button>Family Site</button>
+                            <ul>
+                                <li><a href="javascript:">(주)애경산업</a></li>
+                                <li><a href="javascript:">(주)에이텍</a></li>
+                                <li><a href="javascript:">애경S.T</a></li>
+                                <li><a href="javascript:">에이케이아이에스(주)</a></li>
+                                <li><a href="javascript:">애드미션</a></li>
+                                <li><a href="javascript:">네오팜</a></li>
+                                <li><a href="javascript:">애경유화(주)</a></li>
+                                <li><a href="javascript:">애경화학(주)</a></li>
+                                <li><a href="javascript:">에이케이켐텍</a></li>
+                                <li><a href="javascript:">코스파</a></li>
+                                <li><a href="javascript:">AKPLAZA</a></li>
+                                <li><a href="javascript:">AK홀딩스</a></li>
+                                <li><a href="javascript:">애경개발</a></li>
+                            </ul>
+                        </span>
+                    </div>
+                </div>
+                <div class="logo_bottom">
+                    <h4>제주항공이 추천하는 최저가 여행</h4>
+                    <ul>
+                        <li><a href="javascript:">최저 운임 항공권</a></li>
+                        <li><a href="javascript:">서울 출발 항공권</a></li>
+                        <li><a href="javascript:">제주 출발 항공권</a></li>
+                        <li><a href="javascript:">부산 출발 항공권</a></li>
+                        <li><a href="javascript:">무안 출발 항공권</a></li>
+                        <li><a href="javascript:">청주 출발 항공권</a></li>
+                        <li><a href="javascript:">대구 출발 항공권</a></li>
+                        <li><a href="javascript:">광주 출발 항공권</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footerinfo">
+            <div class="inner">
+                <div class="info_left">
+                    <ul>
+                        <li>대표이사 김이배</li>
+                        <li>사업자등록번호 616-81-50527</li>
+                        <li>통신판매업신고 제주 2006-125호</li>
+                        <li>제주특별자치도 제주시 신대로 64 3층(연동, 건설공제회관)</li>
+                    </ul>
+                    <p>서울지사 서울시 강서구 하늘길 210 국제화물청사 366</p>
+                    <p>Copyright ⓒ 2020 by JEJUAIR, CO., LTD. All rights reserved.</p>
+                </div>
+                <div class="info_right">
+                    <a href="#">valualliance 바로가기</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
