@@ -56,7 +56,7 @@
 .container .skill .bar{position:absolute; left:0; top:0; bottom:0; width:0; border-radius: 15px; background:#8d8887;}
 .container .skill .rate{position:absolute; top:-24px; right:10px; font-size:1.4em; color:#410e0a; line-height: 15px;}
 /*포트폴리오*/
-.container .wrap-gallery-list > ul > li{float: left; width: 33.3%; text-align: center; box-sizing: border-box; padding:10px}
+.container .wrap-gallery-list > ul > li{float: left; width: 50%; text-align: center; box-sizing: border-box; padding:10px}
 .container .wrap-gallery-list > ul > li > a{display: block}
 .container .wrap-gallery-list > ul > li > a > img{width:100%}
 .container .wrap-gallery-list > ul > li > a > p{margin-top:10px; font-size: 18px}
