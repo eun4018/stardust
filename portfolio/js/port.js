@@ -203,3 +203,9 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
 }
+/*scroll bar*/
+(function($){
+  $(window).on("load",function(){
+      $(".img_box").mCustomScrollbar();
+  });
+})(jQuery);
