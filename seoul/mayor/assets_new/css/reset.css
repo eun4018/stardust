@@ -1,0 +1,255 @@
+@charset "utf-8";
+
+@font-face {
+	font-family:'Noto Sans KR';
+	font-style:normal;
+	font-weight:100;
+	src:url('../fonts/NotoSansKR-Thin.eot');/* IE9 Compat Modes */
+	src:local('Noto Sans KR Thin'), local('NotoSansKR-Thin'),
+			 url('../fonts/NotoSansKR-Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			 url('../fonts/NotoSansKR-Thin.woff2') format('woff2'), /* Super Modern Browsers */
+			 url('../fonts/NotoSansKR-Thin.woff') format('woff'), /* Modern Browsers */
+			 url('../fonts/NotoSansKR-Thin.ttf') format('truetype'), /* Safari, Android, iOS */
+			 url('../fonts/NotoSansKR-Thin.svg#NotoSansKR') format('svg');/* Legacy iOS */
+}
+@font-face {
+	font-family:'Noto Sans KR';
+	font-style:normal;
+	font-weight:300;
+	src:url('../fonts/NotoSansKR-Light.eot');/* IE9 Compat Modes */
+	src:local('Noto Sans KR Light'), local('NotoSansKR-Light'),
+			 url('../fonts/NotoSansKR-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			 url('../fonts/NotoSansKR-Light.woff2') format('woff2'), /* Super Modern Browsers */
+			 url('../fonts/NotoSansKR-Light.woff') format('woff'), /* Modern Browsers */
+			 url('../fonts/NotoSansKR-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+			 url('../fonts/NotoSansKR-Light.svg#NotoSansKR') format('svg');/* Legacy iOS */
+}
+
+@font-face {
+	font-family:'Noto Sans KR';
+	font-style:normal;
+	font-weight:400;
+	src:url('../fonts/NotoSansKR-Regular.eot');/* IE9 Compat Modes */
+	src:local('Noto Sans KR Regular'), local('NotoSansKR-Regular'),
+			 url('../fonts/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			 url('../fonts/NotoSansKR-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+			 url('../fonts/NotoSansKR-Regular.woff') format('woff'), /* Modern Browsers */
+			 url('../fonts/NotoSansKR-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+			 url('../fonts/NotoSansKR-Regular.svg#NotoSansKR') format('svg');/* Legacy iOS */
+}
+@font-face {
+	font-family:'Noto Sans KR';
+	font-style:normal;
+	font-weight:500;
+	src:url('../fonts/NotoSansKR-Medium.eot');/* IE9 Compat Modes */
+	src:local('Noto Sans KR Medium'), local('NotoSansKR-Medium'),
+			 url('../fonts/NotoSansKR-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			 url('../fonts/NotoSansKR-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+			 url('../fonts/NotoSansKR-Medium.woff') format('woff'), /* Modern Browsers */
+			 url('../fonts/NotoSansKR-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+			 url('../fonts/NotoSansKR-Medium.svg#NotoSansKR') format('svg');/* Legacy iOS */
+}
+@font-face {
+	font-family:'Noto Sans KR';
+	font-style:normal;
+	font-weight:700;
+	src:url('../fonts/NotoSansKR-Bold.eot');/* IE9 Compat Modes */
+	src:local('Noto Sans KR Bold'), local('NotoSansKR-Bold'),
+			 url('../fonts/NotoSansKR-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			 url('../fonts/NotoSansKR-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+			 url('../fonts/NotoSansKR-Bold.woff') format('woff'), /* Modern Browsers */
+			 url('../fonts/NotoSansKR-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+			 url('../fonts/NotoSansKR-Bold.svg#NotoSansKR') format('svg');/* Legacy iOS */
+}
+@font-face {
+	font-family:'Noto Sans KR';
+	font-style:normal;
+	font-weight:900;
+	src:url('../fonts/NotoSansKR-Black.eot');/* IE9 Compat Modes */
+	src:local('Noto Sans KR Black'), local('NotoSansKR-Black'),
+			 url('../fonts/NotoSansKR-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			 url('../fonts/NotoSansKR-Black.woff2') format('woff2'), /* Super Modern Browsers */
+			 url('../fonts/NotoSansKR-Black.woff') format('woff'), /* Modern Browsers */
+			 url('../fonts/NotoSansKR-Black.ttf') format('truetype'), /* Safari, Android, iOS */
+			 url('../fonts/NotoSansKR-Black.svg#NotoSansKR') format('svg');/* Legacy iOS */
+}
+
+
+@font-face {
+	font-family:'seoulnamsanregular';
+	font-style:normal;
+	font-weight:400;
+	src:url('../fonts/SeoulNamsan.eot');/* IE9 Compat Modes */
+	src:url('../fonts/SeoulNamsan.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			 url('../fonts/SeoulNamsan.woff2') format('woff2'), /* Super Modern Browsers */
+			 url('../fonts/SeoulNamsan.woff') format('woff'), /* Modern Browsers */
+			 url('../fonts/SeoulNamsan.ttf') format('truetype'), /* Safari, Android, iOS */
+			 url('../fonts/SeoulNamsan.svg#SeoulNamsan') format('svg');/* Legacy iOS */
+}
+@font-face {
+	font-family:'SeoulNamsan';
+	font-style:normal;
+	font-weight:700;
+	src:url('../fonts/SeoulNamsanB.eot');/* IE9 Compat Modes */
+	src:url('../fonts/SeoulNamsanB.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			 url('../fonts/SeoulNamsanB.woff2') format('woff2'), /* Super Modern Browsers */
+			 url('../fonts/SeoulNamsanB.woff') format('woff'), /* Modern Browsers */
+			 url('../fonts/SeoulNamsanB.ttf') format('truetype'), /* Safari, Android, iOS */
+			 url('../fonts/SeoulNamsanB.svg#SeoulNamsanB') format('svg');/* Legacy iOS */
+}
+
+*{box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
+
+html{font-size:16px}
+body{
+	font-family:'Noto Sans KR','Malgun Gothic',dotum, Arial, Helvetica, sans-serif;
+	line-height: 1.5;
+  color: #222;
+  font-size: 16px;
+  font-weight: 400;
+	letter-spacing: -0.05em;
+  background: #fff;
+	-webkit-text-size-adjust:none;
+  -webkit-font-smoothing: antialiased;
+}
+html, body{height: 100%;}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1,h2,h3,strong{font-weight: 500;}
+
+/* 공통 */
+a{text-decoration:none; color: inherit}
+input[type="text"],input[type="password"],textarea{
+	appearance:none ;-webkit-appearance:none;-moz-appearance:none;
+	border:1px solid #ddd;
+	border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0;
+	font: inherit;
+}
+input[type="button"], button {
+	appearance:none ;-webkit-appearance:none;-moz-appearance:none;
+	border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0;
+	font: inherit;
+	border: 0
+}
+input[type="radio"],input[type="checkbox"]{margin: 0;}
+input[type="radio"],input[type="checkbox"],label{vertical-align: middle;}
+select{
+	border: 1px solid #ddd;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	font: inherit;
+	font-size: 1em;
+	background: #fff url('../img/common/select.gif') 91.5% center no-repeat;
+	padding: 0 15px 0 10px;
+}
+select::-ms-expand {
+    display: none;
+}
+
+img{max-width: 100%}
+.mt0{margin-top:0px !important}
+.mt10{margin-top:10px !important}
+.mt15{margin-top:15px !important}
+.mt20{margin-top:20px !important}
+.mt30{margin-top:30px !important}
+.mt40{margin-top:40px !important}
+.mt50{margin-top:50px !important}
+
+.mt1p{margin-top: 1% !important}
+.mt2p{margin-top: 2% !important}
+.mt3p{margin-top: 3% !important}
+.mt4p{margin-top: 4% !important}
+.mt5p{margin-top: 5% !important}
+.mt6p{margin-top: 6% !important}
+.mt7p{margin-top: 7% !important}
+.mt8p{margin-top: 8% !important}
+.mt9p{margin-top: 9% !important}
+.mt10p{margin-top: 10% !important}
+.mb0{margin-bottom: 0 !important}
+
+h1,h2,h3,h4,h5{font-size: 1em}
+button, input[type="button"]{
+	margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+	font:inherit;
+	font-size: 1em;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+button,label{cursor: pointer;}
+address,em{font-style: normal}
+
+.tal{text-align: left !important;}
+.tac{text-align: center !important;}
+.tar{text-align: right !important;}
+
+.fl{float: left}
+.fr{float: right}
+.clearfix:after{content: ''; display: block; clear: both}
+
+
+@media screen and (max-width: 1151px) {
+  html, body {font-size: 60.9%}
+  div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video,img {
+    font-size: 1.4rem;
+		line-height: 1.5;
+  }
+
+}
