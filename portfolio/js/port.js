@@ -79,8 +79,8 @@ $(document).ready(function () {
     scrollBar: true,
     responsiveWidth: 414,
     navigation: true,
-    navigationTooltips: ["home", "about", "portfolio", "contact", "connect"],
-    anchors: ["home", "about", "portfolio", "contact", "connect"],
+    navigationTooltips: ["home", "about", "portfolio", "contact"],
+    anchors: ["home", "about", "portfolio", "contact"],
     menu: "#myMenu",
     fitToSection: true,
 

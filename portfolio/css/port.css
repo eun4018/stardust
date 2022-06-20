@@ -1,6 +1,7 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+* {font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;}
 /* general styles */
-
-body {font-family: "Raleway", sans-serif !important;}
+body {font-family: 'Pretendard', sans-serif !important;}
 ul {list-style-type: none;}
 a {text-decoration: none !important;}
 h1 {color: #ff6363; font-weight: bold;}
@@ -9,14 +10,7 @@ p {font-size: 20px; color: #484848;}
 .skillbar {cursor: pointer;}
 .hide {display: none;}
 .display {display: block;}
-.a11y-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    clip-path: polygon(0 0, 0 0, 0 0);
-  }
+.a11y-hidden {position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: polygon(0 0, 0 0, 0 0);}
 
 /* flash alert styles */
 .flash-container {width: 100%; position: fixed; z-index: 700; padding-top: 20px; font-weight: bold;}
@@ -194,7 +188,7 @@ transition: all 0.3s ease-out;}
 
 /* footer styles */
 
-.footer {background-color: #484848; height: 100px; padding-top: 10px;}
+.footer {background-color: #484848; width:100%; height: 100px; padding-top: 10px; position:absolute; bottom:0;}
 .footer p {color: white; font-weight: bold; font-size: 16px;}
 
 .social-links a {color: white; padding: 0px 5px 0px 5px;}
@@ -355,7 +349,7 @@ padding:5px 10px; background:#b13f3f;
     opacity:1;
 }
 .modal-content .prev,.modal-content .next{position:absolute; top:45%; 
-    transform:translateX(-45%); font-size:6rem; color:#fff;
+    transform:translateX(-45%); font-size:6rem; color:#fff; cursor: pointer;
 }
 .modal-content .prev{left: -3.625rem;}
 .modal-content .next{right: -5.625rem;}
@@ -381,7 +375,7 @@ padding:5px 10px; background:#b13f3f;
         right: -0.425rem;
     }
 }
-@media screen and (max-width:525px){
+@media screen and (max-width:640px){
     .modal-content .mySlides .tit {
         flex-direction: column;
     }
