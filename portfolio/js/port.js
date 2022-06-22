@@ -14,7 +14,16 @@ $(document).ready(function () {
   })(jQuery);
 
   // input text for typing animation
-  $("#holder").writeText("안녕하세요. 정서은의 포트폴리오입니다.");
+  
+  if($("body").hasClass("japan") === true) {
+
+    $("#holder").writeText("こんにちは。ジョンソウンのポートフォリオです。");
+    
+    } else {
+    
+      $("#holder").writeText("안녕하세요. 정서은의 포트폴리오입니다.");
+    
+    }
 
   // initialize wow.js
   new WOW().init();
@@ -70,7 +79,14 @@ $(document).ready(function () {
       );
     });
   };
-
+  $('.langset').on('click',function(){
+    $('.lang_pc ul').toggleClass('active',function(){
+      $('.lang_pc ul li').on('click',function(){
+        var current = $(this).html();
+        $(".langset").html(current);
+      })
+    });
+  })
   $(document).ready(main);
 
   // initiate full page scroll
@@ -87,22 +103,24 @@ $(document).ready(function () {
     afterLoad: function (anchorLink, index) {
       var loadedSection = $(this);
       console.log(loadedSection)
-      //using index
-      if (index == 1) {
-        /* add opacity to arrow */
-        $(".fa-chevron-down").each(function () {
-          $(this).css("opacity", "1");
-        });
-        $(".header-links a").each(function () {
-          $(this).css("color", "white");
-        });
-        $(".header-links").css("background-color", "transparent");
-      } else if (index != 1) {
-        $(".header-links a").each(function () {
-          $(this).css("color", "black");
-        });
-        $(".header-links").css("background-color", "transparent");
-      }
+     //using index
+     if (index == 1) {
+      /* add opacity to arrow */
+      $(".fa-chevron-down").each(function () {
+        $(this).css("opacity", "1");
+      });
+      $(".header-links a").each(function () {
+        $(this).css("color", "#fff");
+      });
+      $(".header-links > .lang_pc ul").css("border","1px solid #fff")
+      $(".header-links").css("background-color", "transparent");
+    } else if (index != 1) {
+      $(".header-links a").each(function () {
+        $(this).css("color", "#222");
+      });
+      $(".header-links > .lang_pc ul").css("border","1px solid #222")
+      $(".header-links").css("background-color", "transparent");
+    }
 
       //using index
       if (index == 2) {
