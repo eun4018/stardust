@@ -1,0 +1,580 @@
+/* @font-face {
+	font-family: 'NotoKr';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/notokr-regular.eot');
+	src: url('../fonts/notokr-regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/notokr-regular.woff') format('woff');
+}
+ 
+
+@font-face {
+	font-family: 'NotoKr';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/notokr-medium.eot');
+	src: url('../fonts/notokr-medium.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/notokr-medium.woff') format('woff');
+} */
+ 
+*{-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;box-sizing: border-box;}
+
+body {/* font-family: 'NotoKr'; */color: #666;}
+
+
+#container .holder {margin-top:70px;}
+/* #sec-main-notice-wrapper {float:left; width:657px;}
+#sec-main-event {position:relative; padding:30px 41px 24px 236px; height:170px; overflow:hidden;}
+#sec-main-event h3 {position:absolute; top:0; left:26px; width:180px;}
+#sec-main-event h3 * {display:block;}
+#sec-main-event h3 span {position:relative;}
+#sec-main-event h3 span:before, #sec-main-event h3 span:after {content:" "; position:absolute;}
+#sec-main-event h3 span:before {display:none; z-index:2; top:0; left:0; right:0; bottom:0; background:#000; opacity:0.3; filter:alpha(opacity=30);}
+#sec-main-event h3 span:after {z-index:3; top:50%; left:50%; margin:-33px 0 0 -33px; width:65px; height:65px; background-image:url(../images/ico/ico-sprite-main-moreview.png);}
+#sec-main-event h3 a:hover span:before {display:block;} 
+#sec-main-event ul {height:170px; overflow:hidden;}
+#sec-main-event li a {display:block; position:relative; transition:all .75s ease; background:transparent center center;}
+#sec-main-event li a:hover, #sec-main-event li a:focus {text-decoration:none;}
+#sec-main-event li a:hover, #sec-main-event li a:focus,
+#sec-main-event li a:hover *, #sec-main-event li a:focus * {color:#fff !important;} */
+
+/* ë©”ì¸ ìŠ¬ë¼ì´ë“œ */
+.bxslider-wrap {position: relative;}
+#sec-main-visual {position:relative;background-color: #fff;overflow: hidden;min-height: 972px;}
+#sec-main-visual div.visual-title {position:absolute; z-index:20; top:140px; left:50%; width: 1000px;margin-left:-500px;padding-top: 0px;}
+#sec-main-visual div.visual-title h3 {margin-bottom: 20px;text-align: center;}
+#sec-main-visual div.visual-title h3 span#visual-tit01 {display: inline-block;position: relative;}
+#visual-tit03 {margin-top: 20px;}
+
+/* wave animation */
+.wave-animation {position: absolute;top: 32px;left: 92px;width: 46px;height: 26px;overflow: hidden;}
+.wave-animation2 {left: 226px;}
+
+.wave-loop {position: absolute;top: 0;left: 0;width: 612px;height: 24px;background: url(../images/txt/wave_new.png) repeat no-repeat 0 0; transform-origin: center bottom;}
+.wave-animation .wave-loop {
+    /* animation: move_wave 6s normal linear infinite; */
+	animation: move_wave 12s  linear infinite;
+	-webkit-animation : move_wave 12s normal linear infinite; 
+	animation-delay : 2s;
+}
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.85)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+
+#sec-main-visual .bx-wrapper {z-index:15;}
+#sec-main-visual .bg-visual {position:relative; z-index:5; height:567px; background-position:center top; background-repeat:no-repeat;/* border-bottom-left-radius: 140px */}
+#sec-main-visual .bg-visual .tooltip-holder {position:relative; margin:0 auto; max-width:1000px; height:100%;}
+#sec-main-visual .bx-wrapper .bx-viewport {z-index:10;}
+#sec-main-visual .bx-wrapper .bx-has-pager {position:relative; z-index:20;}
+#sec-main-visual .bx-wrapper .bx-pager {z-index:15; bottom:126px;left: 0px;}
+#sec-main-visual .bx-wrapper .bx-pager.bx-default-pager a {margin: 0 5px;width:12px; height:12px; -moz-border-radius:50%; -webkit-border-radius:50%; border-radius:50%; background:#fff;}
+#sec-main-visual .bx-wrapper .bx-pager.bx-default-pager a:hover, #sec-main-visual .bx-wrapper .bx-pager.bx-default-pager a.active {background: #1f34a6;}
+#sec-main-visual .bg-visual .tooltip {position:absolute;}
+#sec-main-visual .bg-visual .tooltip span {display:block; width:1px; height:1px; background:#fff;}
+#sec-main-visual .bg-visual .tooltip img {position:absolute; opacity:0; filter:alpha(opacity=0); max-width:none !important;}
+#sec-main-visual .bg-visual .tooltip div {position:absolute; width:136px; height:136px; overflow:hidden;}
+#sec-main-visual .bg-visual .tooltip-img1 {top:444px; left:520px;}
+#sec-main-visual .bg-visual .tooltip-img1 div {top:50%; left:100%; margin-top:-62px; width:124px; height:124px;}
+#sec-main-visual .bg-visual .tooltip-img1 div img {top:0; left:-100%;}
+#sec-main-visual .bg-visual .tooltip-img2 {bottom:223px; left:141px;}
+#sec-main-visual .bg-visual .tooltip-img2 div {bottom:100%; left:50%; margin-left:-68px;}
+#sec-main-visual .bg-visual .tooltip-img2 div img {top:100%; left:0;}
+#sec-main-visual .bg-visual .tooltip-img3 {top:451px; left:601px;}
+#sec-main-visual .bg-visual .tooltip-img3 div {top:50%; left:100%; margin-top:-68px;}
+#sec-main-visual .bg-visual .tooltip-img3 div img {top:0; left:-100%;}
+#sec-main-visual .bg-visual .tooltip-img4 {bottom:241px; left:702px;}
+#sec-main-visual .bg-visual .tooltip-img4 div {bottom:100%; left:50%; margin-left:-68px;}
+#sec-main-visual .bg-visual .tooltip-img4 div img {top:100%; left:0;}
+#sec-main-visual .bg-visual .tooltip-img5 {top:267px; right:654px;}
+#sec-main-visual .bg-visual .tooltip-img5 div {top:50%; right:100%; margin-top:-68px;}
+#sec-main-visual .bg-visual .tooltip-img5 div img {top:0; left:100%;}
+#sec-main-visual .bg-visual .tooltip-img6 {top:412px; left:291px;}
+#sec-main-visual .bg-visual .tooltip-img6 div {top:50%; left:100%; margin-top:-68px;}
+#sec-main-visual .bg-visual .tooltip-img6 div img {top:0; left:-100%;}
+#sec-main-visual .bg-visual .tooltip-img7 {top:404px; left:769px;}
+#sec-main-visual .bg-visual .tooltip-img7 div {top:50%; left:100%; margin-top:-70px; width:140px; height:140px;}
+#sec-main-visual .bg-visual .tooltip-img7 div img {top:0; left:-100%;}
+
+/* ê³µì§€ì‚¬í•­ & ì„œë¹„ìŠ¤ ë°”ë¡œê°€ê¸° */
+.main-visual-layer {position: absolute;top: 567px;left: 50%;z-index: 20;width: 1000px;margin-left: -500px;}
+.main-visual-layer .visual-column {float: left;width: 310px;height: 378px;margin-left: 35px;}
+.main-visual-layer .visual-column1 {margin-left: 0;}
+
+/* ë©”ì¸ì»¨í…ì¸  í—¤ë” */
+.visual-column .heading {position: relative;width: 100%;text-align: center;border-top-left-radius: 10px;border-top-right-radius: 10px}
+.visual-column .heading h3 {padding: 35px 0 15px;;color: #222;font-weight: bold;font-size: 22px;letter-spacing: -0.09em}
+.visual-column .heading p {color: #fff;font-size: 16px;}
+.visual-column1 .heading {text-align: left;}
+.visual-column2 {background: #b4e0ff url(../images/bg/bg_wave_bottom.png) no-repeat left bottom;}
+.visual-column2 .heading {}
+.visual-column2 .heading h3 {position: relative;}
+.visual-column2 .heading h3:after {content: '';position: absolute;top: -25px;right: -20px;width: 79px;height: 80px;background: url(../images/ico/ico_canu.png) no-repeat 0 0;}
+.visual-column3 .heading {}
+
+.visual-column3 #sec-main-notice.no-result .heading {background: #26c0e4 url(../images/bg/bg-main-notice-wave2.png) no-repeat 0 100%;}
+#sec-main-notice.no-result ul {background: #fff url(../images/img/img_no_content.png) no-repeat 50% 30%}
+
+/* ê³µì§€ì‚¬í•­ 2019 */
+#sec-main-notice {position: relative;width: 100%;box-sizing: border-box}
+#sec-main-notice ul {min-height: 212px;padding: 0}
+#sec-main-notice ul li {position: relative;border-top: 1px solid #dde4ea;}
+#sec-main-notice ul li:first-child {border-top-width: 2px;}
+#sec-main-notice ul li  * {vertical-align: middle;}
+#sec-main-notice ul li .text {display:block; overflow:hidden; width:100%;white-space:nowrap; padding-left:0; text-overflow:ellipsis;word-wrap:normal;font-size: 16px;}
+#sec-main-notice ul li a {display: block;padding: 13px 10px;color: #333;}
+#sec-main-notice ul li a:hover .text {font-weight: bold;}
+#sec-main-notice ul li .date {display: block;color: #666;font-size: 14px;}
+#sec-main-notice .notice-more {position: absolute;top: 37px;right: 0px;}
+
+
+/* í”„ë¡œê·¸ëž¨ ì†Œê°œ 2019 */
+#sec-main-program {min-height: 378px;}
+#sec-main-program ul {margin:0 auto; width:100%;padding: 0 20px;}
+#sec-main-program li {border-top:1px solid #d2ecff;}
+#sec-main-program li:first-child {border-top: 2px dotted #e9f6ff}
+#sec-main-program li a {position: relative;display: table;width: 100%;padding: 10px 0;box-sizing: border-box;}
+#sec-main-program li a * {vertical-align: middle;}
+/* #sec-main-program li a:hover {background: #d5f5ff;} */
+#sec-main-program li a:after {
+content: '';
+position: absolute;
+top:50%;
+right: 0px;
+width: 24px;
+height: 24px;
+margin-top: -12px;
+background: url(../images/ico/ico_main_2022.png) no-repeat -210px -24px;
+z-index: 10;
+}
+/* #sec-main-program li a:hover:after {
+background-position: 100% -48px;
+} */
+#sec-main-program li .icon {display:inline-block;width: 70px;height: 70px;background-color: #00b3ad;border-radius: 50%;}
+#sec-main-program li .icon2 {background-color: #f067de;}
+#sec-main-program li .icon3 {background-color: #3b54f4;}
+/* #sec-main-program li a:hover .icon {background: #fff;} */
+#sec-main-program li .icon .main-icon {width: 70px;height: 70px;}
+#sec-main-program li .icon .main-icon-program1 {background-position: 0 0px}
+#sec-main-program li .icon .main-icon-program2 {background-position: -70px 0px}
+#sec-main-program li .icon .main-icon-program3 {background-position: -140px 0px}
+#sec-main-program li .text {display: inline-block;margin-left: 15px;color: #333;font-size: 14px;}
+#sec-main-program li .text em {display: block;color: #313d5b;font-size: 22px;font-weight: 700;letter-spacing: -0.075em;}
+
+
+
+.visual_over {position: absolute;left: 0;bottom: 0;z-index: 16;width: 100%;height: 42px;background: url(../images/bg/bg-main-visual.png) repeat-x center 100%}
+
+/* í”„ë¡œê·¸ëž¨ ì•ˆë‚´ */
+.visual-column2 #sec-main-event,
+.visual-column2 #sec-main-event .heading h3:after {display: none;}
+.opened #sec-main-program,
+.opened #sec-main-program .heading h3:after {display: none}
+.opened #sec-main-event,
+.opened #sec-main-event .heading h3:after {display: block}
+
+
+
+/* ìž¥ì†Œ ë° sns 2019 */
+#sec-main-sns .link-wrap {float: left;width: 180px;}
+#sec-main-sns .link-wrap a {display: block;width: 180px;height: 190px;padding-top: 20px;background: url(../images/bg/bg_place.jpg) no-repeat 0 0;color: #333;font-size: 16px;font-weight: bold;text-align: center;}
+#sec-main-sns .link-wrap a span {display: block;color: #0d84ea}
+
+#sec-main-sns .sns-list {border: 1px solid #d8e1e8;background: #f4f8fb;border-radius: 3px;}
+#sec-main-sns .sns-list ul {overflow: hidden;}
+#sec-main-sns .sns-list ul li {float: left;width: 33.3333%;border-left: 1px solid #d8e1e8;}
+#sec-main-sns .sns-list ul li:first-child {border-left: 0;}
+#sec-main-sns .sns-list ul li a {display: block;width: 100%;height: 100%;min-height: 70px;color: #666;font-weight: bold;text-align: center;}
+#sec-main-sns .sns-list ul li img {display: block;margin: 10px auto 8px;}
+
+
+/** í‹°ì €/ì˜¤ëŠ˜ì˜ í–‰ì‚¬ & ì£¼ìš” í”„ë¡œê·¸ëž¨ **/
+.sec-main-content {overflow: hidden;background:#f8f8f8;}
+
+#sec-main-event {position: relative;}
+#sec-main-event .event-area {position: relative;width: 100%;height: 300px;padding: 0 20px;box-sizing: border-box;overflow: hidden;background: url(../images/img/img_event.png) no-repeat 50% 84%}
+#sec-main-event .event-area.no-result {background: none;}
+#sec-main-event .event-more {position: absolute;top: 39px;right: 69px;width: 24px;height: 24px;background: url(../images/ico/ico_main.png) no-repeat -276px 0;}
+#sec-main-event .event-area .event_list_wrap {padding: 10px 5px 10px 10px;background: #fff;border-radius: 5px;height: 180px;}
+#sec-main-event .event-area.no-result .event_list_wrap {background: rgba(255,255,255,.5);height: 253px;}
+#sec-main-event .event-area ul {}
+#sec-main-event .event-area ul li {width: 100%;}
+#sec-main-event .event-area ul li a {position: relative;display: block;padding: 15px 5px 15px 0px;border-top: 1px solid #dde4ea;}
+#sec-main-event .event-area ul li:nth-last-child(1) a {padding-bottom: 0;}
+#sec-main-event .event-area ul li a * {vertical-align: middle;}
+#sec-main-event .event-area ul li:first-child a {padding-top: 0;border-top: 0;}
+#sec-main-event .event-area ul li a span.title {display: inline-block;width: 95%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;word-wrap: normal;line-height: 1}
+#sec-main-event .event-area ul li a span.txt-location {padding-right: 5px;position: relative;display: inline-block;width: auto;max-width: 100%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;word-wrap: normal;line-height: 1;}
+#sec-main-event .event-area ul li a .title {color: #333;font-weight: bold;font-size: 16px;}
+#sec-main-event .event-area ul li a .time {color: #0d84ea;font-weight: bold;font-size: 13px;display: inline-block;margin: 0}
+#sec-main-event .event-area ul li a .location {display: inline-block;position: relative;color: #666666;font-size: 13px;width: 100%;padding: 0 5px;margin-top: -10px;display: inline-block;}
+#sec-main-event .event-area ul li a .location:before {content: '[';position: absolute;top: 0px;left: 0;}
+#sec-main-event .event-area ul li a .txt-location:after {content: ']';position: absolute;top: -2px;right: 0;}
+#sec-main-event .event-area ul li.no-result {padding-top: 110px;color: #333;text-align: center;}
+
+#sec-main-event .mCSB_scrollTools {right: -4px}
+
+#sec-main-event .mCSB_inside > .mCSB_container {margin-right: 10px;}
+#sec-main-event .mCSB_scrollTools .mCSB_draggerRail {width: 3px; background: #dae9f7}
+#sec-main-event .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {width: 3px;background: #2f9ff1}
+
+
+
+/* í‹°ì € ì˜ìƒë³´ê¸° */
+#sec-main-teaser {width: 100%}
+
+#sec-main-teaser {background: url(../images/bg/bg_movie.png) no-repeat 0 0}
+/*
+#sec-main-teaser .heading h3:after {
+content: '';
+position: absolute;
+top: 26px;
+right: 20px;
+width: 24px;
+height: 24px;
+background: url(../images/ico/ico_main.png) no-repeat -276px 0;
+}
+*/
+.teaser-area {width: 100%;height: 300px;position: relative;background: #edf3f9;}
+.teaser-area a {display: block;width: 100%;height: 100%;background: url(../images/img/img_main_movie.jpg?ver20190712) no-repeat 50% 50%;}
+.teaser-area a .bg-movie {position: absolute;top: 50%;left: 50%;margin: -42px 0 0 -42px;display: inline-block;width: 84px;height: 85px;background: url(../images/bg/bg_movie_link.png) no-repeat 0 0;}
+
+#sec-main-program {width: 100%;}
+#movie, #movie1 {position: fixed;top: 0;left: 0;width: 100%;height: 100%;display: none;background: rgba(0,0,0,1);z-index: 100000}
+#movie .movie-con,
+#movie1 .movie-con {display: table;width: 100%;height: 100%}
+#movie .movie-content,
+#movie1 .movie-content {display: table-cell;vertical-align: middle}
+#movie #movepage2,
+#movie1 #movepage3 {position: absolute;top:15px;right: 15px;}
+
+/* ì˜¤ëŠ˜ì˜ í–‰ì‚¬ */
+
+
+
+/* ì£¼ìš” í”„ë¡œê·¸ëž¨ */
+
+
+
+
+/* ë°°ë„ˆì•ˆë‚´ */
+#sec-main-banner {padding-top:40px; clear:both;}
+#sec-main-banner ul {margin:0 auto; width:1000px; overflow:hidden;}
+#sec-main-banner li {float:left; width:20%; color:#333; text-align:center;}
+#sec-main-banner li a {display:block; padding-top:6px; height:144px; border-width:0 1px 0 0; border-style:solid; border-color:#eee; background-position:center 54px; background-repeat:no-repeat;}
+#sec-main-banner li:nth-child(1) a {border-width:0 1px; background-image:url(../images/img/img-main-banner1.gif);}
+#sec-main-banner li:nth-child(2) a {background-image:url(../images/img/img-main-banner2.gif);}
+#sec-main-banner li:nth-child(3) a {background-image:url(../images/img/img-main-banner3.gif);}
+#sec-main-banner li:nth-child(4) a {background-image:url(../images/img/img-main-banner4.gif);}
+#sec-main-banner li:nth-child(5) a {background-image:url(../images/img/img-main-banner5.gif);}
+
+
+
+
+
+/* íŠ¸ìœ„í„° */
+#sec-main-twitter {position:relative; background: #ebebeb;overflow: hidden}
+#sec-main-twitter h3 {float: left;width: 240px;}
+#sec-main-twitter .widget_reallysimpletwitterwidget {float: left;width: 690px;height:50px;}
+.widget_reallysimpletwitterwidget h3 {display: none}
+
+#sec-main-twitter #mcs2_container {position:relative; z-index:5;}
+#sec-main-twitter #mcs2_container_button {position:absolute; z-index:10; top: 14px;right: 7px}
+#sec-main-twitter #mcs2_container_button button {float:left; width:20px; height:20px; background-image:url(../images/btn/btn-sprite-main-twitter.png); background-repeat:no-repeat;}
+#sec-main-twitter button#t-next {background-position:-20px 0;}
+#sec-main-twitter button#t-auto {width:18px;}
+#sec-main-twitter button.t-auto {background-position:-58px 0;}
+#sec-main-twitter button.t-hold {background-position:-40px 0;}
+
+#sec-main-twitter .bx-viewport {height: 50px !important}
+#sec-main-twitter .seoulTwitterContWrap {}
+#sec-main-twitter .seoulTwitterName, #sec-main-twitter .seoulTwitterId {display: none;}
+#sec-main-twitter .seoulTwitterContent {display:block; margin: 0 0 0 90px;padding-top: 14px;overflow:hidden; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal;}
+
+#sec-main-twitter .seoulTwitterDate {position:absolute; top:14px; left:4px; width: 72px;padding-right: 5px; color:#343434;text-align: right;}
+#sec-main-twitter .seoulTwitterDate:after {
+content: ' ';
+position:absolute; 
+top: 4px;
+right: 0;
+width: 1px;
+height: 15px;
+background: #333;
+}
+
+/* ë™ì˜ìƒ */
+#sec-main-movie {padding:14px 26px 18px 26px; background:#f7eee3;}
+#sec-main-movie h3 {margin-bottom:14px;}
+#sec-main-movie ul {overflow:hidden;}
+#sec-main-movie li {float:left;}
+#sec-main-movie li a {display:block; position:relative; width:185px;}
+#sec-main-movie li a:before, #sec-main-movie li a:after {content:" "; display:block; position:absolute;}
+#sec-main-movie li a:before {top:0; left:0; right:0; bottom:35px; background:#000; transition:all .75s ease; opacity:0.15; filter:alpha(opacity=15);}
+#sec-main-movie li a:after {top:39px; left:70px; width:44px; height:44px; background:url(../images/ico/ico-main-movie-play.png) no-repeat;}
+#sec-main-movie li a:focus:before, #sec-main-movie li a:hover:before {opacity:0.7; filter:alpha(opacity=70);}
+#sec-main-movie .bx-wrapper .bx-controls-direction a {top:0; margin-top:0; width:26px; height:156px; transition:all 0.35s ease-in-out; background-position:center center; background-repeat:no-repeat;}
+#sec-main-movie .bx-wrapper .bx-controls-direction a:hover {background-color:#d6c3ab;}
+#sec-main-movie .bx-wrapper .bx-prev {left:-26px; background-image:url(../images/btn/btn-main-subslider-left.png);}
+#sec-main-movie .bx-wrapper .bx-next {right:-26px; background-image:url(../images/btn/btn-main-subslider-right.png);}
+
+/* ì•„ì´ì½˜ */
+.main-icon {display: inline-block;background: url(../images/ico/ico_main_2022.png) no-repeat 0 0}
+.main-icon-more {width: 24px;height: 24px;background-position: -210px 0;}
+.main-icon-svr1 {background-position: 0 -70px}
+.main-icon-svr2 {background-position: -80px -70px}
+.main-icon-svr3 {background-position: -160px -70px}
+.main-icon-svr4 {background-position: -240px -70px}
+
+/* #visual-tit01,#visual-tit02,#visual-tit03,#visual-tit04,#visual-tit05 {opacity: 0} */
+
+/*main 20210521*/
+#container{margin-bottom:0;}
+#sec-main-visual div.visual-title h3 {margin:0 0 20px 10px !important;}
+#sec-main-visual div.visual-title h3 span#visual-tit01 {display: block !important; margin: 0 0 10px 0;}
+#sec-main-visual{background-color:transparent !important; top:-84px !important;}
+#sec-main-visual .visual-inner{position:absolute; top:103px; left:50%; transform:translateX(-50%); width:960px; height:480px; z-index:20; background:url(../images/bg/bg-main-visual-2022.png) no-repeat;}
+#sec-main-visual div.visual-title{position:inherit !important; top: 130px !important; left:0 !important; transform: translateX(0) !important; width: 502px; margin-left: 0; float: left;}
+#sec-main-visual div.visual-title h3{text-align:left;}
+#sec-main-visual .layor-pop{position:absolute; right:0; width:530px; height:100%; opacity:1; transition:all .5s;}/*20220924*/
+#sec-main-visual .layor-pop.on{opacity:0;}
+#sec-main-visual .layor-pop .closer{position:absolute; right:0; background:#e37401;}
+#sec-main-visual .bx-wrapper .bx-viewport .bg-visual{height:778px !important; width:2560px !important; left:50%; transform:translateX(-50%);}
+.bx-wrapper img{margin:0 auto !important; width:1920px !important;}
+.bx-wrapper .bx-caption {position:absolute; background: rgba(0, 0, 0, 0.65); width:385px; height:50px; bottom:133px; left: 50%; transform: translateX(-50%); border-radius:20px; z-index:20;}
+.bx-wrapper .bx-caption span{font-family: inherit; font-size:1em; line-height: 28px; padding:12px 0 12px 20px;}
+#sec-main-visual .bx-wrapper .pager-custom{color:#8a9199; width:auto; font-size:15px; position:absolute; top:14px; right:66px;}
+#sec-main-visual .bx-wrapper .pager-custom .current{padding-right:6px; color:#fff;}
+#sec-main-visual .bx-wrapper .pager-custom .total{padding-left:4px;}
+#sec-main-visual .bx-wrapper .bx-controls{position: absolute; width:385px; height:50px; bottom:133px; left: 50%; transform: translateX(-50%); border-radius:20px; z-index:20;}
+.bx-wrapper .bx-controls-direction a{width: 9px; height: 14px; top:18px; margin-top:0; background-image:url(../images/ico/play-buttons-2022.png);}
+.bx-wrapper .bx-prev{background-position:0 0; left:auto; right:44px;} 
+.bx-wrapper .bx-next{background-position-x:-24px; right:11px;}
+.bx-wrapper .bx-controls.bx-has-controls-auto .bx-controls-auto{top:20px; right:29px; width:8px;}
+.bx-wrapper .bx-controls-auto .bx-start{width:6px; height:10px; background:url(../images/ico/play-buttons-2022.png) no-repeat -14px 0; }
+.bx-wrapper .bx-controls-auto .bx-start:hover, .bx-wrapper .bx-controls-auto .bx-start.active{background-position:-14px 0;}
+.bx-wrapper .bx-controls-auto .bx-stop{position: absolute; top: -1px; right: -4px;width:8px; height:11px; background:url(../images/ico/play-buttons-2022.png) no-repeat -37px 0;}
+.bx-wrapper .bx-controls-auto .bx-stop:hover, .bx-wrapper .bx-controls-auto .bx-stop.active{background-position:-37px 0;}
+.main-visual-layer{position:inherit; top:-36px; left:0; margin-left:0; width:100%; height: 100%; min-height: 972px;}
+.main-visual-layer:before{position:absolute; top:-114px; content:''; width:100%; height:114px; background: url(../images/bg/bg-container-2022-1.png) no-repeat center center; background-size: auto 114px; }
+.main-visual-layer .visual-column{float:none; width:100%; height:auto; margin-left:0;}
+.main-visual-layer .visual-column1, #sec-main-program, .main-visual-layer .visual-column3{width:1000px; margin:0 auto;}  
+.main-visual-layer .visual-column1{height:420px; margin-bottom:60px;}
+.visual-column .heading h3{text-indent: -9999px; background:url(../images/txt/notice-txt-2022-1.png) no-repeat 0 0; padding:0; margin-bottom:24px;}
+.visual-column .heading h3:after{display:none;}
+.visual-column2 .heading h3{background:url(../images/txt/intro-txt-2022-1.png) no-repeat; margin-bottom:30px;} 
+#sec-main-notice{top:43px;}
+#sec-main-notice .notice-more{top:-1px; padding:8px 18px; background:#ffe6c2; border-radius:20px 20px 20px 20px; color:#846333; font-weight:bold;}
+#sec-main-notice .notice-more:after{display:block; float:right; content:''; width:14px; height:14px; margin: 3px 0 0 7px; background:url(../images/ico/icon-main-2022-1.png) no-repeat 0 0;}
+#sec-main-notice ul li{border-top:0;}
+#sec-main-notice ul li a {padding:18px 20px; background:#f7f7f7; border-radius:10px 10px;}
+#sec-main-notice ul li a:hover{background:#fff1d3;}
+#sec-main-notice ul li a:after{float:right; margin-top:3px; content:''; width:21px; height:21px; background:url(../images/ico/icon-main-2022-1.png) no-repeat -20px 0;}
+#sec-main-notice ul li a:hover:after{background:url(../images/ico/icon-main-2022-1.png) no-repeat -20px -22px;}
+#sec-main-notice ul li + li {margin-top:6px;}
+#sec-main-notice ul li .date, #sec-main-notice ul li .text {display: inline-block; color: #666; font-size: 18px;}
+#sec-main-notice ul li a:hover .date{font-weight:bold;}
+#sec-main-notice ul li .text{width:auto; padding-left:5px; color:#444;}
+.main-visual-layer .visual-column2{background:#f8f2ed;}
+#sec-main-program {padding-top:40px; min-height:376px;}
+#sec-main-program ul{padding:0 15px;}
+#sec-main-program ul li{border:0 !important; width:220px; height:219px; float:left; background:#fff; border:2px solid #aadbff; border-radius:24px 24px 0 24px; box-shadow: 2px 2px 8px rgba(173,155,126,.36); -webkit-box-shadow: 2px 2px 8px rgba(173,155,126,.36);}
+#sec-main-program ul li+li{margin-left:30px;}
+#sec-main-program li a{padding: 18px 0 17px 0;}
+#sec-main-program li a:after{display:none;}
+#sec-main-program li:hover{border:0; background:url(../images/bg/bg-program-2022-1.png) no-repeat; background-size:cover;}
+#sec-main-program li .icon{display: block; width: 100%; height: 103px; background-color: transparent; margin-bottom: 24px;}
+#sec-main-program li .icon2{padding-top:24px;}
+#sec-main-program li .icon3{padding-top:12px;}
+#sec-main-program li .icon4{padding-top:5px;}
+#sec-main-program li .icon .main-icon{display:block; width:143px; height:103px; margin:0 auto; background:url(../images/ico/icon-main-2022-1.png) no-repeat 0 -48px;}
+#sec-main-program li:hover .icon .main-icon-program1{background:url(../images/ico/icon-main-2022-1.png) no-repeat -317px -48px;}
+#sec-main-program li .icon .main-icon-program2{width:129px; height:71px; background-position-y: -165px; }
+#sec-main-program li:hover .icon .main-icon-program2{background-position:-318px -165px;}
+#sec-main-program li .icon .main-icon-program3{width:144px; height:86px; background-position-x: -153px;}
+#sec-main-program li:hover .icon .main-icon-program3{background-position:-481px -48px;}
+#sec-main-program li .icon .main-icon-program4{width:147px; height:94px; background-position: -153px -165px;}
+#sec-main-program li:hover .icon .main-icon-program4{background-position:-481px -165px;}
+#sec-main-program li .text{position:relative; display: block; text-align:center; margin:0 auto; font-size:16px; color:#222;}
+#sec-main-program li .text em{font-size: 24px; color:#2f2f2f;}
+#sec-main-program li .text em:last-child{position:relative; display:inline-block; font-size:16px; color:#222 !important;}
+#sec-main-program li .text em:last-child:after{content:''; position:absolute; top:5px; right:-20px; width:13px; height:13px; background: url(../images/ico/icon-main-2022-1.png) no-repeat -42px 0;}
+#sec-main-program li .text em b{vertical-align: top; color:#772f23;}  
+#sec-main-service ul li{width:49%; float:none;}
+#sec-main-service ul li:last-child{margin: 40px auto 60px auto;}
+#sec-main-service ul li a{height:84px; border:0; border-radius:0; background:#d07d5d;}
+#sec-main-service ul li:last-child a{background:#aa584a;}
+#sec-main-service ul li a i{float:left; margin:0; width:54px; height:48px; margin:15px 0 0 49px;}
+#sec-main-service ul li a .main-icon{background:url(../images/ico/icon-main-2022-1.png) no-repeat -68px 0;}
+#sec-main-service ul li a .main-icon-svr1{width:72px; height:57px; background-position: 0 -271px; margin-left:58px;}
+#sec-main-service ul li a span{position:relative; float:left; margin-bottom:0; height: 49px; line-height: 49px; font-size:18px; letter-spacing: -0.05em; color:#fff; margin:16px 0 0 32px;}
+#sec-main-service ul li:last-child a span{margin-left:39px;}
+#sec-main-service ul li a span:after{content:''; display:block; position:absolute; top: 15px; right: -105px; width:83px; height:14px; background:url(../images/ico/icon-main-2022-1.png) no-repeat -153px 0;}
+#sec-main-service ul li:last-child a span:after{width:103px; background:url(../images/ico/icon-main-2022-1.png) no-repeat -257px 0; right:-137px;}
+
+/*main header style 20220604*/
+#navigation .nav-border{background:rgba(10,27,61,.45); border-bottom:0px !important;}
+#navigation .nav-border.on{background:#fff;}
+#navigation .nav-background{background:#fff;}
+#navigation .nav-background.on,#navigation .nav-background.clicked{background:#fff; box-shadow: 4px 4px 5px rgba(0,0,0,.37); -webkit-box-shadow: 4px 4px 5px rgba(0,0,0,.37);}
+#navigation .nav-list{margin-left:180px;}
+#navigation .nav-list > li > ul {margin-top:13px;}
+#navigation .nav-list > li{padding:30px 0;}
+#navigation .nav-list > li > ul li{padding-top:0;}
+#navigation .nav-list > li > ul li:first-child{padding-top:16px;}
+#navigation .nav-list > li > ul li a{line-height:1.3; height:30px;}
+#navigation .nav-list > li > a{overflow:initial; text-indent: 0px !important; background-image:none; height:24px; width:auto !important; font-size:1.2em; letter-spacing: -0.05em; color:#fff; font-weight:400;}
+#navigation .nav-list > li > a.nav-depth1-1,
+#navigation .nav-list > li > a.nav-depth1-2{margin-right:60px;}
+#navigation .nav-list.on > li.active > a{color:#222; font-weight:bold;}
+#navigation .nav-list.on > li.active.on > a{color:#e23513 !important;}
+#navigation .social-links{position:absolute; top:25px; right:45px; width:auto;}
+#navigation .social-links dd{float:left;}
+#navigation .social-links dd + dd{margin-left:10px;} 
+#navigation .social-links a{display: inline-block; width: 36px; height: 36px; overflow: hidden; background:transparent url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/icon-head-2022.png) no-repeat 0 0; text-indent: -9999em;}
+#navigation .on .social-links a{background:transparent url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/icon-head-hover-2022.png) no-repeat 0 0;}
+#navigation .social-links .youtube a{background-position-x: -46px;}
+#navigation .social-links .instar a{background-position-x: -92px;}
+#btn-top-search-open{background:transparent url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/icon-head-2022.png) no-repeat -137px 0 !important;}
+.on #btn-top-search-open{background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/icon-head-hover-2022.png) no-repeat -138px 0 !important;}
+
+/*main í–‰ì‚¬ íŒì—… 20220604*/
+#sec-main-event{position:inherit !important; top:104px !important; right:0 !important; width: 330px; height: 314px; background: rgba(0, 0, 0, 0.5); z-index: 20; border-radius: 12px; border:0px/*#8f8f8f;*/;}
+#sec-main-event .event-tit{position:relative; height:62px;}
+#sec-main-event .event-tit ul{position:absolute; top:15px; left:15px; width:230px; height:32px; background: rgba(255,175,96,.7); border-radius:25px;}
+#sec-main-event .event-tit ul li{cursor:pointer; float:left; width:49.2%; text-align:center; line-height:2.4; color:#fff; font-weight:bold;}
+#sec-main-event .event-tit ul li.on{color:#b56b21; background:#fff; border-radius:25px; line-height:2; margin:2px 0 0 2px;}
+#sec-main-event .event-tit:before{content:''; clear:both;}
+#sec-main-event .event-tit a{position:absolute; top:19px; right:16px; border-radius:50%; display:block; width:24px; height:24px; background:#fff;}
+#sec-main-event .event-tit a:before{content:''; position:absolute; top:5px; left:11px;  width:2px; height:14px; background:#5c7282;}
+#sec-main-event .event-tit a:after{content:''; position:absolute; top:11px; left:5px; width:14px; height:2px; background:#5c7282;}
+#sec-main-event .event-box-2022 > div{display:none; position:absolute; width:300px; height:239px; left:15px; background:rgba(255, 255, 255, 0.8); border-radius:10px;}
+#sec-main-event .event-box-2022 > div.on{display:block;}
+#sec-main-event .event-box-2022 .not-event{position:relative; top:30%; height:76px;}
+#sec-main-event .event-box-2022 .not-event:before{content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:44px; height:43px; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/icon-main-2022-1.png) no-repeat -80px -271px;}
+#sec-main-event .event-box-2022 .not-event p{position:absolute; bottom:0; left:50%; transform:translateX(-50%); color:#333;}
+/* #sec-main-event .event-box-2022 .event-notice{overflow-y: auto; max-height:239px;}
+#sec-main-event .event-box-2022 .event-notice ul li{display:block; width:auto; border-bottom:1px solid #b7b7b7; margin:0 8px;}
+#sec-main-event .event-box-2022 .event-notice ul li p{position:relative; padding:10px 0 5px 10px; font-size:16px; font-weight:bold; color:#333; margin-left:4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+#sec-main-event .event-box-2022 .event-notice ul li p:before{content:''; position:absolute; top:45%; left:0; width:5px; height:5px; border-radius:50%; background:#b56b21;}
+#sec-main-event .event-box-2022 .event-notice .time-spot span{display:block; padding-bottom:3px; padding-left:17px; font-size:14px; font-weight:bold; margin: auto 5px auto 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;color:#b56b21 ; position:relative; letter-spacing: -0.05em;}
+#sec-main-event .event-box-2022 .event-notice .time-spot span:before{position:absolute; content:''; top:6px; left:0; width:13px; height:13px; background:url(../images/ico/icon-new-main2022.png) no-repeat -382px -94px;}
+#sec-main-event .event-box-2022 .event-notice .time-spot span:last-child{font-weight:normal; color:#666; margin-left:5px; padding:0 0 10px 13px;}
+#sec-main-event .event-box-2022 .event-notice .time-spot span:last-child:before{position:absolute; content:''; top:4px; width:8px; background:url(../images/ico/icon-new-main2022.png) no-repeat -401px -94px;}
+#sec-main-event .event-box-2022 .event-notice .time-spot:after{content:''; display:block; clear:both;}    
+@media screen and(max-width:1600px){
+#sec-main-event{right: 12.5% !important;}
+} */
+
+/*main í–‰ì‚¬ íŒì—… ìŠ¤í¬ë¡¤*/
+.mCSB_scrollTools{opacity: 1;}
+#sec-main-event .mCSB_scrollTools{right: 0; margin: 4px auto;}
+#sec-main-event .mCSB_scrollTools .mCSB_draggerRail{width: 8px; background: #ccc; border-color:transparent !important;}
+#sec-main-event .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width: 4px; background: #fff; margin:2px auto;}
+.mCSB_scrollTools .mCSB_dragger{height:67px !important; max-height: 67px !important;}
+/*20220331*/
+#navigation h1 > a {background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/img-head-logo-2022.png) no-repeat; position:relative;}
+#navigation .nav-border.on h1 > a{background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/img-head-logo-2022-hover.png) no-repeat;}
+#navigation .nav-border {background: rgba(0,0,0,.4);}
+#sec-main-visual .visual-inner{background:none;}
+#sec-main-visual .bx-wrapper .bx-viewport .bxslider{height:762px;}
+#sec-main-visual .bx-wrapper .bx-viewport .bxslider:after{position:absolute; bottom:-1px; content:''; width:100%; z-index:100; height:225px; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/bg/main_visual-bg.png) no-repeat center center;}
+#sec-main-visual .bx-wrapper .pager-custom{top:16px; right:76px;}
+#sec-main-visual .bx-wrapper .bx-controls-direction a{top:20px;}
+#sec-main-visual .bx-wrapper .bx-controls,
+#sec-main-visual .bx-wrapper .bx-caption{width:406px; border-radius:25px;}
+#sec-main-visual .bx-wrapper .bx-controls.bx-has-controls-auto .bx-controls-auto{top:22px; right:39px;}
+#sec-main-visual .bx-wrapper .bx-prev{right:54px;}
+#sec-main-visual .bx-wrapper .bx-next{right:20px;}
+#sec-main-visual div.visual-title{left:36px !important; width:491px;}
+#sec-main-visual div.visual-title h3{margin:0 !important; position: absolute; top: 20px; left: 27px;}
+#sec-main-visual div.visual-title h3 span:last-child img{ margin-top:16px;}
+#sec-main-visual div.visual-title h3 span:last-child img:last-child{margin-top:10px;}
+#sec-main-event{border:1px solid #8e8f91; height: 334px;}
+#sec-main-event .event-tit ul{top: 23px; left: 21px; height:40px; width:240px; border-radius:0; background:transparent;}
+#sec-main-event .event-tit ul,
+#sec-main-event .event-tit ul li,
+#sec-main-event .event-tit ul li.on{display: flex; justify-content: center; align-items: center; line-height:initial; margin:0; border-radius:14px 14px 0 0;}
+#sec-main-event .event-tit ul li{color:#ededed; height:100%;line-height:initial; float:none; width:50%; border-radius:14px 14px 0 0; background:#a6a6a6;}
+#sec-main-event .event-tit ul li.on{background:#4a98f0; color:#fff;}
+#sec-main-event .event-tit a{top:34px; right:23px; width: 18px; height: 18px; background:none;}
+#sec-main-event .event-tit a:before{top: 50%; transform: translate(-50%,-50%); left: 50%; height: 18px; background: #fff;}
+#sec-main-event .event-tit a:after{top: 50%; transform: translate(-50%,-50%); left: 50%; width: 18px; 	background: #fff;}
+#sec-main-event .event-box-2022 > div{height:259px; left:16px; box-shadow: 0px -1px 2px rgba(0,0,0,.45); -webkit-box-shadow: 0px -1px 2px rgba(0,0,0,.45);}
+#sec-main-event .event-box-2022 .not-event:before{top:-9px; width:62px; height:60px; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/main-icon-2022.png) no-repeat -204px 0;}
+#sec-main-event .event-box-2022 .event-notice{max-height:259px; overflow-y:auto;}
+#sec-main-event .event-box-2022 .event-notice ul{padding:16px 10px 0; display:flex; flex-direction:column;}
+#sec-main-event .event-box-2022 .event-notice ul li{/*min-height:86px;*/ font-weight:bold; margin-bottom:20px;}
+#sec-main-event .event-box-2022 .event-notice ul li p{color:#333; padding-left:12px; margin-bottom:5px; position:relative; font-size:16px;}
+#sec-main-event .event-box-2022 .event-notice ul li p:before{content:''; position:absolute; top:50%; transform:translateY(-50%); left:0; width:3px; height:3px; border:2px solid #4a98f0; border-radius:50%; }
+#sec-main-event .event-box-2022 .event-notice ul li .time-spot{display: flex; justify-content: space-between; margin-left:4px;}
+#sec-main-event .event-box-2022 .event-notice ul li .time-spot span{display:inline-block; width:56%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-left:17px; position:relative;}
+#sec-main-event .event-box-2022 .event-notice ul li .time-spot span:first-child{color:#2577d4; width:auto; letter-spacing:-0.05em;}
+#sec-main-event .event-box-2022 .event-notice ul li .time-spot span:before{content:''; position:absolute; left:0; top: 5px; width:13px; height:13px; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/main-icon-2022.png) no-repeat -30px -61px;}
+#sec-main-event .event-box-2022 .event-notice ul li .time-spot span:last-child:before{top:3px; width:10px; background-position-x:-49px;}
+#sec-main-event .event-box-2022 .mCSB_scrollTools .mCSB_draggerRail,
+#sec-main-event .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:3px;}
+#sec-main-event .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background:rgba(0,0,0,.5);}
+.main-visual-layer{top:6px;}
+.main-visual-layer:before{display:none;}
+.main-visual-layer .visual-column1{height: 394px;}
+#sec-main-notice .heading h3{margin-bottom:0; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/txt/notice-txt-2022.png) no-repeat; padding-bottom:4px;}
+#sec-main-notice .notice-more{padding:5px 20px; top:-9px; background:none; border:1px solid #dcdcdc; color:#444;}
+#sec-main-notice .notice-more:before{content:''; width:10px; height:10px; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/main-icon-2022.png) no-repeat -30px 0; display:block; float:left; margin: 5px 5px 0 0;}
+#sec-main-notice .notice-more:after{display:none;}
+#sec-main-notice ul li + li{margin-top:0;}
+#sec-main-notice ul li a{border-radius: 0; background:none; border-top:1px solid #dcdcdc;}
+#sec-main-notice ul li a:hover{background:#e8f4ff;}
+#sec-main-notice ul li:last-child a{border-bottom:1px solid #dcdcdc;}
+#sec-main-notice ul li a:after{width:10px; height:18px; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/main-icon-2022.png) no-repeat 0 0;}
+#sec-main-notice ul li a:hover:after{background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/main-icon-2022.png) no-repeat -15px 0;}
+#sec-main-notice ul li .date{color:#444;}
+#sec-main-notice ul li:hover .date,#sec-main-notice ul li:hover .text{color:#5587e2;}
+#sec-main-notice ul li:hover .text{position:relative; padding-right:8px;}
+#sec-main-notice ul li:hover .text:after{content:''; width:6px; height:6px; background:#5587e2; border-radius:50%; position:absolute; top:0; right:0px;}
+.main-visual-layer{min-height:800px;}
+.main-visual-layer .visual-column2{background:#f2f5f7;}
+.visual-column2 .heading h3{margin-bottom:0; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/txt/program-txt-2022.png) no-repeat; font-size:25px; margin-bottom:35px;}
+#sec-main-program{min-height: 394px;}
+#sec-main-program ul{padding:0; display:flex;}
+#sec-main-program ul li{float:none; position:relative; width:250px; height:230px; box-shadow: 0 0 0; -webkit-box-shadow: 0 0 0; border-radius:0; background:#ffc053;}
+#sec-main-program ul li + li{margin-left:0;}
+#sec-main-program ul li:nth-child(1){border-radius:20px 0 0 0;}
+#sec-main-program ul li:nth-child(2){background:#6fcf20;}
+#sec-main-program ul li:nth-child(3){background:#0bcdde;}
+#sec-main-program ul li:nth-child(4){background:#3e69d7; border-radius:0 0 20px 0;}
+#sec-main-program li:hover{background:#ffb028; top:-14px;}
+#sec-main-program li:nth-child(2):hover{background:#67c718;}
+#sec-main-program li:nth-child(3):hover{background:#03bdcd;}
+#sec-main-program li:nth-child(4):hover{background:#3762d1;}
+#sec-main-program li a{padding:28px 0 0 0;}
+#sec-main-program li .icon{margin-bottom:0; height:100px; border-radius:0;}
+#sec-main-program li .icon .main-icon{width:100px; height:100px; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/program-icon-2022.png) no-repeat 0 0;}
+#sec-main-program li:hover .icon .main-icon{width:100%; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/program-icon-2022-hover.png) no-repeat 0 0;}
+#sec-main-program li .icon2,#sec-main-program li .icon3,#sec-main-program li .icon4{padding-top:0;}
+#sec-main-program li .icon .main-icon-program2{background-position-x:-110px;}
+#sec-main-program li:hover .main-icon.main-icon-program2{background-position-x:-250px;}
+#sec-main-program li .icon .main-icon-program3{background-position-x:-220px;}
+#sec-main-program li:hover .main-icon.main-icon-program3{background-position-x:-500px;}
+#sec-main-program li .icon .main-icon-program4{background-position-x:-330px;}
+#sec-main-program li:hover .main-icon.main-icon-program4{background-position-x:-750px;}
+#sec-main-program li .text{padding:16px 0 22px 0;}
+#sec-main-program li:hover .text{background:#fff; border-bottom:3px solid rgba(206,208,210,1); padding:8px 0 22px 0; margin-top:8px;}
+#sec-main-program li:nth-child(4):hover .text{border-radius:0 0 20px 0}
+#sec-main-program li .text em{color:#fff; letter-spacing: -0.075rem;}
+#sec-main-program li:hover .text em{color:#f7aa25;}
+#sec-main-program li:hover .txt-program2 em{color:#60c20f;}
+#sec-main-program li:hover .txt-program3 em{color:#00b4c4;}
+#sec-main-program li:hover .txt-program4 em{color:#3e69d7;}
+#sec-main-program li .text em:last-child{color:#fff !important; display:block; max-width:110px; margin:5px auto 0 auto; background:#e99d1a; border-radius: 20px; padding: 3px 20px 3px 10px;}
+#sec-main-program li .text em:last-child:after{top: 50%; transform: translateY(-50%); right:9px; width:10px; height:7px; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/main-icon-2022.png) no-repeat -30px -15px;}
+#sec-main-program li .text .txt-program2 em:last-child{background:#53ae08;}
+#sec-main-program li .text .txt-program3 em:last-child{background:#00abba;}
+#sec-main-program li .text .txt-program4 em:last-child{background:#2c57c3;}
