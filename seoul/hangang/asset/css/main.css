@@ -318,15 +318,15 @@ background: #333;
 #sec-main-movie li a {display:block; position:relative; width:185px;}
 #sec-main-movie li a:before, #sec-main-movie li a:after {content:" "; display:block; position:absolute;}
 #sec-main-movie li a:before {top:0; left:0; right:0; bottom:35px; background:#000; transition:all .75s ease; opacity:0.15; filter:alpha(opacity=15);}
-#sec-main-movie li a:after {top:39px; left:70px; width:44px; height:44px; background:url(../images/ico/ico-main-movie-play.png) no-repeat;}
+#sec-main-movie li a:after {top:39px; left:70px; width:44px; height:44px; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/ico-main-movie-play.png) no-repeat;}
 #sec-main-movie li a:focus:before, #sec-main-movie li a:hover:before {opacity:0.7; filter:alpha(opacity=70);}
 #sec-main-movie .bx-wrapper .bx-controls-direction a {top:0; margin-top:0; width:26px; height:156px; transition:all 0.35s ease-in-out; background-position:center center; background-repeat:no-repeat;}
 #sec-main-movie .bx-wrapper .bx-controls-direction a:hover {background-color:#d6c3ab;}
-#sec-main-movie .bx-wrapper .bx-prev {left:-26px; background-image:url(../images/btn/btn-main-subslider-left.png);}
-#sec-main-movie .bx-wrapper .bx-next {right:-26px; background-image:url(../images/btn/btn-main-subslider-right.png);}
+#sec-main-movie .bx-wrapper .bx-prev {left:-26px; background-image:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/btn/btn-main-subslider-left.png);}
+#sec-main-movie .bx-wrapper .bx-next {right:-26px; background-image:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/btn/btn-main-subslider-right.png);}
 
 /* ì•„ì´ì½˜ */
-.main-icon {display: inline-block;background: url(../images/ico/ico_main_2022.png) no-repeat 0 0}
+.main-icon {display: inline-block;background: url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/ico_main_2022.png) no-repeat 0 0}
 .main-icon-more {width: 24px;height: 24px;background-position: -210px 0;}
 .main-icon-svr1 {background-position: 0 -70px}
 .main-icon-svr2 {background-position: -80px -70px}
@@ -340,7 +340,7 @@ background: #333;
 #sec-main-visual div.visual-title h3 {margin:0 0 20px 10px !important;}
 #sec-main-visual div.visual-title h3 span#visual-tit01 {display: block !important; margin: 0 0 10px 0;}
 #sec-main-visual{background-color:transparent !important; top:-84px !important;}
-#sec-main-visual .visual-inner{position:absolute; top:103px; left:50%; transform:translateX(-50%); width:960px; height:480px; z-index:20; background:url(../images/bg/bg-main-visual-2022.png) no-repeat;}
+#sec-main-visual .visual-inner{position:absolute; top:103px; left:50%; transform:translateX(-50%); width:960px; height:480px; z-index:20; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/bg/bg-main-visual-2022.png) no-repeat;}
 #sec-main-visual div.visual-title{position:inherit !important; top: 130px !important; left:0 !important; transform: translateX(0) !important; width: 502px; margin-left: 0; float: left;}
 #sec-main-visual div.visual-title h3{text-align:left;}
 #sec-main-visual .layor-pop{position:absolute; right:0; width:530px; height:100%; opacity:1; transition:all .5s;}/*20220924*/
@@ -354,30 +354,30 @@ background: #333;
 #sec-main-visual .bx-wrapper .pager-custom .current{padding-right:6px; color:#fff;}
 #sec-main-visual .bx-wrapper .pager-custom .total{padding-left:4px;}
 #sec-main-visual .bx-wrapper .bx-controls{position: absolute; width:385px; height:50px; bottom:133px; left: 50%; transform: translateX(-50%); border-radius:20px; z-index:20;}
-.bx-wrapper .bx-controls-direction a{width: 9px; height: 14px; top:18px; margin-top:0; background-image:url(../images/ico/play-buttons-2022.png);}
+.bx-wrapper .bx-controls-direction a{width: 9px; height: 14px; top:18px; margin-top:0; background-image:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/play-buttons-2022.png);}
 .bx-wrapper .bx-prev{background-position:0 0; left:auto; right:44px;} 
 .bx-wrapper .bx-next{background-position-x:-24px; right:11px;}
 .bx-wrapper .bx-controls.bx-has-controls-auto .bx-controls-auto{top:20px; right:29px; width:8px;}
-.bx-wrapper .bx-controls-auto .bx-start{width:6px; height:10px; background:url(../images/ico/play-buttons-2022.png) no-repeat -14px 0; }
+.bx-wrapper .bx-controls-auto .bx-start{width:6px; height:10px; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/play-buttons-2022.png) no-repeat -14px 0; }
 .bx-wrapper .bx-controls-auto .bx-start:hover, .bx-wrapper .bx-controls-auto .bx-start.active{background-position:-14px 0;}
-.bx-wrapper .bx-controls-auto .bx-stop{position: absolute; top: -1px; right: -4px;width:8px; height:11px; background:url(../images/ico/play-buttons-2022.png) no-repeat -37px 0;}
+.bx-wrapper .bx-controls-auto .bx-stop{position: absolute; top: -1px; right: -4px;width:8px; height:11px; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/play-buttons-2022.png) no-repeat -37px 0;}
 .bx-wrapper .bx-controls-auto .bx-stop:hover, .bx-wrapper .bx-controls-auto .bx-stop.active{background-position:-37px 0;}
 .main-visual-layer{position:inherit; top:-36px; left:0; margin-left:0; width:100%; height: 100%; min-height: 972px;}
-.main-visual-layer:before{position:absolute; top:-114px; content:''; width:100%; height:114px; background: url(../images/bg/bg-container-2022-1.png) no-repeat center center; background-size: auto 114px; }
+.main-visual-layer:before{position:absolute; top:-114px; content:''; width:100%; height:114px; background: url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/bg/bg-container-2022-1.png) no-repeat center center; background-size: auto 114px; }
 .main-visual-layer .visual-column{float:none; width:100%; height:auto; margin-left:0;}
 .main-visual-layer .visual-column1, #sec-main-program, .main-visual-layer .visual-column3{width:1000px; margin:0 auto;}  
 .main-visual-layer .visual-column1{height:420px; margin-bottom:60px;}
-.visual-column .heading h3{text-indent: -9999px; background:url(../images/txt/notice-txt-2022-1.png) no-repeat 0 0; padding:0; margin-bottom:24px;}
+.visual-column .heading h3{text-indent: -9999px; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/txt/notice-txt-2022-1.png) no-repeat 0 0; padding:0; margin-bottom:24px;}
 .visual-column .heading h3:after{display:none;}
-.visual-column2 .heading h3{background:url(../images/txt/intro-txt-2022-1.png) no-repeat; margin-bottom:30px;} 
+.visual-column2 .heading h3{background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/txt/intro-txt-2022-1.png) no-repeat; margin-bottom:30px;} 
 #sec-main-notice{top:43px;}
 #sec-main-notice .notice-more{top:-1px; padding:8px 18px; background:#ffe6c2; border-radius:20px 20px 20px 20px; color:#846333; font-weight:bold;}
-#sec-main-notice .notice-more:after{display:block; float:right; content:''; width:14px; height:14px; margin: 3px 0 0 7px; background:url(../images/ico/icon-main-2022-1.png) no-repeat 0 0;}
+#sec-main-notice .notice-more:after{display:block; float:right; content:''; width:14px; height:14px; margin: 3px 0 0 7px; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/icon-main-2022-1.png) no-repeat 0 0;}
 #sec-main-notice ul li{border-top:0;}
 #sec-main-notice ul li a {padding:18px 20px; background:#f7f7f7; border-radius:10px 10px;}
 #sec-main-notice ul li a:hover{background:#fff1d3;}
-#sec-main-notice ul li a:after{float:right; margin-top:3px; content:''; width:21px; height:21px; background:url(../images/ico/icon-main-2022-1.png) no-repeat -20px 0;}
-#sec-main-notice ul li a:hover:after{background:url(../images/ico/icon-main-2022-1.png) no-repeat -20px -22px;}
+#sec-main-notice ul li a:after{float:right; margin-top:3px; content:''; width:21px; height:21px; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/icon-main-2022-1.png) no-repeat -20px 0;}
+#sec-main-notice ul li a:hover:after{background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/icon-main-2022-1.png) no-repeat -20px -22px;}
 #sec-main-notice ul li + li {margin-top:6px;}
 #sec-main-notice ul li .date, #sec-main-notice ul li .text {display: inline-block; color: #666; font-size: 18px;}
 #sec-main-notice ul li a:hover .date{font-weight:bold;}
@@ -389,7 +389,7 @@ background: #333;
 #sec-main-program ul li+li{margin-left:30px;}
 #sec-main-program li a{padding: 18px 0 17px 0;}
 #sec-main-program li a:after{display:none;}
-#sec-main-program li:hover{border:0; background:url(../images/bg/bg-program-2022-1.png) no-repeat; background-size:cover;}
+#sec-main-program li:hover{border:0; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/bg/bg-program-2022-1.png) no-repeat; background-size:cover;}
 #sec-main-program li .icon{display: block; width: 100%; height: 103px; background-color: transparent; margin-bottom: 24px;}
 #sec-main-program li .icon2{padding-top:24px;}
 #sec-main-program li .icon3{padding-top:12px;}
@@ -405,19 +405,19 @@ background: #333;
 #sec-main-program li .text{position:relative; display: block; text-align:center; margin:0 auto; font-size:16px; color:#222;}
 #sec-main-program li .text em{font-size: 24px; color:#2f2f2f;}
 #sec-main-program li .text em:last-child{position:relative; display:inline-block; font-size:16px; color:#222 !important;}
-#sec-main-program li .text em:last-child:after{content:''; position:absolute; top:5px; right:-20px; width:13px; height:13px; background: url(../images/ico/icon-main-2022-1.png) no-repeat -42px 0;}
+#sec-main-program li .text em:last-child:after{content:''; position:absolute; top:5px; right:-20px; width:13px; height:13px; background: url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/icon-main-2022-1.png) no-repeat -42px 0;}
 #sec-main-program li .text em b{vertical-align: top; color:#772f23;}  
 #sec-main-service ul li{width:49%; float:none;}
 #sec-main-service ul li:last-child{margin: 40px auto 60px auto;}
 #sec-main-service ul li a{height:84px; border:0; border-radius:0; background:#d07d5d;}
 #sec-main-service ul li:last-child a{background:#aa584a;}
 #sec-main-service ul li a i{float:left; margin:0; width:54px; height:48px; margin:15px 0 0 49px;}
-#sec-main-service ul li a .main-icon{background:url(../images/ico/icon-main-2022-1.png) no-repeat -68px 0;}
+#sec-main-service ul li a .main-icon{background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/icon-main-2022-1.png) no-repeat -68px 0;}
 #sec-main-service ul li a .main-icon-svr1{width:72px; height:57px; background-position: 0 -271px; margin-left:58px;}
 #sec-main-service ul li a span{position:relative; float:left; margin-bottom:0; height: 49px; line-height: 49px; font-size:18px; letter-spacing: -0.05em; color:#fff; margin:16px 0 0 32px;}
 #sec-main-service ul li:last-child a span{margin-left:39px;}
-#sec-main-service ul li a span:after{content:''; display:block; position:absolute; top: 15px; right: -105px; width:83px; height:14px; background:url(../images/ico/icon-main-2022-1.png) no-repeat -153px 0;}
-#sec-main-service ul li:last-child a span:after{width:103px; background:url(../images/ico/icon-main-2022-1.png) no-repeat -257px 0; right:-137px;}
+#sec-main-service ul li a span:after{content:''; display:block; position:absolute; top: 15px; right: -105px; width:83px; height:14px; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/icon-main-2022-1.png) no-repeat -153px 0;}
+#sec-main-service ul li:last-child a span:after{width:103px; background:url(https://festival.seoul.go.kr/wp-content/themes/festival/page-templates/project/2022/assets/images/ico/icon-main-2022-1.png) no-repeat -257px 0; right:-137px;}
 
 /*main header style 20220604*/
 #navigation .nav-border{background:rgba(10,27,61,.45); border-bottom:0px !important;}
