@@ -105,7 +105,7 @@
 .my-ranking-card.card-s03 .cont-area .img {margin:0 -18px;}
 
 /* S04 생활금융티켓 - 운동 */
-.my-ranking-card.card-s04 .cont-area {height:175px; background:url('/MYDATA/images/md/S04_exercise.png') no-repeat right bottom / 276px;}
+.my-ranking-card.card-s04 .cont-area {height:175px; background:url('../../images/md/S04_exercise.png') no-repeat right bottom / 276px;}
 .my-ranking-card.card-s04 .cont-area .cont-txt-area .tit {margin-top:8px; font-size:20px; font-weight:bold; line-height:1;}
 .my-ranking-card.card-s04 .cont-area .cont-txt-area .desc {margin-top:10px;}
 .my-ranking-card.card-s04 .cont-area .cont-txt-area .desc p {font-size:13px; font-weight:300; line-height:19px;}
@@ -126,7 +126,7 @@
 /* G03 금융티켓 - 인기 신용카드 */
 .my-ranking-card.card-g03 {padding:20px 18px 40px; box-shadow:none;}
 .my-ranking-card.card-g03 .tit-area + .cont-area {margin-top:25px;}
-.my-ranking-card.card-g03 .tit-area {padding-top:88px; text-align:center; background:url('/MYDATA/images/md/img_emoji_love.png') no-repeat top center / 88px 88px;}
+.my-ranking-card.card-g03 .tit-area {padding-top:88px; text-align:center; background:url('../../images/md/img_emoji_love.png') no-repeat top center / 88px 88px;}
 .my-ranking-card.card-g03 .tit-area .desc {margin-top:5px;}
 .my-ranking-card.card-g03 .my-ranking-list.type-rank li .card-img {width:26px; margin-right:20px;}
 .my-ranking-card.card-g03 .my-ranking-list.type-rank li .card-img img {width:100%;}
@@ -134,7 +134,7 @@
 .my-ranking-card.card-g03 .my-ranking-list.type-rank li .rank {margin-right:25px;}
 
 /* G03 금융티켓 - 인기 신용카드 */
-.my-ranking-card.card-g04 .cont-area {width:100%; height:172px; background:url('/MYDATA/images/md/G04_img.png') no-repeat center / 276px;}
+.my-ranking-card.card-g04 .cont-area {width:100%; height:172px; background:url('../../images/md/G04_img.png') no-repeat center / 276px;}
 .my-ranking-card.card-g04 .txt-wrap {position:absolute; width:276px; height:172px; top:0; left:50%; margin-left:-138px;} 
 .my-ranking-card.card-g04 .txt-wrap .item {display:flex; position:absolute;  flex-direction:column; align-items:center; justify-content:center;}
 .my-ranking-card.card-g04 .txt-wrap .item span {display:block; font-size:13px; color:#111;}
@@ -191,16 +191,16 @@
 .my-ranking-info-pop .my-ranking-pop-area .cont {padding:10px 0; min-height:90px;}
 .my-ranking-info-pop .my-ranking-pop-area .cont .txt {font-size:15px; line-height:20px; font-weight:300; color:#111;}
 
-.my-ranking-info-pop.pop-s01 .my-ranking-pop-area .cont {background:url('/MYDATA/images/md/ic_s01.png') no-repeat center right / 90px 90px;}
-.my-ranking-info-pop.pop-s02 .my-ranking-pop-area .cont {background:url('/MYDATA/images/md/ic_s02.png') no-repeat center right / 90px 90px;}
-.my-ranking-info-pop.pop-s03 .my-ranking-pop-area .cont {background:url('/MYDATA/images/md/ic_s03.png') no-repeat center right / 90px 90px;}
-.my-ranking-info-pop.pop-s04 .my-ranking-pop-area .cont {background:url('/MYDATA/images/md/ic_s04.png') no-repeat center right / 90px 90px;}
-.my-ranking-info-pop.pop-s05 .my-ranking-pop-area .cont {background:url('/MYDATA/images/md/ic_s05.png') no-repeat center right / 90px 90px;}
-.my-ranking-info-pop.pop-s07 .my-ranking-pop-area .cont {background:url('/MYDATA/images/md/ic_s07.png') no-repeat center right / 90px 90px;}
+.my-ranking-info-pop.pop-s01 .my-ranking-pop-area .cont {background:url('../../images/md/ic_s01.png') no-repeat center right / 90px 90px;}
+.my-ranking-info-pop.pop-s02 .my-ranking-pop-area .cont {background:url('../../images/md/ic_s02.png') no-repeat center right / 90px 90px;}
+.my-ranking-info-pop.pop-s03 .my-ranking-pop-area .cont {background:url('../../images/md/ic_s03.png') no-repeat center right / 90px 90px;}
+.my-ranking-info-pop.pop-s04 .my-ranking-pop-area .cont {background:url('../../images/md/ic_s04.png') no-repeat center right / 90px 90px;}
+.my-ranking-info-pop.pop-s05 .my-ranking-pop-area .cont {background:url('../../images/md/ic_s05.png') no-repeat center right / 90px 90px;}
+.my-ranking-info-pop.pop-s07 .my-ranking-pop-area .cont {background:url('../../images/md/ic_s07.png') no-repeat center right / 90px 90px;}
 
-.my-ranking-info-pop.pop-g01 .my-ranking-pop-area .cont {background:url('/MYDATA/images/md/ic_g01.png') no-repeat center right / 90px 90px;}
-.my-ranking-info-pop.pop-g02 .my-ranking-pop-area .cont {background:url('/MYDATA/images/md/ic_g02.png') no-repeat center right / 90px 90px;}
-.my-ranking-info-pop.pop-g11 .my-ranking-pop-area .cont {background:url('/MYDATA/images/md/ic_g11.png') no-repeat center right / 90px 90px;}
+.my-ranking-info-pop.pop-g01 .my-ranking-pop-area .cont {background:url('../../images/md/ic_g01.png') no-repeat center right / 90px 90px;}
+.my-ranking-info-pop.pop-g02 .my-ranking-pop-area .cont {background:url('../../images/md/ic_g02.png') no-repeat center right / 90px 90px;}
+.my-ranking-info-pop.pop-g11 .my-ranking-pop-area .cont {background:url('../../images/md/ic_g11.png') no-repeat center right / 90px 90px;}
 
 
 /* 랭킹 - 풀팝업 */
@@ -254,7 +254,7 @@
 .my-ranking-detail-cont .shopping-used-box .used-list li .shopping{display:flex;align-items:center;justify-content:space-between;}
 .my-ranking-detail-cont .shopping-used-box .used-list li .shopping .name{font-size:15px;line-height:15px;color:#666;margin-top:11px; width: calc(100% - 144px); white-space: nowrap; overflow:hidden; text-overflow: ellipsis;}
 .my-ranking-detail-cont .shopping-used-box .used-list li .shopping .price{position:relative;font-size:15px;line-height:15px;color:#111;margin-top:11px;padding-right:19px; text-align:right;}
-.my-ranking-detail-cont .shopping-used-box .used-list li .shopping .price:after {position:absolute; display:block; width:12px; height:15px; top:0; right:0; background:url('/MYDATA/images/md/btn-arr-right.png') no-repeat center / 100%; content:'';}
+.my-ranking-detail-cont .shopping-used-box .used-list li .shopping .price:after {position:absolute; display:block; width:12px; height:15px; top:0; right:0; background:url('../../images/md/btn-arr-right.png') no-repeat center / 100%; content:'';}
 .my-ranking-detail-cont .shopping-used-box .used-list li a{display:block;}
 
 /* 랭킹 - 풀팝업 - 택시비 s01 */
@@ -273,17 +273,17 @@
 .my-ranking-card-banner .txt-area .main-txt + .sub-txt {margin-top:8px;line-height:21px;}
 .my-ranking-card-banner .txt-area + .my-btn-area {margin-top:35px;}
 .my-ranking-card-banner .my-btn-fake {display:inline-flex; font-size:15px; color:#00A49D; align-items:center;}
-.my-ranking-card-banner .my-btn-fake:after {display:block; width:8px; height:8px; margin-left:3px; background:url('/MYDATA/images/md/btn_more_s_b.png') no-repeat center / 100%; content:'';}
+.my-ranking-card-banner .my-btn-fake:after {display:block; width:8px; height:8px; margin-left:3px; background:url('../../images/md/btn_more_s_b.png') no-repeat center / 100%; content:'';}
 
-.my-ranking-card-banner.card-e01 .txt-area:after {width:86px; height:62px; margin-top:-31px; background:url('/MYDATA/images/md/E01_bg.png') no-repeat center / 100%;}
-.my-ranking-card-banner.card-e02 .txt-area:after {width:87px; height:58px; margin-top:-29px; background:url('/MYDATA/images/md/E02_bg.png') no-repeat center / 100%;}
-.my-ranking-card-banner.card-e03 .txt-area:after {width:84px; height:67px; top:inherit; bottom:-7px;  background:url('/MYDATA/images/md/E03_bg.png') no-repeat center / 100%;}
-.my-ranking-card-banner.card-e04 .txt-area:after {width:86px; height:62px; top:inherit; bottom:0; background:url('/MYDATA/images/md/E04_bg.png') no-repeat center / 100%;}
-.my-ranking-card-banner.card-e05 .txt-area:after {width:85px; height:65px; margin-top:-32px; background:url('/MYDATA/images/md/E05_bg.png') no-repeat center / 100%;}
-.my-ranking-card-banner.card-e06 .txt-area:after {width:87px; height:63px; margin-top:-31px; background:url('/MYDATA/images/md/E06_bg.png') no-repeat center / 100%;}
-.my-ranking-card-banner.card-e07 .txt-area:after {width:83px; height:63px; margin-top:-31px; background:url('/MYDATA/images/md/E07_bg.png') no-repeat center / 100%;}
-.my-ranking-card-banner.card-e08 .txt-area:after {width:83px; height:63px; margin-top:-31px; background:url('/MYDATA/images/md/E08_bg.png') no-repeat center / 100%;}
-.my-ranking-card-banner.card-e09 .txt-area:after {width:83px; height:63px; margin-top:-31px; background:url('/MYDATA/images/md/E09_bg.png') no-repeat center / 100%;}
+.my-ranking-card-banner.card-e01 .txt-area:after {width:86px; height:62px; margin-top:-31px; background:url('../../images/md/E01_bg.png') no-repeat center / 100%;}
+.my-ranking-card-banner.card-e02 .txt-area:after {width:87px; height:58px; margin-top:-29px; background:url('../../images/md/E02_bg.png') no-repeat center / 100%;}
+.my-ranking-card-banner.card-e03 .txt-area:after {width:84px; height:67px; top:inherit; bottom:-7px;  background:url('../../images/md/E03_bg.png') no-repeat center / 100%;}
+.my-ranking-card-banner.card-e04 .txt-area:after {width:86px; height:62px; top:inherit; bottom:0; background:url('../../images/md/E04_bg.png') no-repeat center / 100%;}
+.my-ranking-card-banner.card-e05 .txt-area:after {width:85px; height:65px; margin-top:-32px; background:url('../../images/md/E05_bg.png') no-repeat center / 100%;}
+.my-ranking-card-banner.card-e06 .txt-area:after {width:87px; height:63px; margin-top:-31px; background:url('../../images/md/E06_bg.png') no-repeat center / 100%;}
+.my-ranking-card-banner.card-e07 .txt-area:after {width:83px; height:63px; margin-top:-31px; background:url('../../images/md/E07_bg.png') no-repeat center / 100%;}
+.my-ranking-card-banner.card-e08 .txt-area:after {width:83px; height:63px; margin-top:-31px; background:url('../../images/md/E08_bg.png') no-repeat center / 100%;}
+.my-ranking-card-banner.card-e09 .txt-area:after {width:83px; height:63px; margin-top:-31px; background:url('../../images/md/E09_bg.png') no-repeat center / 100%;}
 
 /* 기타배너 - E03 데이터 영역 */
 .my-ranking-card-banner.card-e03 .data-area {display:flex; margin-top:30px; align-items:center;}
@@ -341,7 +341,7 @@
 .my-wrap.my-wrap-rel .my-btn-area-fix02{position:absolute;}
 
 /* 맛집 배너 */
-.my-main-ranking .my-ranking-card.taste-home-banner{box-shadow: 0 0 0 0; background:url(/MYDATA/images/md/bg-tasty-home.png) no-repeat; background-size:cover; background-position: center center; min-height:302px; padding:0; position:relative;}
+.my-main-ranking .my-ranking-card.taste-home-banner{box-shadow: 0 0 0 0; background:url(../../images/md/bg-tasty-home.png) no-repeat; background-size:cover; background-position: center center; min-height:302px; padding:0; position:relative;}
 .my-main-ranking .my-ranking-card.taste-home-banner > a{display: flex; flex-direction: column; justify-content: space-between; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.3); position: absolute; border-radius: 15px; padding: 22px 18px 25px;}
 .my-main-ranking .my-ranking-card.taste-home-banner > a .tit,
 .my-main-ranking .my-ranking-card.taste-home-banner > a strong,
@@ -373,13 +373,13 @@
   height:42px;
   transform: translateX(-50%);
   margin-left:1px;
-  background:url('/MYDATA/images/md/roulette_pin.png') no-repeat 0 0;
+  background:url('../../images/md/roulette_pin.png') no-repeat 0 0;
   background-size:100% auto;
   z-index:1;}
 .food-roulette .roulette{
   width:100%;
   height:100%;
-  background:url('/MYDATA/images/md/roulette_bg.png') 0 0 no-repeat;
+  background:url('../../images/md/roulette_bg.png') 0 0 no-repeat;
   background-size:100% 100%;
   -webkit-animation-duration:2s;
   animation-duration:2s;
@@ -435,7 +435,7 @@
   height:58px;
   transform:translate(-50%, -50%);
   margin:2px 0 0 2px;
-  background:url('/MYDATA/images/md/roulette_btn.png') 0 0 no-repeat;
+  background:url('../../images/md/roulette_btn.png') 0 0 no-repeat;
   background-size:100% 100%;
   z-index:1;}
 .card-box-ban.food-box > .tit-area > .txt-area {text-align:center; margin-bottom:29px;}
@@ -466,14 +466,14 @@
   background-size:26px 26px;}
 .card-box-ban.food-box .food_list.menu_list{display:none;}
 .card-box-ban.food-box .food_list.que_mark{display:block; margin-left:0;}
-.card-box-ban.food-box .food_1:before{background-image:url(/MYDATA/images/md/food-menu-01.png);}
-.card-box-ban.food-box .food_2:before{background-image:url(/MYDATA/images/md/food-menu-02.png);}
-.card-box-ban.food-box .food_3:before{background-image:url(/MYDATA/images/md/food-menu-03.png);}
-.card-box-ban.food-box .food_4:before{background-image:url(/MYDATA/images/md/food-menu-04.png);}
-.card-box-ban.food-box .food_5:before{background-image:url(/MYDATA/images/md/food-menu-05.png);}
-.card-box-ban.food-box .food_6:before{background-image:url(/MYDATA/images/md/food-menu-06.png);}
-.card-box-ban.food-box .food_7:before{background-image:url(/MYDATA/images/md/food-menu-07.png);}
-.card-box-ban.food-box .food_8:before{background-image:url(/MYDATA/images/md/food-menu-08.png);}
+.card-box-ban.food-box .food_1:before{background-image:url(../../images/md/food-menu-01.png);}
+.card-box-ban.food-box .food_2:before{background-image:url(../../images/md/food-menu-02.png);}
+.card-box-ban.food-box .food_3:before{background-image:url(../../images/md/food-menu-03.png);}
+.card-box-ban.food-box .food_4:before{background-image:url(../../images/md/food-menu-04.png);}
+.card-box-ban.food-box .food_5:before{background-image:url(../../images/md/food-menu-05.png);}
+.card-box-ban.food-box .food_6:before{background-image:url(../../images/md/food-menu-06.png);}
+.card-box-ban.food-box .food_7:before{background-image:url(../../images/md/food-menu-07.png);}
+.card-box-ban.food-box .food_8:before{background-image:url(../../images/md/food-menu-08.png);}
 .card-box-ban.food-box .my-ranking-card-banner.banner2023{margin-top:16px;}
 .card-box-ban.food-box .my_surr_box{display:flex; font-size:15px; line-height:21px;}
 .card-box-ban.food-box .my_surr_box p{font-weight:bold;}
@@ -481,7 +481,7 @@
 .card-box-ban.food-box .food_list.food_small:before{top:1px; left:-21px; width:20px; height:20px; background-size:20px 20px;}
 .card-box-ban.food-box .hash-tag span{font-size:13px; color:#888; margin-top:2px;}
 .card-box-ban.food-box .hash-tag span + span{margin-left:3px;}
-.card-box-ban.pet-box{min-height:392px; background-image: url(/MYDATA/images/md/img_pet_hospital.png); background-size: 210px 142px;}
+.card-box-ban.pet-box{min-height:392px; background-image: url(../../images/md/img_pet_hospital.png); background-size: 210px 142px;}
 .my-ranking-card-banner.banner2023.food-banner{display:none;}
 .my-ranking-card-banner.banner2023{box-shadow: none; background-color:#D2F5F3; padding:18px;}
 .my-ranking-card-banner.banner2023.pet-ban .txt-area .pet-main-txt{font-size:15px; line-height:21px;}
@@ -491,7 +491,7 @@
   content:'';
   width:72px;
   height:50px;
-  background-image:url(/MYDATA/images/md/img_pet_cat.png);
+  background-image:url(../../images/md/img_pet_cat.png);
   background-size:72px 50px;
   margin-top:-25px;}
 .my-2-top-type-select-area{background-color:transparent !important;}
@@ -500,24 +500,24 @@
 .my-ranking-card-banner.card-e02.cash-car-2023 .txt-area:after{
   width:89px;
   height:65px;
-  background-image: url(/MYDATA/images/md/img_cashback.png);
+  background-image: url(../../images/md/img_cashback.png);
   margin-top:-30px;}
 .my-ranking-card-banner.card-e02.cash-car-2023 .sub-2023{font-size:15px; line-height:1.325; margin-top:4px;}
 .my-ranking-card-banner.card-e02.cash-car-2023 .sub-2023 > span{font-size:15px; color:#008882; font-weight:bold;}
 .card-box-ban.point-box{
   min-height:324px; 
-  background-image:url(/MYDATA/images/md/img_card_point.png);
+  background-image:url(../../images/md/img_card_point.png);
   background-size:194px 124px;
   background-position-y:calc(100% - 89.5px);}
 .my-ranking-card-banner.card-e01.new-card-ban-01 .txt-area .main-txt{display:flex; align-items:center;}
 .my-ranking-card-banner.card-e01.new-card-ban-01 .txt-area .main-txt > img{margin-right:2px;}
 .my-ranking-card-banner.card-e01.new-card-ban-01 .txt-area:after{
   margin-top:-31px;
-  background-image: url(/MYDATA/images/md/ic-investment.gif);
+  background-image: url(../../images/md/ic-investment.gif);
   width:68px;
   height:62px;}
 .new-card-2023 .my-ranking-card-banner{box-shadow: none; margin-top:15px; background:#E6DEFF !important;}
-.my-ranking-card.card-g03.new-card-2023 .tit-area{background-image: url(/MYDATA/images/md/img_emoji_crown.png); background-size: 100px 86px;}
+.my-ranking-card.card-g03.new-card-2023 .tit-area{background-image: url(../../images/md/img_emoji_crown.png); background-size: 100px 86px;}
 .my-ranking-card.card-g03.new-card-2023 .my-ranking-list li{height:auto; padding:7px 18px; justify-content: flex-start;}
 .my-ranking-card.card-g03.new-card-2023 .my-ranking-list.type-rank li .card-img{width:auto; height:auto; margin-right:15px;}
 .my-ranking-card.card-g03.new-card-2023 .my-ranking-list.type-rank li .card-img img{width:40px; height:26px;}
@@ -534,5 +534,5 @@
 .my-ranking-card.card-g03.new-card-2023 .my-ranking-list.type-rank li.rank01 .card-img img{width:102px; height:65px;}
 .new-card-2023 .my-ranking-card-banner .txt-area .main-txt{font-size:15px;}
 .new-card-2023 .my-ranking-card-banner .txt-area .sub-txt{font-size:13px; color:#888;}
-.new-card-2023 .my-ranking-card-banner.card-e06 .txt-area:after{margin-top:-25px; width:72px; height:50px; background-image: url(/MYDATA/images/md/img_best_card.png);}
-.my-ranking-info-pop.pop-s01.Card-point .my-ranking-pop-area .cont{background-image: url(/MYDATA/images/md/ic-cardPoint.png);}
+.new-card-2023 .my-ranking-card-banner.card-e06 .txt-area:after{margin-top:-25px; width:72px; height:50px; background-image: url(../../images/md/img_best_card.png);}
+.my-ranking-info-pop.pop-s01.Card-point .my-ranking-pop-area .cont{background-image: url(../../images/md/ic-cardPoint.png);}
