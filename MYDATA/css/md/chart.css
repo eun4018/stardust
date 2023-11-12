@@ -1,0 +1,728 @@
+/**
+***************************************************
+* chart
+****************************************************
+*/
+/**
+  * @name: BarChart
+  * @tag : <div class="BarChart"></div>
+*/
+.BarChart .chartGroup { position: relative; height: 140px; display: flex; align-items: flex-end; }
+.BarChart .chartGroup .y-area { position: absolute; top: 14px; bottom: 14px; left: 0; right: 0; display: flex; flex-direction: column; justify-content: space-between; }
+.BarChart .chartGroup .y-area li { display: flex; align-content: center; position: relative; }
+.BarChart .chartGroup .y-area li::before { content: ''; position: absolute; top: 50%; left: 0; right: 0; border-top-width: 1px; border-top-style: solid; height: 1px; transform: translateY(-50%); }
+.BarChart .chartGroup .y-area li .y { display: inline-block; text-align: right; font-size: 11px; line-height: 11px; letter-spacing: 0 !important; }
+.BarChart .chartGroup .y-area li .y * { font-size: 11px; line-height: 11px; }
+.BarChart .chartGroup .x-area-event, .BarChart .chartGroup .x-area { position: relative; z-index: 10; display: flex; width: 100%; }
+.BarChart .chartGroup .x-area-event li, .BarChart .chartGroup .x-area li { height: 150px; width: 100%; position: relative; }
+.BarChart .chartGroup .x-area-event li .bar, .BarChart .chartGroup .x-area li .bar { display: block; position: relative; height: calc(100% - 20px); }
+.BarChart .chartGroup .x-area-event li .bar > em, .BarChart .chartGroup .x-area li .bar > em { position: absolute; bottom: -.5px; height: 0; left: 50%; transform: translateX(-50%); width: 20px; border-top-left-radius: 5px; border-top-right-radius: 5px; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.BarChart .chartGroup .x-area-event li .debtBar > em, .BarChart .chartGroup .x-area li .debtBar > em { transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.BarChart .chartGroup .x-area-event li .x, .BarChart .chartGroup .x-area li .x { display: flex; align-items: flex-end; justify-content: space-around; height: 20px; font-size: 11px; line-height: 11px; letter-spacing: 0 !important; word-break: keep-all; }
+.BarChart .chartGroup .x-area-event li .x *, .BarChart .chartGroup .x-area li .x * { font-size: 11px; line-height: 11px; }
+.BarChart .chartGroup .no-result { position: absolute; top: 50%; left: 0; right: 0; text-align: center; font-size: 13px; line-height: 13px; color: #fff; transform: translateY(-50%); }
+.BarChart .chartGroup .no-result * { font-size: 13px; line-height: 13px; }
+.my-2-top-total-area-case [data-chart-type="plan"] { margin-top: 30px; }
+
+
+[data-chart-type="plan"].case-1 .chartGroup .label-max { position: absolute; left: 0; right: 0; bottom: 0; z-index: 100; border-bottom: 1px #82888b dashed; }
+[data-chart-type="plan"].case-1 .chartGroup .label-max em { font-size: 12px; line-height: 12px; letter-spacing: 0 !important; text-align: right; display: block; color: #333D42; padding-bottom: 4px; }
+[data-chart-type="plan"].case-1 .chartGroup .label-max em * { font-size: 12px; line-height: 12px; }
+[data-chart-type="plan"].case-1 .chartGroup .y-area { bottom: 20px; }
+[data-chart-type="plan"].case-1 .chartGroup .y-area li::before { left: 0; border-color: #f1f1f1; }
+[data-chart-type="plan"].case-1 .chartGroup .y-area li:last-child::before { border-color: #dfdfdf; }
+[data-chart-type="plan"].case-1 .chartGroup .x-area { padding-left: 0; }
+[data-chart-type="plan"].case-1 .chartGroup .x-area li .bar > em { background-color: #2B9F99; }
+[data-chart-type="plan"].case-1 .chartGroup .x-area li.selected .bar > em { background-color: #2B9F99; }
+[data-chart-type="plan"].case-1 .chartGroup .x-area li .x { color: #888; }
+[data-chart-type="plan"].case-1 .chartGroup .tooltip { border: 1px #4B5A61 solid; }
+[data-chart-type="plan"].case-1 .chartGroup .tooltip::after { border-right: 1px #4B5A61 solid; border-bottom: 1px #4B5A61 solid; }
+[data-chart-type="plan"].case-2 .chartGroup .x-area li { height: 120px; }
+[data-chart-type="plan"].case-2 .chartGroup .x-area-event { left: 33px; }
+[data-chart-type="plan"].case-2 .chartGroup .x-area-event li:last-child .tooltip { left: initial; transform: translateX(0%); right: 0; }
+[data-chart-type="plan"].case-2 .chartGroup .x-area-event li:last-child .tooltip::after { left: initial; right: 19px; }
+[data-chart-type="plan"] .chartGroup .y-area li .y { width: 20px; color: #ccc; }
+[data-chart-type="plan"] .chartGroup .y-area li::before { left: 33px; border-top-color: #58656b; }
+[data-chart-type="plan"] .chartGroup .y-area li:last-child::before { border-top-color: #6e777b; }
+[data-chart-type="plan"] .chartGroup .y-area li .unit { position: absolute; bottom: -14px; left: 0; color: #ccc; width: 20px; font-size: 11px; line-height: 11px; }
+[data-chart-type="plan"] .chartGroup .y-area li .unit * { font-size: 11px; line-height: 11px; }
+[data-chart-type="plan"] .chartGroup .x-area { padding-left: 33px; }
+[data-chart-type="plan"] .chartGroup .x-area li .bar > em { background-color: rgba(132, 215, 211, 0.5); }
+[data-chart-type="plan"] .chartGroup .x-area li .x { color: #ccc; }
+[data-chart-type="plan"] .chartGroup .x-area li.selected { z-index: 10; }
+[data-chart-type="plan"] .chartGroup .x-area li.selected .bar > em { background-color: #84d7d3; }
+[data-chart-type="plan"] .chartGroup .x-area li.selected .tooltip { visibility: visible; margin-bottom: 10px; }
+[data-chart-type="plan"] .chartGroup .x-area li .tooltip { visibility: hidden; position: absolute; left: 50%; bottom: calc(22% - 8px); background-color: #fff; border-radius: 10px; padding: 14px 12px; transform: translateX(-50%); margin-left: -1px; box-shadow: 2px 4px 4px 1px rgba(68, 68, 68, 0.5); transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+[data-chart-type="plan"] .chartGroup .x-area li .tooltip::after { content: ''; background-color: #fff; width: 8px; height: 8px; position: absolute; left: 50%; bottom: -7px; transform: rotate(45deg) translateX(-50%); }
+[data-chart-type="plan"] .chartGroup .x-area li .tooltip em { display: block; font-size: 12px; line-height: 12px; letter-spacing: 0 !important; color: #888; margin-bottom: 5px; }
+[data-chart-type="plan"] .chartGroup .x-area li .tooltip em * { font-size: 12px; line-height: 12px; }
+[data-chart-type="plan"] .chartGroup .x-area li .tooltip span { display: block; font-size: 14px; line-height: 14px; letter-spacing: 0 !important; word-break: keep-all; }
+[data-chart-type="plan"] .chartGroup .x-area li .tooltip span * { font-size: 14px; line-height: 14px; }
+@media screen and (max-width: 320px) { [data-chart-type="plan"] .chartGroup .x-area li .tooltip { padding: 10px 8px; }  [data-chart-type="plan"] .chartGroup .x-area li .tooltip span { font-size: 12px; line-height: 12px; }  [data-chart-type="plan"] .chartGroup .x-area li .tooltip span * { font-size: 12px; line-height: 12px; } }
+[data-chart-type="plan"] .chartGroup .x-area-event { position: absolute; left: 0; right: 0; top: -10px; z-index: 125; width: inherit; }
+[data-chart-type="plan"] .chartGroup .x-area-event li { height: 150px; }
+[data-chart-type="plan"] .chartGroup .x-area-event li.selected .tooltip { visibility: visible; margin-bottom: 10px; }
+[data-chart-type="plan"] .chartGroup .x-area-event li.selected .tooltip-area { visibility: visible; }
+[data-chart-type="plan"] .chartGroup .x-area-event li .tooltip-area { visibility: hidden; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); z-index: 30; }
+[data-chart-type="plan"] .chartGroup .x-area-event li .tooltip { visibility: hidden; position: absolute; left: 50%; bottom: calc(22% - 8px); background-color: #fff; border-radius: 10px; padding: 14px 12px; transform: translateX(-50%); margin-left: -1px; box-shadow: 2px 4px 4px 1px rgba(68, 68, 68, 0.5); transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+[data-chart-type="plan"] .chartGroup .x-area-event li .tooltip::after { content: ''; background-color: #fff; width: 8px; height: 8px; position: absolute; left: 50%; bottom: -7px; transform: rotate(45deg) translateX(-50%); border-right: 1px #4b5a61 solid; border-bottom: 1px #4b5a61 solid; }
+[data-chart-type="plan"] .chartGroup .x-area-event li .tooltip em { display: block; font-size: 12px; line-height: 12px; letter-spacing: 0 !important; margin-bottom: 5px; }
+[data-chart-type="plan"] .chartGroup .x-area-event li .tooltip em * { font-size: 12px; line-height: 12px; }
+[data-chart-type="plan"] .chartGroup .x-area-event li .tooltip span { display: block; font-size: 14px; line-height: 14px; letter-spacing: 0 !important; word-break: keep-all; }
+[data-chart-type="plan"] .chartGroup .x-area-event li .tooltip span * { font-size: 14px; line-height: 14px; }
+
+
+
+[data-chart-type="asset"].scope-0 .chartGroup .x-area li .bar { height: calc(100% - 20px); }
+[data-chart-type="asset"].scope-0 .chartGroup .x-area li .debtBar { height: 0; }
+[data-chart-type="asset"].scope-1 .chartGroup .x-area li .bar { height: calc(100% - 67px); }
+[data-chart-type="asset"].scope-1 .chartGroup .x-area li .debtBar { height: 47px; }
+[data-chart-type="asset"].scope-2 .chartGroup .x-area li .bar { height: calc(100% - 114px); }
+[data-chart-type="asset"].scope-2 .chartGroup .x-area li .debtBar { height: 94px; }
+[data-chart-type="asset"].scope-3 .chartGroup .x-area li .bar { height: calc(100% - 161px); }
+[data-chart-type="asset"].scope-3 .chartGroup .x-area li .debtBar { height: 141px; }
+[data-chart-type="asset"].scope-4 .chartGroup .x-area li .bar { height: calc(100% - 211px); }
+[data-chart-type="asset"].scope-4 .chartGroup .x-area li .debtBar { height: 188px; }
+[data-chart-type="asset"] .chartGroup { height: 230px; }
+[data-chart-type="asset"] .chartGroup .y-area li .y { width: 20px; color: #888; }
+[data-chart-type="asset"] .chartGroup .y-area li::before { left: 33px; border-top-color: #eee; }
+[data-chart-type="asset"] .chartGroup .y-area li .unit { position: absolute; bottom: -14px; left: 0; color: #888; width: 20px; font-size: 11px; line-height: 11px; }
+[data-chart-type="asset"] .chartGroup .y-area li .unit * { font-size: 11px; line-height: 11px; }
+[data-chart-type="asset"] .chartGroup .x-area { padding-left: 33px; }
+[data-chart-type="asset"] .chartGroup .x-area li { height: 210px; }
+[data-chart-type="asset"] .chartGroup .x-area li .bar > em { background: #2B9F99 url(/images/md/lineArea-1.png) repeat 0 0; background-size: 4px auto; height: 0; width: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; }
+[data-chart-type="asset"] .chartGroup .x-area li .debtBar { display: block; position: relative; }
+[data-chart-type="asset"] .chartGroup .x-area li .debtBar > em { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 12px; height: 0; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: #a6b6b6; }
+[data-chart-type="asset"] .chartGroup .x-area li .x { color: #888; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+[data-chart-type="asset"] .chartGroup .x-area-event { position: absolute; left: 33px; right: 0; top: 20px; z-index: 25; width: inherit; }
+[data-chart-type="asset"] .chartGroup .x-area-event li { height: 190px; }
+[data-chart-type="asset"] .chartGroup .x-area-event li:last-child .tooltip-area { left: initial; transform: translateX(10px); }
+[data-chart-type="asset"] .chartGroup .x-area-event li:last-child .tooltip-area .tooltip::after { margin-left: 15px; }
+[data-chart-type="asset"] .chartGroup .x-area-event li.selected .tooltip { visibility: visible; margin-bottom: 10px; }
+[data-chart-type="asset"] .chartGroup .x-area-event li.selected .tooltip-area { visibility: visible; }
+[data-chart-type="asset"] .chartGroup .x-area-event li .tooltip-area { visibility: hidden; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); z-index: 30; }
+[data-chart-type="asset"] .chartGroup .x-area-event li .tooltip { visibility: hidden; position: absolute; left: 50%; bottom: 0; background-color: #fff; border: 1px #4b5a61 solid; border-radius: 10px; padding: 10px 8px; transform: translateX(-50%); box-shadow: 2px 4px 4px 1px rgba(68, 68, 68, 0.3); transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); z-index: 30; margin-left: -1px; min-width: 52px; }
+[data-chart-type="asset"] .chartGroup .x-area-event li .tooltip::after { content: ''; background-color: #fff; width: 8px; height: 8px; position: absolute; left: 50%; bottom: -7px; transform: rotate(45deg) translateX(-50%); border-right: 1px #4b5a61 solid; border-bottom: 1px #4b5a61 solid; }
+[data-chart-type="asset"] .chartGroup .x-area-event li .tooltip em { display: block; font-size: 12px; line-height: 12px; letter-spacing: 0 !important; margin-bottom: 5px; }
+[data-chart-type="asset"] .chartGroup .x-area-event li .tooltip em * { font-size: 12px; line-height: 12px; }
+[data-chart-type="asset"] .chartGroup .x-area-event li .tooltip span { display: block; font-size: 14px; line-height: 14px; letter-spacing: 0 !important; word-break: keep-all; }
+[data-chart-type="asset"] .chartGroup .x-area-event li .tooltip span * { font-size: 14px; line-height: 14px; }
+
+
+[data-chart-type="cash"] { margin-bottom: 20px; position: relative; }
+[data-chart-type="cash"] .chartGroup { overflow-x: scroll; overflow-y: hidden; height: 170px; }
+[data-chart-type="cash"] .chartGroup::-webkit-scrollbar { display: none; }
+[data-chart-type="cash"] .chartGroup .x-area { display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; width: inherit; padding: 0 0 0 20px; }
+[data-chart-type="cash"] .chartGroup .x-area li { padding-bottom: 10px; }
+[data-chart-type="cash"] .chartGroup .x-area li .bar { width: 32px; border-bottom: 1px #eee solid; }
+[data-chart-type="cash"] .chartGroup .x-area li .bar > em { background-color: #a6b6b6; height: 0; width: 12px; border-top-left-radius: 12px; border-top-right-radius: 12px; }
+[data-chart-type="cash"] .chartGroup .x-area li .x { color: #888; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); height: initial; padding: 5px 4px; min-width: 21px; transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+[data-chart-type="cash"] .chartGroup .x-area li.selected { z-index: 10; }
+[data-chart-type="cash"] .chartGroup .x-area li.selected .bar > em { background: #2B9F99 url(/images/md/lineArea-1.png) repeat 0 0; background-size: 4px auto; }
+[data-chart-type="cash"] .chartGroup .x-area li.selected .x { background-color: #2B9F99; color: #fff; border-radius: 10px; }
+[data-chart-type="cash"] .chartGroup .x-area li:first-child.selected .x { background-color: #fff; color: #01a6a0; font-weight: 700; }
+[data-chart-type="cash"] .chartGroup .x-area li.isActiveLack { z-index: 10; }
+[data-chart-type="cash"] .chartGroup .x-area li.isActiveLack .bar > em { background: #908fd3 url(/images/md/pattern-pie-case-3-1-opacity.png) repeat 4px 0; background-size: 5px auto; }
+[data-chart-type="cash"] .chartGroup .x-area li .tooltip { visibility: hidden; position: absolute; left: 50%; bottom: 0; background-color: #fff; border: 1px #4b5a61 solid; border-radius: 10px; padding: 10px 8px; transform: translateX(-50%); box-shadow: 2px 4px 4px 1px rgba(68, 68, 68, 0.3); width: 110px; z-index: 10; }
+[data-chart-type="cash"] .chartGroup .x-area li .tooltip::after { content: ''; background-color: #fff; width: 8px; height: 8px; position: absolute; left: 50%; bottom: -7px; transform: rotate(45deg) translateX(-50%); border-right: 1px #4b5a61 solid; border-bottom: 1px #4b5a61 solid; }
+[data-chart-type="cash"] .chartGroup .x-area li .tooltip em { display: block; font-size: 12px; line-height: 12px; letter-spacing: 0 !important; margin-bottom: 5px; }
+[data-chart-type="cash"] .chartGroup .x-area li .tooltip em * { font-size: 12px; line-height: 12px; }
+[data-chart-type="cash"] .chartGroup .x-area li .tooltip span { display: block; font-size: 14px; line-height: 14px; letter-spacing: 0 !important; word-break: keep-all; }
+[data-chart-type="cash"] .chartGroup .x-area li .tooltip span * { font-size: 14px; line-height: 14px; }
+[data-chart-type="cash"] .chartGroup .x-area-event { position: absolute; left: 20px; right: 0; top: 20px; z-index: 25; display: block; }
+[data-chart-type="cash"] .chartGroup .x-area-event li { display: inline-block; height: 137px; }
+
+
+[data-chart-type="guest-month"] .chartGroup .open-scope { position: absolute; top: 0; bottom: 20px; background-color: #f8f8f8; }
+[data-chart-type="guest-month"] .chartGroup .open-scope[aria-valuemin="0"] { left: 0; }
+[data-chart-type="guest-month"] .chartGroup .open-scope[aria-valuemin="1"] { left: 14.2%; }
+[data-chart-type="guest-month"] .chartGroup .open-scope[aria-valuemin="2"] { left: 28.4%; }
+[data-chart-type="guest-month"] .chartGroup .open-scope[aria-valuemin="3"] { left: 42.6%; }
+[data-chart-type="guest-month"] .chartGroup .open-scope[aria-valuemin="4"] { left: 56.8%; }
+[data-chart-type="guest-month"] .chartGroup .open-scope[aria-valuemax="3"] { right: 42.6%; }
+[data-chart-type="guest-month"] .chartGroup .open-scope[aria-valuemax="4"] { right: 28.4%; }
+[data-chart-type="guest-month"] .chartGroup .open-scope[aria-valuemax="5"] { right: 14.2%; }
+[data-chart-type="guest-month"] .chartGroup .open-scope[aria-valuemax="6"] { right: 0; }
+[data-chart-type="guest-month"] .chartGroup .open-scope span { display: block; font-size: 10px; line-height: 10px; color: #666; margin-top: 6px; text-align: center; word-break: keep-all; }
+[data-chart-type="guest-month"] .chartGroup .open-scope span * { font-size: 10px; line-height: 10px; }
+[data-chart-type="guest-month"] .chartGroup .x-area li { height: 100px; }
+[data-chart-type="guest-month"] .chartGroup .x-area li.isActive { z-index: 5; }
+[data-chart-type="guest-month"] .chartGroup .x-area li .bar > em { background-color: #67c1bc; }
+[data-chart-type="guest-month"] .chartGroup .x-area li .x { border-top: 1px #eee solid; color: #888; }
+[data-chart-type="guest-month"] .chartGroup .x-area li:first-child .tooltip { left: 0; transform: translateX(0); }
+[data-chart-type="guest-month"] .chartGroup .x-area li:first-child .tooltip::after { left: 17px; transform: rotate(45deg) translateX(-50%); }
+[data-chart-type="guest-month"] .chartGroup .x-area li:last-child .tooltip { left: inherit; right: 0; transform: translateX(0); }
+[data-chart-type="guest-month"] .chartGroup .x-area li:last-child .tooltip::after { left: inherit; right: 12px; transform: rotate(45deg) translateX(-50%); }
+[data-chart-type="guest-month"] .chartGroup .x-area li .tooltip { position: absolute; left: 50%; bottom: 0; background-color: #fff; border: 1px #4b5a61 solid; border-radius: 10px; padding: 10px 8px; transform: translateX(-50%); box-shadow: 2px 4px 4px 1px rgba(68, 68, 68, 0.3); width: 110px; text-align: center; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+[data-chart-type="guest-month"] .chartGroup .x-area li .tooltip::after { content: ''; background-color: #fff; width: 8px; height: 8px; position: absolute; left: 50%; bottom: -8px; transform: rotate(45deg) translateX(-50%); border-right: 1px #4b5a61 solid; border-bottom: 1px #4b5a61 solid; }
+[data-chart-type="guest-month"] .chartGroup .x-area li .tooltip span { display: block; font-size: 11px; line-height: 11px; word-break: keep-all; }
+[data-chart-type="guest-month"] .chartGroup .x-area li .tooltip span * { font-size: 11px; line-height: 11px; }
+
+
+[data-chart-type="hot-place-location"] .chartGroup { height: 80px; }
+[data-chart-type="hot-place-location"] .chartGroup .x-area li { height: 80px; }
+[data-chart-type="hot-place-location"] .chartGroup .x-area li .bar > em { background-color: #67c1bc; height: 80%; }
+[data-chart-type="hot-place-location"] .chartGroup .x-area li .x { border-top: 1px #eee solid; color: #888; }
+[data-chart-type="hot-place-location"] .chartGroup .x-area li:nth-child(3) { z-index: 10; }
+[data-chart-type="hot-place-location"] .chartGroup .x-area li:nth-child(3) .bar > em { height: 22%; }
+
+
+[data-chart-type="hot-place-time"] .chartGroup { height: 150px; }
+[data-chart-type="hot-place-time"] .chartGroup .average-line-area { position: absolute; left: 0; right: 0; top: 0; height: calc(100% - 20px); border-bottom: 1px #eee solid; }
+[data-chart-type="hot-place-time"] .chartGroup .average-line-area .line { position: absolute; left: 0; right: 0; border-top: 1px #858b8e dashed; bottom: 0; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+[data-chart-type="hot-place-time"] .chartGroup .average-line-area .line span { position: absolute; bottom: 0; right: 0; text-align: right; color: #333D42; font-size: 12px; line-height: 14px; padding-bottom: 5px; }
+[data-chart-type="hot-place-time"] .chartGroup .average-line-area .line span * { font-size: 12px; line-height: 14px; }
+[data-chart-type="hot-place-time"] .chartGroup .x-area { justify-content: center; }
+[data-chart-type="hot-place-time"] .chartGroup .x-area li { width: 100px; height: 150px; }
+[data-chart-type="hot-place-time"] .chartGroup .x-area li .bar > em { background-color: #67c1bc; }
+[data-chart-type="hot-place-time"] .chartGroup .x-area li .x { color: #888; }
+
+
+[data-chart-type="score"] .chartGroup .label-max { position: absolute; left: 0; right: 0; bottom: 0%; border-bottom: 1px #82888b dashed; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+[data-chart-type="score"] .chartGroup .label-max em { font-size: 12px; line-height: 12px; letter-spacing: 0 !important; text-align: right; display: block; color: #333d42; padding-bottom: 4px; }
+[data-chart-type="score"] .chartGroup .label-max em * { font-size: 12px; line-height: 12px; }
+[data-chart-type="score"] .chartGroup .x-area li.case-1-0 .bar em, [data-chart-type="score"] .chartGroup .x-area li.case-2-0 .bar em { background-color: #01a6a0; }
+[data-chart-type="score"] .chartGroup .x-area li.case-1-0 .bar i, [data-chart-type="score"] .chartGroup .x-area li.case-1-0 .bar b, [data-chart-type="score"] .chartGroup .x-area li.case-1-0 .bar strong, [data-chart-type="score"] .chartGroup .x-area li.case-2-0 .bar i, [data-chart-type="score"] .chartGroup .x-area li.case-2-0 .bar b, [data-chart-type="score"] .chartGroup .x-area li.case-2-0 .bar strong { color: #01a6a0; }
+[data-chart-type="score"] .chartGroup .x-area li.case-1-1 .bar em, [data-chart-type="score"] .chartGroup .x-area li.case-2-1 .bar em { background-color: #2893b7; }
+[data-chart-type="score"] .chartGroup .x-area li.case-1-1 .bar i, [data-chart-type="score"] .chartGroup .x-area li.case-1-1 .bar b, [data-chart-type="score"] .chartGroup .x-area li.case-1-1 .bar strong, [data-chart-type="score"] .chartGroup .x-area li.case-2-1 .bar i, [data-chart-type="score"] .chartGroup .x-area li.case-2-1 .bar b, [data-chart-type="score"] .chartGroup .x-area li.case-2-1 .bar strong { color: #2893b7; }
+[data-chart-type="score"] .chartGroup .x-area li.case-1-2 .bar em, [data-chart-type="score"] .chartGroup .x-area li.case-2-2 .bar em { background-color: #5e78d7; }
+[data-chart-type="score"] .chartGroup .x-area li.case-1-2 .bar i, [data-chart-type="score"] .chartGroup .x-area li.case-1-2 .bar b, [data-chart-type="score"] .chartGroup .x-area li.case-1-2 .bar strong, [data-chart-type="score"] .chartGroup .x-area li.case-2-2 .bar i, [data-chart-type="score"] .chartGroup .x-area li.case-2-2 .bar b, [data-chart-type="score"] .chartGroup .x-area li.case-2-2 .bar strong { color: #5e78d7; }
+[data-chart-type="score"] .chartGroup .x-area li.case-1-3 .bar em { background-color: #8665ef; }
+[data-chart-type="score"] .chartGroup .x-area li.case-1-3 .bar i, [data-chart-type="score"] .chartGroup .x-area li.case-1-3 .bar b, [data-chart-type="score"] .chartGroup .x-area li.case-1-3 .bar strong { color: #8665ef; }
+[data-chart-type="score"] .chartGroup .x-area li.case-3-0 .bar em, [data-chart-type="score"] .chartGroup .x-area li.case-3-1 .bar em, [data-chart-type="score"] .chartGroup .x-area li.case-3-2 .bar em { background-color: #67c1bc; }
+[data-chart-type="score"] .chartGroup .x-area li.case-3-0 .bar i, [data-chart-type="score"] .chartGroup .x-area li.case-3-0 .bar b, [data-chart-type="score"] .chartGroup .x-area li.case-3-0 .bar strong, [data-chart-type="score"] .chartGroup .x-area li.case-3-1 .bar i, [data-chart-type="score"] .chartGroup .x-area li.case-3-1 .bar b, [data-chart-type="score"] .chartGroup .x-area li.case-3-1 .bar strong, [data-chart-type="score"] .chartGroup .x-area li.case-3-2 .bar i, [data-chart-type="score"] .chartGroup .x-area li.case-3-2 .bar b, [data-chart-type="score"] .chartGroup .x-area li.case-3-2 .bar strong { color: #2b9f99; }
+[data-chart-type="score"] .chartGroup .x-area li[class^="case-3-"] b, [data-chart-type="score"] .chartGroup .x-area li[class^="case-2-"] b { background-color: #fff !important; }
+[data-chart-type="score"] .chartGroup .x-area li[class^="case-3-"] strong, [data-chart-type="score"] .chartGroup .x-area li[class^="case-2-"] strong { background-color: #fff !important; }
+[data-chart-type="score"] .chartGroup .x-area li[class^="case-2-"] strong { margin-bottom: 18px !important; }
+[data-chart-type="score"] .chartGroup .x-area li .bar { border-bottom: 1px #eee solid; }
+[data-chart-type="score"] .chartGroup .x-area li .bar i { font-weight: 700; letter-spacing: 0 !important; }
+[data-chart-type="score"] .chartGroup .x-area li .bar > b, [data-chart-type="score"] .chartGroup .x-area li .bar > strong { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); font-size: 11px; line-height: 11px; font-weight: 700; margin-bottom: 5px; background-color: #f8f8f8; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); text-shadow: 1px 0 #fff; }
+[data-chart-type="score"] .chartGroup .x-area li .bar > b *, [data-chart-type="score"] .chartGroup .x-area li .bar > strong * { font-size: 11px; line-height: 11px; }
+[data-chart-type="score"] .chartGroup .x-area li .bar b { font-weight: 400; font-size: 10px; line-height: 10px; }
+[data-chart-type="score"] .chartGroup .x-area li .bar b * { font-size: 10px; line-height: 10px; }
+[data-chart-type="score"] .chartGroup .x-area li .x { color: #888; }
+[data-chart-type="score"].case-3 .x-area { margin: 0 50px; }
+[data-chart-type="score"].case-3 .x-area .bar { border-bottom: none !important; }
+[data-chart-type="score"].case-3 .chartGroup::before { content: ''; position: absolute; left: 0; right: 0; bottom: 20px; border-top: 1px #eee solid; }
+
+
+
+/**
+  * @name: DoubleBarChart
+  * @tag : <div class="DoubleBarChart"></div>
+*/
+.DoubleBarChart .chartGroup { position: relative; height: 170px; display: flex; align-items: flex-end; }
+.DoubleBarChart .chartGroup .x-area { position: relative; z-index: 10; display: flex; width: 100%; }
+.DoubleBarChart .chartGroup .x-area li { height: 150px; width: 100%; position: relative; }
+.DoubleBarChart .chartGroup .x-area li .bar { display: flex; align-items: flex-end; justify-content: center; position: relative; height: calc(100% - 20px); }
+.DoubleBarChart .chartGroup .x-area li .bar > em { width: 20px; height: 0; margin: 0 3px; border-top-left-radius: 5px; border-top-right-radius: 5px; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.DoubleBarChart .chartGroup .x-area li .x { display: flex; align-items: flex-end; justify-content: space-around; height: 20px; font-size: 11px; line-height: 11px; letter-spacing: 0 !important; word-break: keep-all; }
+.DoubleBarChart .chartGroup .x-area li .x * { font-size: 11px; line-height: 11px; }
+.DoubleBarChart .chartGroup .no-result { position: absolute; top: 50%; left: 0; right: 0; text-align: center; font-size: 13px; line-height: 13px; color: #fff; transform: translateY(-50%); }
+.DoubleBarChart .chartGroup .no-result * { font-size: 13px; line-height: 13px; }
+[data-chart-type="Bar-double"] .chartGroup .x-area li .bar > em:nth-child(1) { background-color: #67c1bc; }
+[data-chart-type="Bar-double"] .chartGroup .x-area li .bar > em:nth-child(2) { background: #7d66c3 url(/images/md/lineArea-1.png) repeat 0 0; background-size: 4px auto; }
+[data-chart-type="Bar-double"] .chartGroup .x-area li .bar b { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); font-size: 11px; line-height: 11px; margin-bottom: 5px; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+[data-chart-type="Bar-double"] .chartGroup .x-area li .bar b * { font-size: 11px; line-height: 11px; }
+[data-chart-type="Bar-double"] .chartGroup .x-area li .bar b:nth-child(3) { color: #2B9F99; margin-left: -13px; }
+[data-chart-type="Bar-double"] .chartGroup .x-area li .bar b:nth-child(3) i { color: #2B9F99; }
+[data-chart-type="Bar-double"] .chartGroup .x-area li .bar b:nth-child(4) { color: #7d66c3; margin-left: 13px; }
+[data-chart-type="Bar-double"] .chartGroup .x-area li .bar b:nth-child(4) i { color: #7d66c3; }
+[data-chart-type="Bar-double"] .chartGroup .x-area li .x { border-top: 1px #eee solid; color: #888; }
+[data-chart-type="hot-place-gender"] .chartGroup .x-area li .bar > em:nth-child(1) { background-color: #4896f0; }
+[data-chart-type="hot-place-gender"] .chartGroup .x-area li .bar > em:nth-child(2) { background: #f14a76 url(/images/md/lineArea-1.png) repeat 0 0; background-size: 4px auto; }
+[data-chart-type="hot-place-gender"] .chartGroup .x-area li .x { border-top: 1px #eee solid; color: #888; }
+[data-chart-type="hot-place-gender"] .chartGroup .x-area li.isActive { z-index: 10; }
+[data-chart-type="hot-place-gender"] .chartGroup .x-area li.isActive .tooltip { margin-bottom: 10px; }
+[data-chart-type="hot-place-gender"] .chartGroup .x-area li .tooltip { visibility: hidden; position: absolute; left: 50%; background-color: #fff; border: 1px #4b5a61 solid; border-radius: 10px; padding: 10px 8px; transform: translateX(-50%); box-shadow: 2px 4px 4px 1px rgba(68, 68, 68, 0.3); min-width: 65px; text-align: center; }
+[data-chart-type="hot-place-gender"] .chartGroup .x-area li .tooltip.selected { visibility: visible; }
+[data-chart-type="hot-place-gender"] .chartGroup .x-area li .tooltip:nth-child(3) { margin-left: -13px; }
+[data-chart-type="hot-place-gender"] .chartGroup .x-area li .tooltip:nth-child(4) { margin-left: 10px; }
+[data-chart-type="hot-place-gender"] .chartGroup .x-area li .tooltip::after { content: ''; background-color: #fff; width: 8px; height: 8px; position: absolute; left: 50%; bottom: -8px; transform: rotate(45deg) translateX(-50%); border-right: 1px #4b5a61 solid; border-bottom: 1px #4b5a61 solid; }
+[data-chart-type="hot-place-gender"] .chartGroup .x-area li .tooltip span { display: block; font-size: 11px; line-height: 11px; word-break: keep-all; }
+[data-chart-type="hot-place-gender"] .chartGroup .x-area li .tooltip span * { font-size: 11px; line-height: 11px; }
+
+
+
+/**
+  * @name: DoubleBarChart
+  * @tag : <div class="DoubleBarChart"></div>
+*/
+.ExpensesBarChart .chartGroup { position: relative; height: 170px; display: flex; align-items: flex-end; }
+.ExpensesBarChart .chartGroup .y-area { position: absolute; top: 20px; bottom: 20px; left: 0; right: 0; display: flex; flex-direction: column; justify-content: space-between; }
+.ExpensesBarChart .chartGroup .y-area li { display: flex; align-content: center; position: relative; }
+.ExpensesBarChart .chartGroup .y-area li::before { content: ''; position: absolute; top: 50%; left: 0; right: 0; border-top-width: 1px; border-top-style: solid; height: 1px; transform: translateY(-50%); }
+.ExpensesBarChart .chartGroup .y-area li:last-child::before { border: none; }
+.ExpensesBarChart .chartGroup .x-area { position: relative; z-index: 10; display: flex; width: 100%; }
+.ExpensesBarChart .chartGroup .x-area li { height: 150px; width: 100%; position: relative; }
+.ExpensesBarChart .chartGroup .x-area li .bar { display: block; position: relative; height: calc(100% - 20px); }
+.ExpensesBarChart .chartGroup .x-area li .bar > em { position: absolute; bottom: 0; height: 0; left: 50%; transform: translateX(-50%); width: 50px; border-top-left-radius: 5px; border-top-right-radius: 5px;  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.ExpensesBarChart .chartGroup .x-area li .x { display: flex; align-items: flex-end; justify-content: space-around; height: 20px; font-size: 13px; line-height: 13px; font-weight: 700; word-break: keep-all; }
+.ExpensesBarChart .chartGroup .x-area li .x * { font-size: 13px; line-height: 13px; }
+.ExpensesBarChart .chartGroup .no-result { position: absolute; top: 50%; left: 0; right: 0; text-align: center; font-size: 13px; line-height: 13px; color: #888; transform: translateY(-50%); }
+.ExpensesBarChart .chartGroup .no-result * { font-size: 13px; line-height: 13px; }
+[data-chart-type="Bar-Expenses"] .chartGroup .y-area li::before { border-color: #f1f1f1; }
+[data-chart-type="Bar-Expenses"] .chartGroup .x-area li.case-1-0 .bar > em:nth-child(1) { background-color: #f2fbfb; border: 1px #2B9F99 dotted; }
+[data-chart-type="Bar-Expenses"] .chartGroup .x-area li.case-1-0 .bar > em:nth-child(2) { background-color: #2B9F99; }
+[data-chart-type="Bar-Expenses"] .chartGroup .x-area li.case-1-1 .bar > em:nth-child(1) { background: #7d66c3 url(/images/md/lineArea-1.png) repeat 0 0; background-size: 4px auto; }
+[data-chart-type="Bar-Expenses"] .chartGroup .x-area li .x { border-top: 1px #dfdfdf solid; color: #888; }
+[data-chart-type="Bar-Expenses"].case-2 .chartGroup .y-area li::before { border-color: #58656b; }
+[data-chart-type="Bar-Expenses"].case-2 .chartGroup .x-area li.case-2-0 .bar > em:nth-child(1) { background-color: #51676d; border: 1px #84d7d3 dotted; }
+[data-chart-type="Bar-Expenses"].case-2 .chartGroup .x-area li.case-2-0 .bar > em:nth-child(2) { background-color: #84d7d3; }
+[data-chart-type="Bar-Expenses"].case-2 .chartGroup .x-area li.case-2-1 .bar > em:nth-child(1) { background: #b6b5ed url(/images/md/lineArea-1.png) repeat 0 0; background-size: 4px auto; }
+[data-chart-type="Bar-Expenses"].case-2 .chartGroup .x-area li .x { border-top: 1px #6e777b solid; color: #fff; }
+[data-chart-type="Bar-Expenses"].case-2 .chartGroup .no-result { color: #fff; }
+[data-chart-type="Bar-Expenses"].case-3 .chartGroup .label-lastMonth { position: absolute; left: 0; right: 0; top: 20px; bottom: 20px; z-index: 20; }
+[data-chart-type="Bar-Expenses"].case-3 .chartGroup .label-lastMonth div { position: absolute; left: 0; right: 0; bottom: 0; z-index: 20; border-bottom: 1px #333d42 dashed; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+[data-chart-type="Bar-Expenses"].case-3 .chartGroup .label-lastMonth span { text-align: right; display: block; font-size: 11px; line-height: 11px; color: #888; margin-bottom: 2px; }
+[data-chart-type="Bar-Expenses"].case-3 .chartGroup .label-lastMonth span * { font-size: 11px; line-height: 11px; }
+[data-chart-type="Bar-Expenses"].case-3 .chartGroup .label-lastMonth em { font-size: 12px; line-height: 12px; letter-spacing: 0 !important; text-align: right; display: block; color: #333d42; padding-bottom: 4px; }
+[data-chart-type="Bar-Expenses"].case-3 .chartGroup .label-lastMonth em * { font-size: 12px; line-height: 12px; }
+[data-chart-type="Bar-Expenses"].case-3 .chartGroup .label-lastMonth em.plus { color: #ef4567; }
+[data-chart-type="Bar-Expenses"].case-3 .chartGroup .label-lastMonth em.minus { color: #418cd9; }
+[data-chart-type="Bar-Expenses"].case-3 .chartGroup .y-area li::before { border-color: #f1f1f1; }
+[data-chart-type="Bar-Expenses"].case-3 .chartGroup .y-area li:last-child::before { border-top: 1px #dfdfdf solid; }
+[data-chart-type="Bar-Expenses"].case-3 .chartGroup .x-area { margin-right: 100px; }
+[data-chart-type="Bar-Expenses"].case-3 .chartGroup .x-area li.case-3-0 .bar > em:nth-child(1) { background: #4896f0 url(/images/md/lineArea-1.png) repeat 0 0; background-size: 4px auto; }
+[data-chart-type="Bar-Expenses"].case-3 .chartGroup .x-area li.case-3-0 .bar > em:nth-child(2) { background-color: #ccc; }
+[data-chart-type="Bar-Expenses"].case-3 .chartGroup .x-area li.case-3-1 .bar > em:nth-child(1) { background: #ef4567 url(/images/md/lineArea-1.png) repeat 0 0; background-size: 4px auto; }
+[data-chart-type="Bar-Expenses"].case-3 .chartGroup .x-area li.case-3-1 .bar > em:nth-child(2) { background-color: #ccc; }
+[data-chart-type="Bar-Expenses"].case-3 .chartGroup .x-area li .x { border-top: none; font-size: 13px; line-height: 13px; font-weight: 400; color: #888; }
+[data-chart-type="Bar-Expenses"].case-3 .chartGroup .x-area li .x * { font-size: 13px; line-height: 13px; }
+[data-chart-type="Bar-Expenses"].case-3 .chartGroup .no-result { color: #fff; }
+
+
+
+/**
+  * @name: LineChart
+  * @tag : <div class="LineChart"></div>
+*/
+.LineChart .chartGroup { position: relative; height: 170px; display: flex; align-items: flex-end; }
+.LineChart .chartGroup .y-area { position: absolute; top: 14px; bottom: 14px; left: 0; right: 0; display: flex; flex-direction: column; justify-content: space-between; }
+.LineChart .chartGroup .y-area li { display: flex; align-content: center; position: relative; }
+.LineChart .chartGroup .y-area li::before { content: ''; position: absolute; top: 50%; left: 0; right: 0; border-top-width: 1px; border-top-style: solid; height: 1px; transform: translateY(-50%); }
+.LineChart .chartGroup .y-area li .y { display: inline-block; text-align: right; font-size: 11px; line-height: 11px; letter-spacing: 0 !important; }
+.LineChart .chartGroup .y-area li .y * { font-size: 11px; line-height: 11px; }
+.LineChart .chartGroup .x-area { position: relative; z-index: 10; display: flex; width: 100%; }
+.LineChart .chartGroup .x-area li { height: 150px; width: 100%; position: relative; }
+.LineChart .chartGroup .x-area li .bar { display: block; position: relative; height: calc(100% - 20px); }
+.LineChart .chartGroup .x-area li .bar > em { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 1px; border-top-left-radius: 5px; border-top-right-radius: 5px; }
+.LineChart .chartGroup .x-area li .x { display: flex; align-items: flex-end; justify-content: space-around; height: 20px; font-size: 11px; line-height: 11px; letter-spacing: 0 !important; word-break: keep-all; }
+.LineChart .chartGroup .x-area li .x * { font-size: 11px; line-height: 11px; }
+.LineChart .chartGroup .no-result { position: absolute; top: 50%; left: 0; right: 0; text-align: center; font-size: 13px; line-height: 13px; color: #fff; transform: translateY(-50%); }
+.LineChart .chartGroup .no-result * { font-size: 13px; line-height: 13px; }
+[data-chart-type="guest-time"] .chartGroup .open-scope { position: absolute; top: 0; bottom: 20px; background-color: #f8f8f8; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemin="0"] { left: 0; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemin="1"] { left: 6.1%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemin="2"] { left: 10.2%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemin="3"] { left: 14.3%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemin="5"] { left: 18.4%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemin="6"] { left: 22.5%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemin="7"] { left: 26.6%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemin="8"] { left: 30.7%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemin="9"] { left: 34.8%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemin="10"] { left: 38.9%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemin="11"] { left: 43%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemin="12"] { left: 47.1%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemax="12"] { right: 47.1%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemax="13"] { right: 43%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemax="14"] { right: 38.9%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemax="15"] { right: 34.8%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemax="16"] { right: 30.7%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemax="17"] { right: 26.6%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemax="18"] { right: 22.5%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemax="19"] { right: 18.4%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemax="20"] { right: 14.3%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemax="21"] { right: 10.2%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemax="22"] { right: 6.1%; }
+[data-chart-type="guest-time"] .chartGroup .open-scope[aria-valuemax="23"] { right: 0; }
+[data-chart-type="guest-time"] .chartGroup .open-scope span { display: block; font-size: 10px; line-height: 10px; color: #666; margin-top: 6px; text-align: center; word-break: keep-all; }
+[data-chart-type="guest-time"] .chartGroup .open-scope span * { font-size: 10px; line-height: 10px; }
+[data-chart-type="guest-time"] .chartGroup .x-area li:nth-of-type(even) .x { display: none; }
+[data-chart-type="guest-time"] .chartGroup .x-area li .x { color: #888; position: absolute; left: 0; right: 0; bottom: 0; }
+[data-chart-type="guest-time"] .chartGroup .x-area li.x_right .tooltip span { left: -105px; }
+[data-chart-type="guest-time"] .chartGroup .x-area li.x_right .tooltip span::after { left: initial; bottom: 29%; right: -6px; transform: rotate(-45deg) translateY(-50%); }
+[data-chart-type="guest-time"] .chartGroup .x-area li .tooltip { position: absolute; left: 50%; bottom: 0; height: 110px; border-left: 1px #111 dotted; transform: translateX(-50%); }
+[data-chart-type="guest-time"] .chartGroup .x-area li .tooltip span { display: block; font-size: 11px; line-height: 11px; word-break: keep-all; position: absolute; left: 5px; top: -17px; width: 100px; background-color: #fff; border: 1px #4B5A61 solid; border-radius: 10px; padding: 8px; }
+[data-chart-type="guest-time"] .chartGroup .x-area li .tooltip span * { font-size: 11px; line-height: 11px; }
+[data-chart-type="guest-time"] .chartGroup .x-area li .tooltip span::after { content: ''; background-color: #fff; width: 6px; height: 6px; position: absolute; left: -6px; bottom: 40%; transform: rotate(135deg) translateY(-50%); border-right: 1px #4b5a61 solid; border-bottom: 1px #4b5a61 solid; }
+
+
+
+
+/**
+  * @name: chart-line-css
+  * @tag : <div class="chart-line-css"></div>
+*/
+.chart-line-css { position: absolute; left: 0; right: 0; top: 30px; z-index: 20; }
+.chart-line-css .line-chart .selected .data-point::before { content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background-color: #fff; border: 3px #01a6a0 solid; border-radius: 50%; height: 12px; width: 12px; }
+.chart-line-css .data-label { position: absolute; font-size: 11px; line-height: 11px; margin: 0 0 7px -10px; text-shadow: 1px 1px #fff, -1px -1px #fff; }
+.chart-line-css .data-label * { font-size: 11px; line-height: 11px; }
+.chart-line-css .data-point { background-color: #fff; border: 1px #333D42 solid; border-radius: 50%; height: 8px; width: 8px; margin-left: 1px; opacity: 1; position: absolute; transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.chart-line-css .line-segment { position: absolute; border-top: 1px #333D42 solid; transform-origin: left bottom; opacity: 1; transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.chart-line-css[data-chart-type="line-case-1"] { top: 0; height: 130px; width: 198px; margin: auto; }
+.chart-line-css[data-chart-type="line-case-2"] { height: 100px; margin: 0 17%; }
+.chart-line-css[data-chart-type="line-case-3"] { top: 50px; height: 100px; border-bottom: 1px #eee solid; }
+.chart-line-css[data-chart-type="line-case-3"] .data-point { display: none; }
+.chart-line-css[data-chart-type="line-case-3"] .line-segment { border-top-color: #009688; }
+.chart-line-css[data-chart-type="line-case-4"] { height: 132px; left: 20px; top: 8px; }
+.chart-line-css[data-chart-type="line-case-4"] .line-chart li.selected .data-point { background-color: #2B9F99; }
+.chart-line-css[data-chart-type="line-case-5"] { height: 190px; left: 33px; top: 20px; }
+.chart-line-css[data-chart-type="line-case-5"] .data-point { border: 1px #111 solid; background-color: #fff; }
+
+
+
+/**
+  * @name: LineDonutChart
+  * @tag : <div class="LineDonutChart"></div>
+*/
+.LineDonutChart .chartGroup { position: relative; height: 170px; }
+.LineDonutChart .chartGroup .x-area { position: relative; z-index: 10; display: flex; width: 100%; }
+.LineDonutChart .chartGroup .x-area li { height: 150px; width: 100%; position: relative; }
+.LineDonutChart .chartGroup .x-area li .x { display: flex; align-items: flex-end; justify-content: space-around; height: 20px; font-size: 11px; line-height: 11px; letter-spacing: 0 !important; color: #888; word-break: keep-all; position: absolute; bottom: 0; left: 0; right: 0; text-align: center; border-top: 1px #eee solid; }
+.LineDonutChart .chartGroup .x-area li .x * { font-size: 11px; line-height: 11px; }
+
+
+
+/**
+  * @name: LinePriceChart
+  * @tag : <div class="LinePriceChart"></div>
+*/
+.LinePriceChart .chart-line-css { height: 130px; }
+.LinePriceChart.case-2 .chart-line-css { height: 120px; }
+.LinePriceChart.case-2 .x-area-event li:first-child.selected .tooltip-area .tooltip::after { left: 25px; }
+.LinePriceChart.case-2 .x-area-event li:last-child.selected .tooltip-area .tooltip::after { left: inherit; right: 4px !important; }
+.LinePriceChart .chartGroup { position: relative; height: 170px; }
+.LinePriceChart .chartGroup .y-area { position: absolute; top: 0; bottom: 20px; left: 0; right: 0; display: flex; flex-direction: column; justify-content: space-between; }
+.LinePriceChart .chartGroup .y-area li { display: flex; align-content: center; position: relative; }
+.LinePriceChart .chartGroup .y-area li::before { content: ''; position: absolute; top: 50%; left: 0; right: 0; border-top-width: 1px; border-top-style: solid; border-color: #eee; height: 1px; transform: translateY(-50%); }
+.LinePriceChart .chartGroup .x-area-event, .LinePriceChart .chartGroup .x-area { position: relative; z-index: 10; display: flex; width: 100%; }
+.LinePriceChart .chartGroup .x-area-event li, .LinePriceChart .chartGroup .x-area li { height: 170px; width: 100%; position: relative; }
+.LinePriceChart .chartGroup .x-area-event li .x, .LinePriceChart .chartGroup .x-area li .x { display: flex; align-items: flex-end; justify-content: space-around; height: 20px; font-size: 11px; line-height: 11px; letter-spacing: -1px; color: #888; word-break: keep-all; position: absolute; bottom: 0; left: 0; right: 0; text-align: center; border-top: 1px #eee solid; }
+.LinePriceChart .chartGroup .x-area-event li .x *, .LinePriceChart .chartGroup .x-area li .x * { font-size: 11px; line-height: 11px; }
+.LinePriceChart .chartGroup .x-area-event { position: absolute; left: 0; right: 0; top: 0; z-index: 25; width: inherit; }
+.LinePriceChart .chartGroup .x-area-event li { height: 150px; }
+.LinePriceChart .chartGroup .x-area-event li:first-child.selected .tooltip-area { transform: translateX(-12%); }
+.LinePriceChart .chartGroup .x-area-event li:first-child.selected .tooltip-area .tooltip::after { left: 11px; }
+.LinePriceChart .chartGroup .x-area-event li:last-child.selected .tooltip-area { transform: translateX(-84%); }
+.LinePriceChart .chartGroup .x-area-event li:last-child.selected .tooltip-area .tooltip::after { left: inherit; right: 17px; }
+.LinePriceChart .chartGroup .x-area-event li.selected .tooltip-area { visibility: visible; }
+.LinePriceChart .chartGroup .x-area-event li .tooltip-area { visibility: hidden; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); z-index: 30; }
+.LinePriceChart .chartGroup .x-area-event li .tooltip { background-color: #fff; border: 1px #01a6a0 solid; border-radius: 10px; padding: 10px 8px; box-shadow: 2px 4px 4px 1px rgba(68, 68, 68, 0.3); transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; margin-left: -1px; }
+.LinePriceChart .chartGroup .x-area-event li .tooltip::after { content: ''; background-color: #fff; width: 8px; height: 8px; position: absolute; left: 50%; bottom: -7px; transform: rotate(45deg) translateX(-50%); border-right: 1px #01a6a0 solid; border-bottom: 1px #01a6a0 solid; }
+.LinePriceChart .chartGroup .x-area-event li .tooltip em { display: block; font-size: 12px; line-height: 12px; letter-spacing: 0 !important; margin-bottom: 5px; }
+.LinePriceChart .chartGroup .x-area-event li .tooltip em * { font-size: 12px; line-height: 12px; }
+.LinePriceChart .chartGroup .x-area-event li .tooltip span { display: block; font-size: 14px; line-height: 14px; letter-spacing: 0 !important; word-break: keep-all; color: #01a6a0; }
+.LinePriceChart .chartGroup .x-area-event li .tooltip span * { font-size: 14px; line-height: 14px; }
+.LinePriceChart .chartGroup .no-result { position: absolute; top: 50%; left: 0; right: 0; text-align: center; font-size: 13px; line-height: 13px; color: #666; transform: translateY(-50%); }
+.LinePriceChart .chartGroup .no-result * { font-size: 13px; line-height: 13px; }
+
+
+
+/**
+  * @name: 소비태그 분석
+  * @tag : <div class="my-chart-curve-area">
+  * @url : http://localhost:3000/html_guide_md/CON-1/CON_003_0011.html
+*/
+.my-chart-curve-area .chart-curve { height: 139px; position: relative; display: flex; justify-content: center; align-items: center; }
+.my-chart-curve-area .chart-curve .chart-curve-svg { vertical-align: top; }
+.my-chart-curve-area .chart-curve .my { position: absolute; left: 0; top: 0; bottom: 0; z-index: 5; }
+.my-chart-curve-area .chart-curve .my em { display: block; position: absolute; left: -14px; top: 0; background-image: url("/images/md/my-value.png"); background-size: 100% 100%; width: 30px; height: 33px; color: #84d7d3; text-align: center; font-size: 13px; line-height: 32px; font-weight: 700; z-index: 1; }
+.my-chart-curve-area .chart-curve .my::after { content: ''; border-left: 1px #333d42 dotted; display: block; position: absolute; left: 0; top: 0; bottom: 0; }
+.my-chart-curve-area .value-area { display: flex; justify-content: space-between; align-items: center; border-top: 1px #eee solid; padding-top: 10px; }
+.my-chart-curve-area .value-area span { font-size: 11px; line-height: 11px; color: #888; letter-spacing: 0; }
+.my-chart-curve-area .value-area span * { font-size: 11px; line-height: 11px; }
+
+
+
+/**
+  * @name: donut
+  * @tag : <div class="my-data-chart-donut">
+  * @url : http://localhost:3000/html_guide_md/CON-1/CON_003_0001.html
+  * @url : http://localhost:3000/html_guide_md/CON-1/CON_006_0001.html
+*/
+.my-data-chart-donut { min-height: 170px; margin: 66px 20px 0; }
+.my-data-chart-donut.SubDonut { margin: 0; }
+.my-data-chart-donut.ExDonut { margin: 0; }
+.my-data-chart-donut path.background { fill: #efefef; }
+.my-data-chart-donut path.foreground { fill: url(#grad-1); }
+.my-data-chart-donut path.background-case-1 { fill: #d9d9d9; }
+.my-data-chart-donut path.background-case-2 { fill: url(#pattern-donut-2); stroke: #fff; }
+.my-data-chart-donut path.background-case-3 { fill: #d9d9d9; }
+.my-data-chart-donut path.foreground-case-1 { fill: url(#pattern-donut-1); stroke: #fff; }
+.my-data-chart-donut path.foreground-case-2 { fill: #67c1bc; stroke: #fff; }
+.my-data-chart-donut path.foreground-case-3 { fill: #67c1bc; stroke: #fff; }
+.my-data-chart-donut path.pattern-pie-case-2-0 { fill: url(#pattern-pie-case-2-0); }
+.my-data-chart-donut path.pattern-pie-case-2-1 { fill: url(#pattern-pie-case-2-1); }
+.my-data-chart-donut path.pattern-pie-case-2-2 { fill: url(#pattern-pie-case-2-2); }
+.my-data-chart-donut path.pattern-pie-case-2-3 { fill: url(#pattern-pie-case-2-3); }
+.my-data-chart-donut path.pattern-pie-case-3-0 { fill: url(#pattern-pie-case-3-0); }
+.my-data-chart-donut path.pattern-pie-case-3-1 { fill: url(#pattern-pie-case-3-1); }
+.my-data-chart-donut path.pattern-pie-case-3-2 { fill: url(#pattern-pie-case-3-2); }
+.my-data-chart-donut path.pattern-pie-case-3-3 { fill: url(#pattern-pie-case-3-3); }
+.my-data-chart-donut path.pie-case-2-0 { fill: #307dd5; }
+.my-data-chart-donut path.pie-case-2-1 { fill: #4591e9; }
+.my-data-chart-donut path.pie-case-2-2 { fill: #6cacf5; }
+.my-data-chart-donut path.pie-case-2-3 { fill: #b3d5fc; }
+.my-data-chart-donut path.pie-case-3-0 { fill: #6a4bcb; }
+.my-data-chart-donut path.pie-case-3-1 { fill: #8c75d9; }
+.my-data-chart-donut path.pie-case-3-2 { fill: #a694e2; }
+.my-data-chart-donut path.pie-case-3-3 { fill: #cbbff2; }
+.my-data-chart-donut path.pattern-pie-case-2-4, .my-data-chart-donut path.pattern-pie-case-3-4, .my-data-chart-donut path.pie-case-2-4, .my-data-chart-donut path.pie-case-3-4 { fill: #ccc; }
+.my-data-chart-donut .ex-text { font-size: 18px; line-height: 18px; font-weight: 700; fill: #8665ef; text-anchor: middle; }
+.my-data-chart-donut .ex-text * { font-size: 18px; line-height: 18px; }
+.my-data-chart-donut .sub-text-0 { font-size: 14px; line-height: 14px; text-anchor: middle; }
+.my-data-chart-donut .sub-text-0 * { font-size: 14px; line-height: 14px; }
+.my-data-chart-donut .sub-text-1 { font-size: 21px; line-height: 21px; font-weight: 700; fill: #009688; text-anchor: middle; }
+.my-data-chart-donut .sub-text-1 * { font-size: 21px; line-height: 21px; }
+.my-data-chart-donut .sub-text-2 { font-size: 21px; line-height: 21px; font-weight: 700; fill: #8665ef; text-anchor: middle; }
+.my-data-chart-donut .sub-text-2 * { font-size: 21px; line-height: 21px; }
+.my-data-chart-donut .sub-text-case-0, .my-data-chart-donut .sub-text-case-2, .my-data-chart-donut .sub-text-case-3 { font-size: 18px; line-height: 18px; text-anchor: middle; }
+.my-data-chart-donut .sub-text-case-0 *, .my-data-chart-donut .sub-text-case-2 *, .my-data-chart-donut .sub-text-case-3 * { font-size: 18px; line-height: 18px; }
+.my-data-chart-donut .sub-text-case-0 { fill: #888; }
+.my-data-chart-donut .sub-text-case-2 { fill: #4896f0; }
+.my-data-chart-donut .sub-text-case-3 { fill: #8665ef; }
+.my-data-chart-donut .sub-text-case-n { font-size: 12px; line-height: 12px; text-anchor: middle; fill: #888; letter-spacing: -1px; }
+.my-data-chart-donut .sub-text-case-n * { font-size: 12px; line-height: 12px; }
+
+
+
+/**
+  * @name: bar
+  * @tag : <div class="my-data-chart-bar">
+  * @url : http://localhost:3000/html_guide_md/SEM/SEM_001_0001.html
+  * @url : http://localhost:3000/html_guide_md/SEM/SEM_001_0003.html
+  * @url : http://localhost:3000/html_guide_md/CAR/CAR_001_0001.html
+*/
+.my-data-chart-bar { min-height: 170px; }
+.my-data-chart-bar .axis-cs path, .my-data-chart-bar .axis path { stroke: #eee; }
+.my-data-chart-bar .axis-cs line, .my-data-chart-bar .axis line { visibility: hidden; }
+.my-data-chart-bar .tick text { fill: #888; font-size: 11px; }
+.my-data-chart-bar .axis-cs .tick text { fill: #888; font-size: 13px; font-weight: 700; }
+.my-data-chart-bar .label-max { font-size: 12px; line-height: 12px; letter-spacing: 0 !important; fill: #333D42; }
+.my-data-chart-bar .label-max * { font-size: 12px; line-height: 12px; }
+.my-data-chart-bar [class^="label-at-"] { font-size: 13px; line-height: 13px; letter-spacing: 0 !important; }
+.my-data-chart-bar [class^="label-at-"] * { font-size: 13px; line-height: 13px; }
+.my-data-chart-bar .label-at-plus { fill: #ef4567; }
+.my-data-chart-bar .label-at-minus { fill: #4896f0; }
+.my-data-chart-bar .label-at-text { font-size: 11px; line-height: 11px; fill: #888; }
+.my-data-chart-bar .label-at-text * { font-size: 11px; line-height: 11px; }
+.my-data-chart-bar .label-score, .my-data-chart-bar .label-level { text-anchor: middle; }
+.my-data-chart-bar .label-score { font-size: 11px; line-height: 11px; font-weight: 700; letter-spacing: 0 !important; }
+.my-data-chart-bar .label-score * { font-size: 11px; line-height: 11px; }
+.my-data-chart-bar .label-level { font-size: 10px; line-height: 10px; }
+.my-data-chart-bar .label-level * { font-size: 10px; line-height: 10px; }
+.my-data-chart-bar .label-noData { font-size: 13px; line-height: 13px; fill: #888; }
+.my-data-chart-bar .label-noData * { font-size: 13px; line-height: 13px; }
+.my-data-chart-bar .bar-pattern-1 { fill: url(#pattern-bar-1); }
+.my-data-chart-bar .bar-pattern-at-0 { fill: url(#pattern-bar-2); }
+.my-data-chart-bar .bar-pattern-at-1 { fill: url(#pattern-bar-3); }
+.my-data-chart-bar .bar-pattern-cs-0 { fill: #2b9f99; }
+.my-data-chart-bar .bar-pattern-cs-1 { fill: url(#pattern-bar-1); }
+.my-data-chart-bar .bar-cs-0 { stroke: #2b9f99; fill: #f2fbfb; }
+.my-data-chart-bar .bar-cs-1 { fill: #fff; }
+.my-data-chart-bar .grid-area .domain { display: none; }
+.my-data-chart-bar .grid-area line { stroke: #f1f1f1; }
+.my-2-top-total-area-case .my-data-chart-bar .grid-area line { stroke: #58656b; }
+.my-2-top-total-area-case .my-data-chart-bar .bar-cs-0 { fill: #51676d; }
+.my-2-top-total-area-case .my-data-chart-bar .bar-pattern-cs-0 { fill: #84d7d3; }
+.my-2-top-total-area-case .my-data-chart-bar .bar-cs-0 { stroke: #84d7d3; }
+.my-2-top-total-area-case .my-data-chart-bar .axis-cs path { stroke: #6e777b; }
+.my-2-top-total-area-case .my-data-chart-bar .axis-cs .tick text { fill: #fff; }
+.my-2-top-total-area-case .my-data-chart-bar .label-noData { fill: #fff; }
+
+
+
+/**
+  * @name: line
+  * @tag : <div class="my-data-chart-line">
+  * @url : http://localhost:3000/html_guide_md/CAR/CAR_002_0001.html
+*/
+.my-data-chart-line { position: relative; min-height: 170px; }
+.my-data-chart-line .axis-cs path, .my-data-chart-line .axis path { stroke: #eee; }
+.my-data-chart-line .axis-cs line, .my-data-chart-line .axis line { visibility: hidden; }
+.my-data-chart-line .tick text { fill: #888; font-size: 11px; }
+.my-data-chart-line .grid-area .domain { display: none; }
+.my-data-chart-line .grid-area line { stroke: #f1f1f1; }
+.my-data-chart-line .grid-area-e .domain { display: none; }
+.my-data-chart-line .grid-area-e line { stroke: #eee; }
+.my-data-chart-line .axis--x-odd .domain, .my-data-chart-line .axis--x .domain { stroke: #dfdfdf; }
+.my-data-chart-line .axis--x-odd .tick:nth-last-child(odd) { visibility: hidden; }
+.my-data-chart-line .myRect { fill: steelblue; }
+.my-data-chart-line .myRect:hover { opacity: 80%; }
+.my-data-chart-line .line { fill: none; stroke: #333D42; }
+.my-data-chart-line .dot-bg { fill: #333D42; }
+.my-data-chart-line .dot-bg.active { fill: #fff; stroke: #01a6a0; stroke-width: 5; }
+.my-data-chart-line .dot { fill: transparent; stroke: none; }
+.my-data-chart-line div.tooltip { position: absolute; text-align: left; width: fit-content; padding: 8px; background-color: #fff; border-radius: 10px; pointer-events: none; border: 1px #01a6a0 solid; box-shadow: 0px 3px 3px 1px #d8dadb; }
+.my-data-chart-line div.tooltip::after { content: ''; display: block; position: absolute; left: 50%; bottom: -5px; width: 8px; height: 5px; background: url("/images/md/tooltip-arrow.png") no-repeat; background-size: 100% 100%; transform: translateX(-50%); }
+.my-data-chart-line div.tooltip * { color: #01a6a0; }
+.my-data-chart-line div.tooltip .won { font-size: 14px; line-height: 14px; letter-spacing: 0 !important; }
+.my-data-chart-line div.tooltip .won * { font-size: 14px; line-height: 14px; }
+
+
+
+/**
+  * @name: 고정지출 분석
+  * @tag : <div class="my-data-chart-rangeScope">
+  * @url : http://localhost:3000/html_guide_md/CON-1/CON_004_0003.html
+*/
+.my-data-chart-rangeScope { padding: 43px 0 50px; display: flex; justify-content: space-between; align-items: center; color: #fff; }
+.my-data-chart-rangeScope .min, .my-data-chart-rangeScope .max { width: 28px; font-size: 12px !important; color: #888; }
+.my-data-chart-rangeScope .max { text-align: right; color: #009688; }
+.my-data-chart-rangeScope .rangeScope { position: relative; width: 100%; height: 8px; background: #a4b5b6; background: linear-gradient(90deg, #a4b5b6 0%, #2b9e99 100%); border-radius: 8px; }
+.my-data-chart-rangeScope .rangeScope .mean { position: absolute; top: -8px; left: 0; }
+.my-data-chart-rangeScope .rangeScope .mean.end em { transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); opacity: 1; top: 27px; }
+.my-data-chart-rangeScope .rangeScope .mean.end::after { transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); opacity: 1; top: 13px; }
+.my-data-chart-rangeScope .rangeScope .mean em { opacity: 0; display: block; position: absolute; left: -34px; top: 10px; font-size: 13px; line-height: 13px; color: #f14a76; width: 83px; text-align: center; }
+.my-data-chart-rangeScope .rangeScope .mean em * { font-size: 13px; line-height: 13px; }
+.my-data-chart-rangeScope .rangeScope .mean::before { content: ''; width: 14px; height: 14px; border-radius: 14px; background-color: #f14a76; border: 3px #fff solid; display: block; position: absolute; left: 0; top: 5px; z-index: 1; }
+.my-data-chart-rangeScope .rangeScope .mean::after { opacity: 0; display: block; content: ''; height: 12px; border-left: 1.5px #f14a76 dotted; position: absolute; left: 7px; top: 0; }
+.my-data-chart-rangeScope .rangeScope .my { position: absolute; top: -4px; left: 0; }
+.my-data-chart-rangeScope .rangeScope .my.end em { transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); opacity: 1; top: -40px; }
+.my-data-chart-rangeScope .rangeScope .my.end::after { transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); opacity: 1; top: -13px; }
+.my-data-chart-rangeScope .rangeScope .my em { opacity: 0; display: block; position: absolute; left: -8px; top: -20px; background-image: url("/images/md/my-value.png"); background-size: 100% 100%; width: 30px; height: 33px; color: #a3e3e0; text-align: center; font-size: 13px; line-height: 32px; font-weight: 700; }
+.my-data-chart-rangeScope .rangeScope .my em * { font-size: 13px; line-height: 32px; }
+.my-data-chart-rangeScope .rangeScope .my::before { content: ''; width: 14px; height: 14px; border-radius: 14px; background-color: #333d42; border: 3px #fff solid; display: block; position: absolute; left: 0; top: 0; z-index: 1; }
+.my-data-chart-rangeScope .rangeScope .my::after { opacity: 0; content: ''; height: 13px; border-left: 1.5px #333d42 dotted; display: block; position: absolute; left: 6px; top: -5px; }
+
+
+
+/**
+  * @name: 내 신용정보 관리
+  * @tag : <div class="my-data-chart-dounut-half">
+  * @url : http://localhost:3000/html_guide_md/CIA/CIA_003_0001.html
+*/
+.my-data-chart-donut-half { position: relative; height: 133px; border-radius: 10px; }
+.my-data-chart-donut-half .my-credit-score-info { position: absolute; bottom: 0; left: 0; right: 0; text-align: center; }
+.my-data-chart-donut-half .my-credit-score-info strong { font-size: 21px; line-height: 21px; font-weight: 700; }
+.my-data-chart-donut-half .my-credit-score-info strong * { font-size: 21px; line-height: 21px; }
+.my-data-chart-donut-half .my-credit-score-info div { display: flex; justify-content: center; align-items: center; margin-top: 10px; }
+.my-data-chart-donut-half .my-credit-score-info div span { display: inline-block; font-size: 14px; line-height: 16px; color: #666; }
+.my-data-chart-donut-half .my-credit-score-info div span * { font-size: 14px; line-height: 16px; }
+.my-data-chart-donut-half .my-credit-score-info div span .my-btn-tooltip { margin: 0; margin-left: 7px; vertical-align: top; }
+.my-data-chart-donut-half .my-credit-score-info div span .my-btn-tooltip .my-ic-tooltip { width: 16px; height: 16px; }
+.my-data-chart-donut-half .my-credit-score-info div em { display: inline-block; font-size: 18px; line-height: 18px; font-weight: 300; }
+.my-data-chart-donut-half .my-credit-score-info div em * { font-size: 18px; line-height: 18px; }
+.my-data-chart-donut-half .my-credit-score-info div em b { font-weight: 700; display: inline-block; min-width: 30px; text-align: right; }
+.my-data-chart-donut-half .my-credit-score-info div em::before { content: ''; display: inline-block; width: 1px; height: 14px; margin: 0 8px; background-color: #E5E5E5; }
+.my-data-chart-donut-half .donut { position: relative; overflow: hidden; width: 260px; height: 130px; margin: 0 auto; }
+.my-data-chart-donut-half .donut::after { content: ''; display: block; position: absolute; left: 0; top: 0; width: 260px; height: 260px; border-radius: 50%; border: 44px solid; transform: rotate(calc(1deg * (-45 + 100 * 1.8))); animation: fillDonut 0.5s ease-in; }
+.my-data-chart-donut-half.excellent .donut::after { border-color: transparent transparent #7aaee9 #7aaee9; }
+.my-data-chart-donut-half.excellent .my-credit-score-info strong, 
+.my-data-chart-donut-half.excellent .my-credit-score-info div em, 
+.my-data-chart-donut-half.excellent .my-credit-score-info div b { color: #216cc0; }
+.my-data-chart-donut-half.fair .donut::after { border-color: transparent transparent #ebbd58 #ebbd58; }
+.my-data-chart-donut-half.fair .my-credit-score-info strong, 
+.my-data-chart-donut-half.fair .my-credit-score-info div em, .my-data-chart-donut-half.fair .my-credit-score-info div b { color: #be8404; }
+.my-data-chart-donut-half.poor .donut::after { border-color: transparent transparent #e16e6e #e16e6e; }
+.my-data-chart-donut-half.poor .my-credit-score-info strong, 
+.my-data-chart-donut-half.poor .my-credit-score-info div em, .my-data-chart-donut-half.poor .my-credit-score-info div b { color: #be2b2b; }
+@keyframes fillDonut {
+  0% { transform: rotate(-45deg); }
+  75% { transform: rotate(135deg); }
+  85% { transform: rotate(132deg); }
+}
+.my-credit-score-info-area { background-color: #fff; border-radius: 10px; text-align: center; margin-top: 23px; padding: 20px 0; }
+.my-credit-score-info-area em { display: block; margin-bottom: 8px; font-size: 18px; line-height: 18px; }
+.my-credit-score-info-area em * { font-size: 18px; line-height: 18px; }
+.my-credit-score-info-area em strong { color: #216cc0; font-weight: 700; letter-spacing: 0 !important; }
+.my-credit-score-info-area span { font-size: 12px; line-height: 12px; color: #888; }
+.my-credit-score-info-area span * { font-size: 12px; line-height: 12px; }
+
+
+
+/**
+  * @name: 차트 범례
+  * @tag : <i class="my-chart-legend"></i>
+  * @url : 
+*/
+.my-chart-legend { display: inline-block; width: 13px; height: 13px; border-radius: 100%; }
+.my-chart-legend.type-1 { background: #b6b5ed url(/images/md/lineArea-1.png) repeat 0 0; background-size: 4px auto; }
+.my-chart-legend.type-2 { background-color: #4B5A61; border: 1px #84D7D3 dotted; }
+.my-chart-legend.type-3 { background-color: #84D7D3; }
+.my-chart-legend.type-4 { background-color: #67c1bc; }
+.my-chart-legend.type-5 { background: #7d66c3 url(/images/md/lineArea-1.png) repeat 0 0; background-size: 4px auto; }
+.my-chart-legend.type-6 { background-color: #f2fbfb; border: 1px #2B9F99 dotted; }
+.my-chart-legend.type-7 { background: #2B9F99 url(/images/md/lineArea-1.png) repeat 0 0; background-size: 4px auto; }
+.my-chart-legend.type-8 { background-color: #a6b6b6; }
+.my-chart-legend.type-9 { border: 2px #333D42 solid; }
+.my-chart-legend.type-10 { border: 1px #333D42 solid; }
+.my-chart-legend.type-11 { background: #908fd3 url(/images/md/pattern-pie-case-3-1-opacity.png) repeat 4px 0; background-size: 5px auto; border: none; }
+.my-chart-legend.type-12 { background-color: #4896f0; border: none; }
+.my-chart-legend.type-13 { background: #f14a76 url(/images/md/lineArea-1.png) repeat 0 0; background-size: 4px auto; }
+.my-chart-legend.type-14 { background: #111; width: 10px; height: 10px; position: relative; margin-right: 8px; }
+.my-chart-legend.type-14::before, .my-chart-legend.type-14::after { content: ''; position: absolute; left: -1px; top: 50%; transform: translateX(-50%); border-top: 1px #111 solid; width: 5px; }
+.my-chart-legend.type-14::after { left: inherit; right: -6px; }
+.my-chart-legend-area { margin-top: 20px; display: flex; justify-content: center; align-items: center; }
+.my-chart-legend-area.tb { margin-top: 0; margin-bottom: 20px; }
+.my-chart-legend-area span { font-size: 12px; line-height: 12px; color: #666; display: flex; align-items: center; margin: 0 6px; }
+.my-chart-legend-area span * { font-size: 12px; line-height: 12px; }
+.my-chart-legend-area i { margin-right: 3px; }
+.my-chart-legend-area em { font-size: 12px; line-height: 12px; color: #666; display: inline-block; padding: 0 2px; }
+.my-chart-legend-area em * { font-size: 12px; line-height: 12px; }
+
+
+
+/**
+  * @name: 내 차 비교하기
+  * @tag : <div class="my-data-chart-car-rangeScope">
+  * @url : http://localhost:3000/html_guide_md/CAR/CAR_004_0001.html
+*/
+.my-data-chart-car-rangeScope { margin-top: 20px; padding-bottom: 30px; }
+.my-data-chart-car-rangeScope .legend { font-size: 12px; line-height: 12px; color: #888; display: block; text-align: right; }
+.my-data-chart-car-rangeScope .legend * { font-size: 12px; line-height: 12px; }
+.my-data-chart-car-rangeScope .my-carRangeScope { position: relative; margin-top: 62px; }
+.my-data-chart-car-rangeScope .my-carRangeScope::before { content: ''; height: 8px; background-color: #ccc; border-radius: 8px; display: block; }
+.my-data-chart-car-rangeScope .my-carRangeScope .score { position: relative; }
+.my-data-chart-car-rangeScope .my-carRangeScope .score li { position: absolute; top: 12px; z-index: 1; font-size: 12px; line-height: 12px; color: #888; }
+.my-data-chart-car-rangeScope .my-carRangeScope .score li * { font-size: 12px; line-height: 12px; }
+.my-data-chart-car-rangeScope .my-carRangeScope .score li.v2::before, .my-data-chart-car-rangeScope .my-carRangeScope .score li.v3::before, .my-data-chart-car-rangeScope .my-carRangeScope .score li.v4::before { content: ''; border-left: 1px #527d7b solid; height: 8px; position: absolute; left: 4px; top: -20px; }
+.my-data-chart-car-rangeScope .my-carRangeScope .score li.v1 { left: 0; }
+.my-data-chart-car-rangeScope .my-carRangeScope .score li.v2 { left: 25%; }
+.my-data-chart-car-rangeScope .my-carRangeScope .score li.v3 { left: 50%; }
+.my-data-chart-car-rangeScope .my-carRangeScope .score li.v4 { left: 75%; }
+.my-data-chart-car-rangeScope .my-carRangeScope .score li.v5 { right: 0; }
+.my-data-chart-car-rangeScope .my-carRangeScope .bar { background: #a4b5b6; background: linear-gradient(90deg, #a4b5b6 0%, #2b9e99 100%); border-radius: 8px; height: 8px; position: absolute; top: 0; left: 0; right: 0; }
+.my-data-chart-car-rangeScope .my-carRangeScope .bar::before, .my-data-chart-car-rangeScope .my-carRangeScope .bar::after { content: ''; width: 14px; height: 14px; border-radius: 14px; background-color: #01a6a0; border: 3px #fff solid; display: block; position: absolute; top: -3px; z-index: 2; }
+.my-data-chart-car-rangeScope .my-carRangeScope .bar::before { left: 0; }
+.my-data-chart-car-rangeScope .my-carRangeScope .bar::after { right: 0; }
+.my-data-chart-car-rangeScope .my-carRangeScope .bar .min, .my-data-chart-car-rangeScope .my-carRangeScope .bar .max { position: absolute; top: -50px; border: 1px #009688 solid; background-color: #fff; text-align: center; padding: 5px 7px; border-radius: 4px; color: #009688; font-size: 12px; line-height: 12px; }
+.my-data-chart-car-rangeScope .my-carRangeScope .bar .min *, .my-data-chart-car-rangeScope .my-carRangeScope .bar .max * { font-size: 12px; line-height: 12px; }
+.my-data-chart-car-rangeScope .my-carRangeScope .bar .min em, .my-data-chart-car-rangeScope .my-carRangeScope .bar .min strong, .my-data-chart-car-rangeScope .my-carRangeScope .bar .max em, .my-data-chart-car-rangeScope .my-carRangeScope .bar .max strong { color: #009688; letter-spacing: 0 !important; }
+.my-data-chart-car-rangeScope .my-carRangeScope .bar .min em, .my-data-chart-car-rangeScope .my-carRangeScope .bar .max em { display: block; margin-bottom: 3px; }
+.my-data-chart-car-rangeScope .my-carRangeScope .bar .min::after, .my-data-chart-car-rangeScope .my-carRangeScope .bar .max::after { content: ''; position: absolute; bottom: -5px; width: 0px; height: 0px; border-right: 5px solid transparent; border-left: 5px solid transparent; border-top: 5px solid #01a6a0; }
+.my-data-chart-car-rangeScope .my-carRangeScope .bar .min { left: -7px; }
+.my-data-chart-car-rangeScope .my-carRangeScope .bar .min::after { left: 10px; }
+.my-data-chart-car-rangeScope .my-carRangeScope .bar .max { right: -7px; }
+.my-data-chart-car-rangeScope .my-carRangeScope .bar .max::after { right: 10px; }
+.my-data-chart-car-rangeScope .my-carRangeScope .myCar { font-size: 10px; line-height: 10px; color: #a3e3e0; background-color: #333D42; border: 2px #fff solid; padding: 5px 6px 4px; border-radius: 16px; box-shadow: 0px 3px 4px 1px #cee4e4; position: absolute; top: -7px; left: 0; z-index: 5; }
+.my-data-chart-car-rangeScope .my-carRangeScope .myCar * { font-size: 10px; line-height: 10px; }
+.my-data-chart-car-rangeScope .my-carRangeScope .myCar.average { background-color: #E5E5E5; color: #666; box-shadow: 0px 3px 4px 1px #ececec; }
+
+
+
+/**
+  * @name: 개인사업자 서비스 - 평균
+  * @tag : <div class="my-data-chart-store-rangeScope">
+  * @url : http://localhost:3000/html_guide_md/SEM/SEM_001_0003.html
+*/
+.my-data-chart-store-rangeScope { position: relative; padding: 45px 0 22px; display: flex; justify-content: space-between; align-items: center; }
+.my-data-chart-store-rangeScope .min, .my-data-chart-store-rangeScope .max { width: 28px; font-size: 12px; line-height: 12px; color: #888; }
+.my-data-chart-store-rangeScope .min *, .my-data-chart-store-rangeScope .max * { font-size: 12px; line-height: 12px; }
+.my-data-chart-store-rangeScope .min em, .my-data-chart-store-rangeScope .max em { display: block; position: absolute; bottom: 0; font-size: 13px; line-height: 13px; color: inherit; white-space: nowrap; }
+.my-data-chart-store-rangeScope .min em *, .my-data-chart-store-rangeScope .max em * { font-size: 13px; line-height: 13px; }
+.my-data-chart-store-rangeScope .max { text-align: right; color: #009688; }
+.my-data-chart-store-rangeScope .max em { right: 0; }
+.my-data-chart-store-rangeScope .my-storeRangeScope { position: relative; width: 100%; height: 8px; margin: 0 5px; background: #a4b5b6; background: linear-gradient(90deg, #a4b5b6 0%, #2b9e99 100%); border-radius: 8px; }
+.my-data-chart-store-rangeScope .my-storeRangeScope .mean { position: absolute; top: -8px; left: 0; }
+.my-data-chart-store-rangeScope .my-storeRangeScope .mean.end em { transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); opacity: 1; top: -39px; }
+.my-data-chart-store-rangeScope .my-storeRangeScope .mean.end::after { transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); opacity: 1; top: -10px; }
+.my-data-chart-store-rangeScope .my-storeRangeScope .mean em { opacity: 0; display: block; position: absolute; left: -34px; top: -30px; z-index: 1; font-size: 13px; line-height: 13px; text-align: center; white-space: nowrap; }
+.my-data-chart-store-rangeScope .my-storeRangeScope .mean em * { font-size: 13px; line-height: 13px; }
+.my-data-chart-store-rangeScope .my-storeRangeScope .mean em span { display: block; margin-top: 2px; font-size: 12px; line-height: 12px; }
+.my-data-chart-store-rangeScope .my-storeRangeScope .mean em span * { font-size: 12px; line-height: 12px; }
+.my-data-chart-store-rangeScope .my-storeRangeScope .mean em span .my-ic-arrow-up { border-bottom-width: 9px; }
+.my-data-chart-store-rangeScope .my-storeRangeScope .mean em span .my-ic-arrow-down { border-top-width: 9px; }
+.my-data-chart-store-rangeScope .my-storeRangeScope .mean::before { content: ''; width: 14px; height: 14px; border-radius: 14px; background-color: #333D42; border: 3px #fff solid; display: block; position: absolute; left: 0; top: 5px; z-index: 1; }
+.my-data-chart-store-rangeScope .my-storeRangeScope .mean::after { opacity: 0; display: block; content: ''; height: 12px; border-left: 1px #333D42 dotted; position: absolute; left: 7px; top: 0; }

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- 
+    Cache-Control
+    no-cache : 캐시를 사용하기 전에 재검증을 위한 요청을 강제함.
+    no-store : 클라이언트의 요청, 서버의 응답 등을 일체 저장하지 않음
+    must-revalidate : 캐시를 사용하기 전에 반드시 만료된 것인지 검증을 함.
+    Ex) Cache-Control: no-cache, no-store, must-revalidate
+  -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+
+  <title>Hana MyData</title>
+  <link rel="stylesheet" href="/MYDATA/css/md/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/MYDATA/css/md/app.css">
+
+  <script src="/MYDATA/js/md/jquery-2.2.4.min.js"></script>
+  <script src="/MYDATA/js/md/Sortable.min.js"></script>
+  <script src="/MYDATA/js/md/jquery-sortable.js"></script>
+  <script src="/MYDATA/js/md/swiper-bundle.min.js"></script>
+  <script src="/MYDATA/js/md/waypoints.min.js"></script>
+  <script src="/MYDATA/js/md/jquery.counterup.js"></script>
+  <script src="/MYDATA/js/md/rangeslider.min.js"></script>
+  
+  
+  <script src="/MYDATA/js/md/d3.v5.min.js"></script>
+  <script src="/MYDATA/js/md/app.js"></script>
+  <script src="/MYDATA/js/md/myChart.js"></script>
+
+  <!-- 차트 모듈 관리 -->
+  <script src="/MYDATA/js/md/vue.js"></script>
+  <script data-main="/MYDATA/js/md/chart/main" src="/MYDATA/js/md/require.min.js"></script>
+</head>
+<body>
+<main class="my-wrap ">
+   
+
+<div class="my-main-container new-main pad-bot-0">
+
+    <div class="my-main-header">
+        <h1><img src="/MYDATA/images/md/my-logo-hab.png" alt="하나 합"></h1>
+        
+        <button class="my-btn-type my-main-alarm">
+          <span class="blind">알람</span>
+        </button>
+    
+      </div>
+      
+    <div class="my-tab-area2">
+        <div class="tab-list" role="tablist">
+            <button type="button" id="tabBtn1-2" class="tab mark-new" aria-controls="tabCont1-2" role="tab" aria-selected="false"><span>지출</span></button>
+            <button type="button" id="tabBtn1-1" class="tab" aria-controls="tabCont1-1" role="tab" aria-selected="false"><span>자산</span></button>
+            <button type="button" id="tabBtn1-3" class="tab tab-hot active" aria-controls="tabCont1-3" role="tab" aria-selected="true"><span><img src="/MYDATA/images/md/img_hot.png" alt="hot 메뉴"></span></button>
+        </div>
+        <a href="#none" class="btn-goshop"><span>상품몰</span></a>
+    </div>
+    
+    <div class="my-main-ranking">
+        <!-- 221129 E09 투자비법 -->
+        <a href="#" class="my-ranking-card-banner card-e09 bg-indigo-3">
+            <div class="txt-area">
+                <p class="sub-txt">투자 침체기에도 웃고 있는</p>
+                <p class="main-txt">김과장의 투자 비법은?</p>
+            </div>
+        </a>
+        <!--// 221129 E09 투자비법 끝-->
+        <!-- 진짜 맛집이야기 배너 -->
+        <div class="my-ranking-card taste-home-banner">
+            <a href="https://qpay.hanacard.co.kr/MKCONT1000N.web" target="_blank">
+                <div class="tit-area">
+                    <div class="txt-area">
+                        <p class="tit">
+                            하나카드가 소개하는<br>
+                            <strong>진짜 맛집 이야기</strong>
+                        </p>
+                    </div>
+                </div>
+                <button class="tasty-btn">찐맛집Story 확인하기</button>
+            </a>
+        </div>
+        <!--진짜 맛집이야기 배너 -->
+        <!-- 23.03.14 반려동물 박스 -->
+        <div class="my-ranking-card card-g06 card-box-ban food-box">
+            <div class="tit-area">
+                <div class="txt-area">
+                    <p class="tit">오늘 뭐 먹지?</p>
+                    <div class="food-menu">
+                        <p class="food_list que_mark">???</p>
+                        <p class="food_list menu_list food_1">한식</p>
+                    </div>
+                </div>
+            </div>
+            <div class="food-roulette">
+                <div class="roulette"></div>
+                <button type="button" id="EVTbtn_1" class="btn_roulette">
+                    <em class="blind">Go!</em>
+                </button>
+            </div>
+            <a href="#" class="my-ranking-card-banner banner2023 food-banner">
+                <div class="txt-area">
+                    <div class="my_surr_box">
+                        내 주변
+                        <p><span class="food_list food_small food_1">한식</span> 맛집 찾기</p>
+                    </div>
+                    <div class="hash-tag">
+                        <span>#고민될땐</span><span>#결제데이터로 보는</span><span>#AI맛집</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!--// 23.03.14 반려동물 박스 -->
+        <!-- 23.03.14 반려동물 박스 -->
+        <div class="my-ranking-card card-g06 card-box-ban pet-box">
+            <div class="tit-area">
+                <div class="txt-area">
+                    <p class="tit">반려동물 월 평균 병원비</p>
+                    <p class="txt"><span class="num num-counter">152,725</span>원</p>
+                    <p class="desc has-star">2022년 마이데이터 기준</p>
+                </div>
+            </div>
+            <a href="#" class="my-ranking-card-banner banner2023 pet-ban">
+                <div class="txt-area">
+                    <p class="pet-main-txt"><strong>반려동물 보험</strong>으로</p>
+                    <p class="pet-sub-txt">병원비 현명하게 준비하기</p>
+                </div>
+            </a>
+        </div>
+        <!--// 23.03.14 반려동물 박스 -->
+        <!-- E09 인기차 -->
+        <div class="my-2-top-type-select-area">
+            <h2>
+                <button class="my-2-underline-select-area">
+                    40대 여성
+                </button> 이<br>
+                많이 타고 있어요
+                <button class="my-btn-tooltip" id="" data-id="acco-tooltip-1"><i class="my-ic-tooltip "></i>
+                    <em class="blind">툴팁</em> 
+                </button>
+            </h2>
+        </div>
+    
+        <div class="my-2-car-rank-area">
+        <a href="#">
+            <span class="rank">TOP 1</span>
+            <div class="my-car">
+            <img src="/MYDATA/images/md/car-default.png" alt="준비중">
+            </div>
+            <strong>볼보 XC60 <span>B5 AWD Inscription</span></strong>
+            <ul class="price-list">
+            <li>
+                <span>출고가</span>
+                <em>3,141만원</em>
+            </li>
+            <li>
+                <span>유지비</span>
+                <em><span>35만원</span>/월</em>
+            </li>
+            </ul>
+        </a>
+        </div>
+        <!--// E09 인기차 -->
+        <!-- 23.03.14 자동차보험 캐시백 배너 -->
+        <a href="#" class="my-ranking-card-banner card-e02 bg-blue-grey-6 cash-car-2023">
+            <div class="txt-area">
+                <p class="main-txt line2">자동차보험 캐시백</p>
+                <p class="sub-2023">보험료 30만원 이상 결제 시<br/><span>최대 3만원</span></p>
+            </div>
+        </a>
+        <!--// 23.03.14 자동차보험 캐시백 배너 -->
+        <!-- 23.03.14 카드포인트 박스-->
+        <div class="my-ranking-card card-g06 card-box-ban point-box">
+            <div class="tit-area">
+                <div class="txt-area">
+                    <p class="tit">숨은 카드포인트 찾은 사람</p>
+                    <p class="txt indigo-2"><span class="num num-counter">999,518</span>명</p>
+                </div>
+            </div>
+            <div class="my-btn-area">
+                <button class="my-btn-type medium rounded-xsm f15 bg-indigo-2 white my-select-type" data-id="point-popMenu-s01" aria-controls="point-popArea-s01" aria-expanded="false" >
+                    내 카드 포인트 확인하기
+                </button>
+            </div>
+        </div>
+        <!--// 23.03.14 카드포인트 박스-->
+        <!-- 23.03.14 투자뉴스 배너 -->
+        <a href="#" class="my-ranking-card-banner card-e01 bg-indigo-3 new-card-ban-01">
+            <div class="txt-area">
+                <p class="sub-txt">투자전문가의 예리한 투자감각</p>
+                <p class="main-txt"><img src="/MYDATA/images/md/hot_type.png" alt="hot" width="31" height="15">한 오늘의 투자 뉴스</p>
+            </div>
+        </a>
+        <!--//23.03.14 투자뉴스 배너-->
+        <!-- E08 기타티켓 -->
+        <a href="#" class="my-ranking-card-banner card-e08 expense-area">
+            <div class="tit-area">
+                <h4>최근 3개월간 <strong>'쇼핑'</strong>에서<br>가장 많이 지출했어요.</h4>
+            </div>
+            <div class="cont-area">
+                <div class="chart-column-area">
+                    <div class="column c-1">
+                        <div class="chart-area">
+                        <div class="bar" data-percent="65">
+                            <img src="/MYDATA/images/md/HNCDWD003.png" alt="편의점">
+                        </div>
+                        </div>
+                        <div class="data-area">
+                        <span>편의점</span>
+                        <strong><em class="counter">65</em>%</strong>
+                        </div>
+                    </div>
+                    <div class="column c-2">
+                        <div class="chart-area">
+                        <div class="bar" data-percent="84">
+                            <img src="/MYDATA/images/md/HNCDWD003.png" alt="쇼핑">
+                        </div>
+                        </div>
+                        <div class="data-area">
+                        <span>쇼핑</span>
+                        <strong ><em class="counter">84</em>%</strong>
+                        </div>
+                    </div>
+                    <div class="column c-3">
+                        <div class="chart-area">
+                        <div class="bar" data-percent="10">
+                            <img src="/MYDATA/images/md/HNCDWD002.png" alt="카페/디저트">
+                        </div>
+                        </div>
+                        <div class="data-area">
+                        <span>까페/디저트</span>
+                        <strong><em class="counter">10</em>%</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!--// E08 기타티켓 -->
+        <!-- E07 기타티켓 -->
+        <a href="#" class="my-ranking-card-banner card-e07 expense-area">
+            <div class="tit-area">
+                <h4>홍길동님,<br><strong>소비 태그 3개</strong>를 획득했어요!</h4>
+            </div>
+            <div class="cont-area">
+                <div class="hash-area">
+                    <div class="hash-tag">#온라인쇼핑오라이~</div>
+                    <div class="hash-tag">#취미줄줄흐른다</div>
+                    <div class="hash-tag">#아쌉으로인생디벨롭중</div>
+                    <div class="hash-tag">+2</div>
+                </div>
+            </div>
+        </a>
+        <!--// E07 기타티켓 -->
+         <!-- 23.03.14 인기신용카드 박스 -->
+         <div class="my-ranking-card card-g03 new-card-2023">
+            <div class="tit-area">
+                <div class="txt-area">
+                    <p class="tit"><strong>30대</strong>가 많이 사용하는</p>
+                </div>
+            </div>
+            <div class="cont-area">
+                <ul class="my-ranking-list type-rank">
+                    <li class="rank01">
+                        <div class="txt-area">
+                            <p class="rank indigo-2"><span>1</span> 위</p>
+                            <p class="txt indigo-2">내맘대로 쁨 카드</p>
+                        </div>
+                        <div class="card-img"><img src="/MYDATA/images/md/img_new_card_01.png" alt=""></div>
+                    </li>
+                    <li>
+                        <p class="rank"><span>2</span> 위</p>
+                        <div class="card-img"><img src="/MYDATA/images/md/img_card_02.jpg" alt=""></div>
+                        <p class="txt">VIVA X 체크카드</p>
+                    </li>
+                    <li>
+                        <p class="rank"><span>3</span> 위</p>
+                        <div class="card-img"><img src="/MYDATA/images/md/img_card_03.jpg" alt=""></div>
+                        <p class="txt">CLUB SK카드</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- 인기카드 배너 -->
+            <a href="#" class="my-ranking-card-banner card-e06 bg-indigo-3">
+                <div class="txt-area">
+                    <p class="sub-txt">나에게 꼭 맞는</p>
+                    <p class="main-txt">인기카드 찾아보기</p>
+                </div>
+            </a>
+            <!--// 인기카드 배너 -->  
+        </div>
+        <!--// 23.03.14 인기신용카드 박스 -->  
+        <!-- G07 금융티켓 - 대출금리 -->
+        <div class="my-ranking-card card-g07">
+            <div class="tit-area">
+                <div class="txt-area">
+                    <p class="tit">긴급점검<br>지금 <strong>대출금리</strong>는?</p>
+                    <p class="desc has-star">시중 은행 기준</p>
+                </div>
+            </div>
+            <div class="cont-area">
+                <div id="RAN-001-0002-1"></div>
+                <script>
+                    require(['Bar-interest'], function (exports) {
+                    //require(['Bar-plan'], function (exports) {
+                        exports({
+                        id: 'RAN-001-0002-1',
+                        case: 'case-1',
+                        x: [
+                            {name: '2022년 2월', value: '40', interest: '4.0'},
+                            {name: '2022년 6월', value: '52', interest: '5.2'},
+                        ]
+                        })
+                    });
+                </script>
+            </div>
+            <div class="my-btn-area">
+                <button class="my-btn-type medium rounded-xsm f15 bg-indigo-2 white">오늘 내 대출금리는?</button>
+            </div>
+        </div>
+        <!--// G07 금융티켓 - 대출금리 -->
+        <!-- E08 기타티켓 -->
+        <a href="#" class="my-ranking-card-banner card-e08 bg-indigo-3">
+            <div class="txt-area">
+                <p class="sub-txt">매일매일 달라지는</p>
+                <p class="main-txt">오늘의 운세</p>
+            </div>
+        </a>
+        <!--// E08 기타티켓 -->
+        <!-- E03 기타티켓 -->
+        <a href="#" class="my-ranking-card-banner card-e03 bg-indigo-3">
+            <div class="txt-area">
+                <p class="main-txt line2">심사없이 즉시 가능한<br>장기카드대출</p>
+                <div class="data-area">
+                    <p class="money"><em>2,300</em>만원</p>
+                    <span class="interest">(11.78%)</span>
+                </div>
+            </div>
+        </a>
+        <!--// E03 기타티켓 -->
+        <!-- 퀵메뉴 220829 -->
+        <div class="my-foot-quick">
+            <ul class="my-foot-quick-list">
+                <li class="my-foot-quick-item">
+                    <a href="" class="my-foot-quick-link btn-hot"><img src="/MYDATA/images/md/img_hot.png" alt="hot 메뉴"></a>
+                </li>
+                <li class="my-foot-quick-item">
+                    <a href="" class="my-foot-quick-link">지출</a>
+                </li>
+                <li class="my-foot-quick-item">
+                    <a href="" class="my-foot-quick-link">자산</a>
+                </li>
+                <li class="my-foot-quick-item">
+                    <a href="" class="my-foot-quick-link btn-goshop">상품몰</a>
+                </li>
+            </ul>
+        </div>
+        <!--// 퀵메뉴 220829 -->
+        <a href="#" class="btn-link-banner type-icon suggest">
+            <p class="ts">더 나은 서비스 제공을 위해<br>여러분의 의견을 보내주세요.</p>
+        </a>
+    </div>
+</div>
+
+<!-- s01 - 택시비 팝업 -->
+<div 
+    class="my-select-list-area my-ranking-info-pop pop-s01 Card-point" 
+    role="dialog" 
+    id="point-popArea-s01" 
+    aria-labelledby="point-popMenu-s01"
+    tabindex="0">
+    <h2><span>내 카드 포인트 확인하기</span></h2>
+
+    <div class="my-ranking-pop-area">
+        <div class="cont">
+            <p class="txt">홍길동님의 카드 포인트가<br/> 보이지 않아요</p>
+        </div>
+    </div>
+
+    <div class="my-btn-area">
+        <button class="my-btn-type medium rounded-sm f15 bg-blue-grey-5 white" id="">내 카드 연결하고 숨은 포인트 찾기</button>
+    </div>
+
+  <button class="my-select-close" data-id="my-expense"><span class="blind">닫기</span></button>
+</div>
+<!--// s01 - 택시비 팝업 -->
+<script>
+    $('.my-main-ranking').find('.num-counter').counterUp({ delay: 20, time: 1100 });
+    $('.my-main-ranking').find('.num-counter-long').counterUp({ delay: 30, time: 2000 });
+
+    myFunc.getDataCounter();
+
+    setTimeout(function(){
+        myFunc.getMyMainControl();
+    },500);
+    $(function(){
+        var reg = /_\d*/gi;
+        var generateRandom = function (el, min, max) {
+        var ranNum = Math.floor(Math.random()*(max-min+1)) + min,
+            $E = $(el);
+            $E.removeClass("food_"+ranNum); 
+            setTimeout(function(){ $E.addClass("food_"+ranNum).each(function(){
+                setTimeout(function(){
+                    $('.food_list.que_mark').css('display','none')
+                    $('.food_list.menu_list').css('display','block')
+                    $('.food-banner').css('display','block')
+                },2000)
+            });},1)
+            $E.attr("class",$E.attr("class").replace(reg,"_"+ranNum));
+                return ranNum;
+        }
+        $('#EVTbtn_1').on('click', function(){
+           generateRandom('.roulette',1,8); 
+        })
+    })
+</script>
+
+<div class="overlay"></div>
+</main><!-- / my-wrap -->
+</body>
+</html>

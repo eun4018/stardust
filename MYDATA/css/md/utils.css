@@ -1,0 +1,170 @@
+/**
+***************************************************
+* utils 
+****************************************************
+*/
+.sticky-Chrome-63 .my-2-hot-place-search-area, .sticky-Chrome-63 .my-nav-case-local, .sticky-Chrome-63 .my-tab-area, .sticky-Chrome-63 .my-data-filter-area, .sticky-Chrome-63 .my-2-data-filter-search, .sticky-Chrome-63 .my-filter-area, .sticky-Chrome-63 .my-search-area, .sticky-Chrome-63 .my-2-top-total-area.fix-sticky, .sticky-Chrome-63 .my-2-data-search-area, .sticky-Chrome-63 .my-2-data-filter-area, .sticky-Chrome-63 .my-2-data-filter-area.top_fx, .sticky-Chrome-63 .my-filter-search, .sticky-Chrome-63 .my-input-area.tm-b, .sticky-Chrome-63 .my-2-calendar-area.folded, .sticky-Chrome-63 .my-estate-list-area::before, .sticky-Chrome-63 .my-estate-list-area.recomm::before, .sticky-Chrome-63 .my-2-sel-company::before, .sticky-Chrome-63 .evt-tab-area { position: relative; top: 0 !important; }
+.sticky-Chrome-63 .my-drawer-area .my-input-area.tm-b { position: relative !important; }
+.sticky-Chrome-63 .my-drawer-area .my-input-area.tm-b + .my-2-sel-company, .sticky-Chrome-63 .my-drawer-area .my-input-area.tm-b + .my-estate-list-area { padding-top: 0; }
+.sticky-Chrome-63 .my-2-expense-container .expense-area .chart-aqua-area .chart-aqua .fish-1 { display: none; }
+.sticky-Chrome-63 .my-2-calendar-area.folded + .my-2-date-noti-area { margin-top: 0; }
+.sticky-Chrome-63 .my-2-calendar-area:not(.folded) .my-btn-cal .day { position: absolute; top: 16px; }
+.sticky-Chrome-63 .my-2-calendar-area:not(.folded) .my-btn-cal .day + .assets-list { margin-top: 21px; }
+.sticky-Chrome-63 .my-2-big-data-place-area .my-place-content-area .tag-area span { padding: 4px 8px; vertical-align: top; }
+.sticky-Chrome-63 .my-2-big-data-place-area .my-place-content-area .tag-area span.det1 { padding: 5px 8px; }
+.sticky-Chrome-63 .my-2-big-data-place-area .my-place-content-area .post-area em { padding-top: 2px; }
+
+
+@font-face { 
+  font-family: 'Spoqa Han Sans'; 
+  font-style: normal; 
+  font-weight: 300; 
+  src: url(/font/md/SpoqaHanSansNeo-Light.woff2) format("woff2"), 
+      url(/font/md/NSpoqaHanSansNeo-Light.woff) format("woff"), 
+      url(/font/md/SpoqaHanSansNeo-Light.otf) format("opentype"); 
+}
+@font-face { 
+  font-family: 'Spoqa Han Sans'; 
+  font-style: normal; 
+  font-weight: 400; 
+  src: url(/font/md/SpoqaHanSansNeo-Regular.woff2) format("woff2"), 
+      url(/font/md/SpoqaHanSansNeo-Regular.woff) format("woff"), 
+      url(/font/md/SpoqaHanSansNeo-Regular.otf) format("opentype"); 
+}
+@font-face { 
+  font-family: 'Spoqa Han Sans'; 
+  font-style: normal; 
+  font-weight: 700; 
+  src: url(/font/md/SpoqaHanSansNeo-Bold.woff2) format("woff2"), 
+      url(/font/md/SpoqaHanSansNeo-Bold.woff) format("woff"), 
+      url(/font/md/SpoqaHanSansNeo-Bold.otf) format("opentype"); 
+}
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; vertical-align: baseline; font-family: 'Spoqa Han Sans'; font-weight: 400; font-size: 16px; line-height: 16px; letter-spacing: -0.5px; color: #111; }
+
+*, :after, :before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+body { -ms-overflow-style: none; }
+body::-webkit-scrollbar { display: none; }
+
+
+/**
+* 방향 전환 후 iOS 텍스트 크기 조정을 사용 중지하지 않고 방지
+*/
+html { -webkit-text-size-adjust: 100%; /* 2 */}
+nav, ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+
+/**
+* 최신 브라우저가 컨트롤없이 '오디오'를 표시하지 못하도록합니다.
+*  iOS 5 기기에서 초과 높이를 제거하십시오.
+*/
+audio:not([controls]) { display: none; height: 0; }
+
+
+/**
+* Address 스타일은 IE 7/8/9, Firefox 3 및 Safari 4에는 없습니다.
+*/
+[hidden] { display: none; }
+
+
+/**
+* 초점을 맞출 때 가독성을 높이고 모든 브라우저에서 마우스를 마우스로 가리 켰습니다.
+*/
+a { text-decoration: none; }
+g, a, input, label, div, button { -webkit-tap-highlight-color: transparent; outline: 0; }
+a:active, a:hover { outline: 0; }
+input:focus ~ label, :focus-visible { outline: 0; }
+
+/**
+* 표 셀 사이의 간격을 대부분 제거
+*/
+table { border-collapse: collapse; border-spacing: 0; width: 100%; }
+img { vertical-align: middle; }
+
+
+/**
+* 텍스트 미 노출
+*/
+.blind { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; color: transparent; }
+
+/**
+* 컬러 클래스
+*/
+.black { color: #111 !important; }
+.white { color: #fff !important; }
+.grey { color: #666 !important; }
+.pink-1 { color: #f06998 !important; }
+.indigo-1 { color: #8665EF !important; }
+.indigo-1 * { color: #8665EF !important; }
+.blue-1 { color: #4896F0 !important; }
+.blue-1 * { color: #4896F0 !important; }
+.teal-2 { color: #009688 !important; }
+.teal-2 * { color: #009688 !important; }
+.grey-5 { color: #888 !important; }
+.grey-6 { color: #dedede !important; }
+.grey-4 { color: #999 !important; }
+.grey-24 { color: #111 !important; }
+.up { color: #F14A76 !important; }
+.up * { color: #F14A76 !important; }
+.down { color: #4896F0 !important; }
+.down * { color: #4896F0 !important; }
+.tt { color: #888 !important; }
+.tt * { color: #888 !important; }
+.assets-tt { color: #666 !important; }
+.assets-tt * { color: #666 !important; }
+.assets-up { color: #009688 !important; }
+.assets-up * { color: #009688 !important; }
+.assets-down { color: #4896F0 !important; }
+.assets-down * { color: #4896F0 !important; }
+.txt-point1 { color: #009688; }
+.txt-point1 * { color: #009688; }
+.bg-white { background-color: #fff !important; }
+.bg-indigo-1 { background-color: #4896F0 !important; }
+.bg-blue-grey-1 { background-color: #01a6a0 !important; }
+.bg-blue-grey-2 { background-color: #f2f3f9 !important; }
+.bg-blue-grey-3 { background-color: #f9f9fc !important; }
+.bg-grey-2 { background-color: #E5E5E5 !important; }
+.bg-grey-7 { background-color: #F9F9FB !important; }
+.bg-grey-9 { background-color: #f5f5f5 !important; }
+
+
+/**
+* CSS 애니메이션
+*/
+@keyframes spin { 
+  to { transform: rotate(360deg); }
+}
+
+@keyframes drift { 
+  from { transform: rotate(0deg); }  
+  from { transform: rotate(360deg); } 
+}
+
+@keyframes wave { 
+  0% { background-position-x: 0; }  
+  100% { background-position-x: -48px; } 
+}
+
+@keyframes animate-width { 
+  0% { width: 0; }  
+  100% { visibility: visible; } 
+}
+
+@keyframes animate-width-stacked { 
+  0% { width: 50%; }  
+  100% { visibility: visible; } 
+}
+
+@keyframes showItemUp { 
+  0% { transform: translateY(20px); opacity: 0; }  
+  100% { transform: translateY(0px); opacity: 1; } 
+}
+
+@keyframes floatspot { 
+  0% { transform: translateY(5px); }  
+  45% { transform: translateY(0px); }  
+  100% { transform: translateY(5px); } 
+}

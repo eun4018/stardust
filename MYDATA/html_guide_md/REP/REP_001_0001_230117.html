@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- 
+    Cache-Control
+    no-cache : 캐시를 사용하기 전에 재검증을 위한 요청을 강제함.
+    no-store : 클라이언트의 요청, 서버의 응답 등을 일체 저장하지 않음
+    must-revalidate : 캐시를 사용하기 전에 반드시 만료된 것인지 검증을 함.
+    Ex) Cache-Control: no-cache, no-store, must-revalidate
+  -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+
+  <title>Hana MyData</title>
+  <link rel="stylesheet" href="/MYDATA/css/md/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/MYDATA/css/md/app.css">
+
+  <script src="/MYDATA/js/md/jquery-2.2.4.min.js"></script>
+  <script src="/MYDATA/js/md/Sortable.min.js"></script>
+  <script src="/MYDATA/js/md/jquery-sortable.js"></script>
+  <script src="/MYDATA/js/md/swiper-bundle.min.js"></script>
+  <script src="/MYDATA/js/md/waypoints.min.js"></script>
+  <script src="/MYDATA/js/md/jquery.counterup.js"></script>
+  <script src="/MYDATA/js/md/rangeslider.min.js"></script>
+   
+  <script src="/MYDATA/js/md/d3.v5.min.js"></script>
+  <script src="/MYDATA/js/md/app.js"></script>
+  <script src="/MYDATA/js/md/myChart_rep.js"></script>
+
+  <!-- 차트 모듈 관리 -->
+  <script src="/MYDATA/js/md/vue.js"></script>
+  <script data-main="/MYDATA/js/md/chart/main" src="/MYDATA/js/md/require.min.js"></script>
+</head>
+<body>
+<!-- <div class="intro-popup">
+    <p class="txt">옆으로 이동해서 더 많은 이야기를 찾아보세요!</p>
+    <p class="green-box">신규 손님과 오늘 새로 업데이트한<br>자신 리포트는 내일 확인 가능합니다!</p>
+    <div class="btns">
+        <button class="remove"><span>다시보지 않기</span></button>
+        <button class="close"><span>닫기</span></button>
+    </div>
+</div>
+<main class="my-wrap "> -->
+   
+<div class="my-main-container rep-main">
+
+    <div class="my-main-header">
+        <h1><img src="/MYDATA/images/md/my-logo-hab.png" alt="하나 합"></h1>
+        <div class="header-right">
+            <button class="my-btn-type type-report">
+                <span class="blind">리포트</span>
+            </button>
+            <button class="my-btn-type type-report2">
+                <span class="blind">리포트2</span>
+            </button>
+            <button class="my-btn-type type-alarm is-new">
+                <span class="blind">알람</span>
+            </button>
+        </div>
+    </div>
+      
+    <div class="my-tab-area2">
+        <div class="tab-list" role="tablist">
+            <button type="button" id="tabBtn1-3" class="tab tab-hot" aria-controls="tabCont1-3" role="tab" aria-selected="false"><span><img src="/MYDATA/images/md/img_hot.png" alt="hot 메뉴"></span></button>
+            <button type="button" id="tabBtn1-2" class="tab mark-new" aria-controls="tabCont1-2" role="tab" aria-selected="false"><span>지출</span></button>
+            <button type="button" id="tabBtn1-1" class="tab" aria-controls="tabCont1-1" role="tab" aria-selected="false"><span>자산</span></button>
+        </div>
+        <a href="#none" class="btn-goshop"><span>상품몰</span></a>
+    </div>
+    <!-- 금융 이야기 -->
+    <div class="report-swiper-box">
+        <p class="txt">당신의 지난 시간을 돌아보는</p>
+        <h2><span class="teal-3 bold">금융 이야기</span></h2>
+        <div class="swiper-area">
+            <div class="swiper-container reportSwiper">
+                <div class="swiper-wrapper">
+                    <div class="item01 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">어디에 다 쓴 거죠!?</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit">내가 바로 <strong>큰 손</strong></p>
+                        </div>
+                    </div>
+                    <div class="item01_2 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">이 구역 합리주의자</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit"><strong>적당</strong> 소비파</p>
+                        </div>
+                    </div>
+                    <div class="item01_3 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">아껴! 또 아껴!!</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit">미래의 <strong>자산가</strong></p>
+                        </div>
+                    </div>
+                    <div class="item01_4 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">미덕의 극치</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit"><strong>검소함</strong>의 대가</p>
+                        </div>
+                    </div>
+                    <div class="item02 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">최근 3개월</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit">나의 <strong>소비力</strong></p>
+                        </div>
+                    </div>
+                    <div class="item02_2 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">최근 3개월</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit">나의 <strong>소비力</strong></p>
+                        </div>
+                    </div>
+                    <div class="item02_3 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">최근 3개월</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit">나의 <strong>소비力</strong></p>
+                        </div>
+                    </div>
+                    <div class="item03 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">오늘도 찾아왔지♥</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit">내 안의 <strong>소비요정</strong></p>
+                        </div>
+                    </div>
+                    <div class="item04 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">지갑을 날려주겠어!</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit"><strong>폭.풍.지.출.</strong> 데이</p>
+                        </div>
+                    </div>
+                    <div class="item05 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">마이 베스트!</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit">최애 <strong>신용카드</strong></p>
+                        </div>
+                    </div>
+                    <div class="item06 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">세상 아까운 연회비</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit">내 <strong>연회비</strong>를<br>알아보자</p>
+                        </div>
+                    </div>
+                    <div class="item07 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">내 지갑 거기 있나요</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit">마성의 <strong>그곳</strong></p>
+                        </div>
+                    </div>
+                    <div class="item08 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">항상 응원합니다</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit"><strong>배움</strong>을 향한<br>열정!</p>
+                        </div>
+                    </div>
+                    <div class="item09 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">오늘도 떠난다</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit"><strong>맛집</strong> 찾아<br>삼만리</p>
+                        </div>
+                    </div>
+                    <div class="item10 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">소중한 내 붕붕카</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit"><strong>고급유</strong><br>주고싶다</p>
+                        </div>
+                    </div>
+                    <div class="item11 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">출근하는 이유?</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit"><strong>댕냥이</strong> 위해<br>버는거죠</p>
+                        </div>
+                    </div>
+                    <div class="item12 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">삐--- 비비빅</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit"><strong>저축力</strong><br>측정기 </p>
+                        </div>
+                    </div>
+                    <div class="item13 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">위 아더 월드!</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit">따끈따끈한<br><strong>세상</strong></p>
+                        </div>
+                    </div>
+                    <div class="item14 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">알아봐 드릴까요?</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit"><strong>금고포옹</strong><br>스타일!</p>
+                        </div>
+                    </div>
+                    <div class="item14_2 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">알아봐 드릴까요?</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit"><strong>목돈투자</strong><br>스타일!</p>
+                        </div>
+                    </div>
+                    <div class="item14_3 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">알아봐 드릴까요?</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit"><strong>알뜰살뜰</strong><br>스타일!</p>
+                        </div>
+                    </div>
+                    <div class="item14_4 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">알아봐 드릴까요?</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit"><strong>유비무환</strong><br>스타일!</p>
+                        </div>
+                    </div>
+                    <div class="item15 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">한번 분석해보자</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit"><strong>원금보존</strong><br>스타일!</p>
+                        </div>
+                    </div>
+                    <div class="item15_2 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">한번 분석해보자</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit"><strong>수익추구</strong><br>스타일!</p>
+                        </div>
+                    </div>
+                    <div class="item16 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">앗,투자 하셨군요</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit"><strong>국내주식</strong><br>볼까요?</p>
+                        </div>
+                    </div>
+                    <div class="item17 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">내면 낼수록...</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit">아까운...<strong>이자...</strong></p>
+                        </div>
+                    </div>
+                    <div class="item18 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">어느새 슉슉나간</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit">각양각색<strong>보험료</strong></p>
+                        </div>
+                    </div>
+                    <div class="item19 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">빈틈없이 꼼꼼하게</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit"><strong>노후</strong>를~ 위하여!</p>
+                        </div>
+                    </div>
+                    <div class="item20 swiper-slide" onclick="reportCardOpen()">
+                        <div class="txt-area">
+                            <p class="txt">나에게 딱맞는!</p>
+                            <span class="my-badge4">N</span>
+                        </div>
+                        <div class="tit-area">
+                            <p class="tit"><strong>혜택 NO.1</strong><br>신용카드</p>
+                        </div>
+                    </div>
+                    <!-- 더 많은 이야기 -->
+                    <div class="item_more swiper-slide">
+                        <!--221219 삭제-->
+                        <!-- <span class="item_more_line"></span>
+                        <span class="item_more_line"></span>
+                        <span class="item_more_line"></span>
+                        <span class="item_more_line"></span> -->
+                        <!--221219 삭제-->
+                        <a class="my-select-type item_more_box"
+                        data-id="bot-popMenu-r01"
+                        aria-controls="bot-popArea-r01"
+                        aria-expanded="false">
+                            <div class="txt-area">
+                                <p class="txt">숨어 있어요!</p>
+                            </div>
+                            <div class="tit-area">
+                                <p class="tit"><strong>더 많은</strong> 이야기<br>찾기</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!--// 더 많은 이야기 -->
+                </div>
+            </div>
+            
+            <div class="swiper-pagination pagination_progress"></div>
+            <div class="swiper-pagination pagination_bullet"></div>
+        </div>  
+    </div>
+    <!-- 차트 -->
+    <div class="report-chart-box">
+        <p class="txt teal-3">2022년 가을 이야기</p>
+        <h2><span class="bold">수입, 지출</span>을 정리했어요.</h2>
+        <!-- 자산 연결-->
+        <div class="rep-chart-type-01">
+            <div class="my-chart-legend-area" aria-labelledby="REP-001-0001">
+                <!-- 23.01.17 수정-->
+                <h4 class="padd">2022년 3분기</h4>
+                <p class="REP-01-icon">
+                    <span><i class="my-chart-legend type-16"></i>수입</span>
+                    <span><i class="my-chart-legend type-17"></i>지출</span>
+                </p>
+                <!-- 23.01.17 수정-->
+            </div>
+            <div id="REP-001-0001"></div>
+            <!-- 23.01.17 수정-->
+            <script>
+            require(['Bar-score-income'], function (exports) {
+                exports({
+                id: 'REP-001-0001',
+                case: 'expense',
+                x: [
+                    {
+                    name: '9월',
+                    expense: [
+                        { name: '수입', value: '60'},
+                        { name: '지출', value: '40'},
+                    ],
+                    },
+                    {
+                    name: '10월',
+                    expense: [
+                        { name: '수입', value: '150'},
+                        { name: '지출', value: '50'},
+                    ],
+                    },
+                    {
+                    name: '11월',
+                    expense: [
+                        { name: '수입', value: '100'},
+                        { name: '지출', value: '70'},
+                    ],
+                    },
+                ]
+                })
+            });
+            </script>
+            <!-- 23.01.17 수정-->
+            <div id="REP-001-0001-y"></div>
+            <script>
+            require(['Bar-plan'], function (exports) {
+                exports({
+                id: 'REP-001-0001-y',
+                case: 'case-2',
+                y: [
+                    {name: '1,200,000'},
+                    {name: '1,000,000'},  
+                    {name: '800,000'},
+                    {name: '600,000'},
+                    {name: '400,000'},
+                    {name: '200,000'},
+                    {name: '0'},
+                ]
+                })
+            });
+            </script>
+        </div>
+        <!-- 23.01.17 수정-->
+        <div class="my-box-wrap type-big rounded bg-blue-grey-4">
+            <ul>
+                <li>
+                    <span class="tit black f15 info-btn">총 수입<button class="my-select-type asset-btn" data-id="acco-selectArea-1" role="button" aria-controls="acco-selectMenu-1" aria-expanded="false"><em class="ally-asset">총수입 설명버튼</em></button></span>
+                    <span class="f15"><em>3,212,245</em> 원</span>
+                </li>
+                <li>
+                    <span class="tit black f15 info-btn">총 지출<button class="my-select-type asset-btn" data-id="acco-selectArea-2" role="button" aria-controls="acco-selectMenu-2" aria-expanded="false"><em class="ally-asset">총지출 설명버튼</em></button></span>
+                    <span class="f15"><em>5,780,743</em> 원</span>
+                </li>
+            </ul>
+        </div>
+        <!-- 23.01.17 수정-->
+        <p class="info">더 자세한 이야기는 카드뉴스 뒷면을 살펴보세요!</p>
+        <!--// 자산 연결-->
+    </div>
+    <!--// 차트 -->
+</div>
+<!-- r01 - 더 많은 이야기 팝업 -->
+<div class="my-select-list-area my-report-info-pop pop-r01" role="dialog" id="bot-popArea-r01" aria-labelledby="bot-popMenu-r01" tabindex="0">
+    <h2><span>아직 남아있는 새로운 이야기</span></h2>
+
+    <div class="my-report-pop-area">
+        <div class="cont">
+            <p class="txt">홍길동님의 지난 금융 이야기를<br />추가로 확인해볼까요?</p>
+        </div>
+    </div>
+
+    <div class="my-btn-area">
+        <button class="my-btn-type medium rounded-sm f15 bg-blue-grey-5 white" id="">내 자산 연결하고 이야기 더보기</button>
+    </div>
+
+  <button class="my-select-close" data-id="my-expense"><span class="blind">닫기</span></button>
+</div>
+<!--// r01 - 더 많은 이야기 팝업 -->
+<!-- 카드 확대 -->
+<div class="my-dialog-content report-flip-card" role="dialog" data-id="acco-dialog-area-open" aria-labelledby="acco-dialog-open-card1" tabindex="0" data-state-id="acco-dialog-open">
+    <div class="my-dialog flip-card-inner">
+        <div class="flip-card-front item01" onclick="reportCardBack()">
+            <h2>당신의 지난 시간을 돌아보는 <strong>금융 이야기</strong></h2>
+            <div class="flip-card-front-box">
+                <p class="txt">내가 바로 큰 손</p>
+                <p class="tit">소비/지출 비중 nn%</p>
+                <p class="txt2">어디에 다 쓴거죠!?</p>
+                <a href="javascript:void(0);">자세히 알아보기</a>
+            </div>
+            <button class="btn-close-top my-select-close" onclick="reportCardClose()"><span class="blind">닫기</span></button>
+        </div>
+        <div class="flip-card-back">
+            <h2>3개월 평균 금융지출 현황</h2>
+            <div class="flip-card-back-box">
+                <div class="flip-card-back-box-boby">
+                    <p class="tit">지난 가을 나의 <strong>소비 지출</strong> 비중</p>
+                    <p class="txt"><strong class="teal-3">소비 지출</strong> 비중이 <span class="teal-3">47%</span>를 차지하고 있네요!</p>
+                    <div class="rep-chart-type-02">
+                        <div id="REP-001-0001-01-1"></div>
+                        <script>
+                            require(['Bar-score-expenses'], function (exports) {
+                            exports({
+                                id: 'REP-001-0001-01-1',
+                                case: 'case-3',
+                                percent: 100,
+                                x: [
+                                { name: "소비/지출", value: 10, score: 47},
+                                { name: "자산/투자", value: 156, score: 21},
+                                { name: "대출이자", value: 37, score: 11},
+                                { name: "보험", value: 24, score: 8},
+                                { name: "그 외(기타)", value: 37, score: 13},
+                                ]
+                            })
+                            });
+                        </script>
+                    </div>
+                    <div class="my-expenses-expectation-wrap">
+                        <div class="my-expenses-expectation-box">
+                            <div class="my-expenses-expectation-body">
+                                <div class="item">
+                                    <span class="txt">소비/지출</span>
+                                    <span class="money">5,915,000 원</span>
+                                </div>
+                                <div class="item">
+                                    <span class="txt">자산/투자</span>
+                                    <span class="money">2,000,000 원</span>
+                                </div>
+                                <div class="item">
+                                    <span class="txt">대출이자</span>
+                                    <span class="money">723,324 원</span>
+                                </div>
+                                <div class="item">
+                                    <span class="txt">보험</span>
+                                    <span class="money">423,324 원</span>
+                                </div>
+                                <div class="item">
+                                    <span class="txt">그외(기타)</span>
+                                    <span class="money">1,200,000 원</span>
+                                </div>   
+                            </div>
+                            <div class="my-expenses-expectation-foot">
+                                <div class="item">
+                                    <span class="txt">Total</span>
+                                    <span class="money">9,983,324 원</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="tit"><strong>월별</strong>로 보면,</p>
+                    <p class="txt">한 달에 평균 <span class="indigo-1">25건</span>,<br>월평균 <span class="teal-3">144만원</span> 정도를 소비했네요!</p>
+
+                    <p class="desc">※ 22년 9~11월 기준</p>
+                    <div class="my-chart-legend-area" aria-labelledby="REP-001-0001-01-2-1">
+                        <span>이용금액<i class="my-chart-legend type-20"></i></span>
+                        <span>이용건수<i class="my-chart-legend type-19"></i></span>
+                    </div>
+                    <div class="rep-chart-type-03">
+                        <div id="REP-001-0001-01-2-1"></div>
+                        <script>
+                          require(['Bar-plan2'], function (exports) {
+                            exports({
+                              id: 'REP-001-0001-01-2-1',
+                              case: 'case-1',
+                              percent: 50,    //평균
+                              x: [
+                                {name: '124만원', value: '124', price: '1,240,000'},
+                                {name: '164만원', value: '164', price: '1,640,000'},
+                                {name: '144만원', value: '70', price: '1,440,000'},
+                              ]
+                            })
+                          });
+                        </script>
+                        <div id="REP-001-0001-01-2-2"></div>
+                        <script>
+                          require(['Line-price2'], function (exports) {
+                            exports({
+                              id: 'REP-001-0001-01-2-2',
+                              case: 'case-2',
+                              x: [
+                                {name: '9월', value: '20', price: '20건'},
+                                {name: '10월', value: '50', price: '50건'},
+                                {name: '11월', value: '35', price: '35건'},
+                              ]
+                            })
+                          });
+                        </script>
+                    </div>
+                    <div class="my-expenses-expectation-wrap">
+                        <div class="my-expenses-expectation-box">
+                            <div class="my-expenses-expectation-foot">
+                                <div class="item">
+                                    <span class="txt">월 평균 지출액</span>
+                                    <span class="money">1,444,089 원</span>
+                                </div>
+                                <div class="item">
+                                    <span class="txt">월 평균 지출 건수</span>
+                                    <span class="money">25 건</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-area-right"><a href="javascript:void(0);">함께 보면 좋은 리포트</a></div>
+                </div>
+                <div class="flip-card-back-box-foot">
+                    <p><strong>홍길동님</strong>의 소비는,</p>
+                    <ul>
+                        <li>
+                            <p class="tit"><strong>비슷한 소득수준</strong>의 손님들보다<br>
+                                <span class="teal-3">nn만원 적어요</span>
+                            </p>
+                            <p class="txt">비슷한 소득수준의 손님들은<br>
+                                <span>한 달 평균 161만원</span>을 소비했어요.<br>
+                                <span>3개월간 총 428만원, 83건</span> 이용해요.
+                            </p>
+                        </li>
+                        <li>
+                            <p class="tit"><strong>비슷한 연령대</strong>의 손님들보다<br>
+                                <span class="up">nn만원 더 많아요</span>
+                            </p>
+                            <p class="txt">비슷한 연령대의 손님들은<br>
+                                <span>한 달 평균 85만원</span>을 소비했어요.<br>
+                                <span>3개월간 총 428만원, 28건</span> 이용해요.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <a href="javascript:void(0)" class="flip-card-back-box-btn" onclick="myFunc.getReportCardBackScrollBottom();">페이지 최하단으로 이동</a>
+            </div>
+            <div class="my-data-open-area-bg"></div>
+            <!--221214 앞면버튼 추가-->
+            <button type="button" class="front-back">앞면</button>
+             <!--221214 앞면버튼 추가-->
+            <button class="btn-close-top my-select-close" onclick="reportCardClose()"><span class="blind">닫기</span></button>
+        </div>
+    </div>
+</div>
+<!--// 카드 확대  -->
+<!-- 23.01.17 수정 총지출-->
+<div class="my-select-list-area hasFixedBtn-4" role="dialog" id="acco-selectMenu-1" aria-labelledby="acco-selectArea-1"><!--  tabindex="0" -->
+  <h2><span>총 수입</span></h2>
+  <div class="join-info center">
+    <ul class="exp-list">
+      <li>은행계좌의 입금으로 분류된 금액<br> 단, 계좌 거래메모의 고객명과 동일한 거래금액은 제외</li>
+      <li>마이데이터에 등록된 가맹점/업종 분류는 하나카드 가맹점/업종 분류와 다를 수 있습니다.</li>
+    </ul>        
+  </div>
+  <button class="btn-close-top popup my-select-close"><span class="blind">닫기</span></button>
+</div>
+<!-- 23.01.17 수정 총지출-->
+<!-- 23.01.17 수정 총수입-->
+<div class="my-select-list-area hasFixedBtn-4" role="dialog" id="acco-selectMenu-2" aria-labelledby="acco-selectArea-2"><!--  tabindex="0" -->
+    <h2><span>총 지출</span></h2>
+    <div class="join-info center">
+      <ul class="exp-list">
+        <li>
+          카드 지출 및 은행계좌의 예적금·저축·투자·연금·보험료·대출금·이자·이체거래로 분류된 금액을 포함<br>
+          단, 계좌 거래메모의 고객명과 동일한 거래금액은 제외
+        </li>
+        <li>마이데이터에 등록된 가맹점/업종 분류는 하나카드 가맹점/업종 분류와 다를 수 있습니다.</li>
+      </ul>        
+    </div>
+    <button class="btn-close-top popup my-select-close"><span class="blind">닫기</span></button>
+</div>
+<!-- 23.01.17 수정 총수입-->
+<script>
+    /*인트로 모달*/
+    $(document).ready(function(){
+        $('.intro-popup').addClass('in').each(function(){
+            $('body').css('overflow','hidden')
+        });
+        $('.remove').on('click',function(){
+            $('.intro-popup').remove();
+        })
+        $('.close').on('click',function(){
+            $('.intro-popup').addClass('out').removeClass('in')
+        })
+        $('.remove,.close').on('click',function(){
+            $('body').css('overflow','');
+        })
+    })
+    if ($('.reportSwiper .swiper-slide').length > 1) {
+        myFunc.getReportSwiper.swiper();
+    }
+    setTimeout(function(){
+        myFunc.getMyMainControl();
+    },500);
+    
+    /* 손님여정리포트 카드열기, 뒤집기, 닫기 */
+    function reportCardOpen() {
+        myFunc.getSelectMenu.open('acco-dialog-open-card1');
+        /*grayclose 221209*/
+        if($('.report-flip-card').hasClass('active') === true){
+            $('.my-dialog-content.report-flip-card').on('click',function(){
+                $('.report-flip-card').removeClass('back');
+                myFunc.getSelectMenu.close('acco-dialog-open-card1');
+                $('.flip-card-back-box').scrollTop('0')
+            }).children('.my-dialog.flip-card-inner').on('click', function(){
+            return false;
+            })
+        }else{}
+         /*grayclose 221209*/
+    }
+    function reportCardBack() {
+        event.stopPropagation();
+        $('.report-flip-card').addClass('back');
+        /*card flip 221214*/
+        $('.my-dialog-content.report-flip-card .front-back').on('click', function(){
+            event.stopPropagation();
+            $('.report-flip-card').removeClass('back');
+        })
+        /*card flip 221214*/
+    }
+    function reportCardClose() {
+        event.stopPropagation();
+        $('.report-flip-card').removeClass('back');
+        myFunc.getSelectMenu.close('acco-dialog-open-card1');
+        $('.flip-card-back-box').scrollTop('0') /*card scroll top 221123*/
+    }
+    /* 스크롤시 차트 */
+    $('.flip-card-back-box').on('scroll', function() {
+        $('#REP-001-0001-01-2-1').waypoint({
+          handler: function () {
+            // waypoint Active addClass
+            document.getElementById('REP-001-0001-01-2-1').classList.add('waypointActive');
+
+            this.destroy();
+          },
+          offset: '80%'
+        });
+        myFunc.getReportCardBackScroll();
+    });
+    /* slide card number 221216 */
+    $(window).on('load',function(){
+        $('.report-swiper-box .swiper-slide').not(':last-child').each(function(index){
+            var idx = $(this).index() + 1;
+            if(idx < 10){
+                $(this).prepend('<p class="number">'+'0'+idx+'</p>')
+            }else{
+                $(this).prepend('<p class="number">'+idx+'</p>')
+            }
+        })
+    })
+    /* slide card number 221216 */
+</script>
+<div class="overlay"></div>
+</main><!-- / my-wrap -->
+</body>
+</html>
