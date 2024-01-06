@@ -102,7 +102,6 @@ $(document).ready(function () {
 
     afterLoad: function (anchorLink, index) {
       var loadedSection = $(this);
-      console.log(loadedSection)
      //using index
      if (index == 1) {
       /* add opacity to arrow */
@@ -144,7 +143,7 @@ $(document).ready(function () {
             return false;
             });
           $('.close').on('click',function(){
-            $('html, body').css({'overflow': 'visible'});
+            $('html, body').css({'overflow': ''});
             $('html,body').off('scroll touchmove mousewheel');
           })
         })
@@ -197,11 +196,11 @@ $(document).ready(function () {
 
 function openModal() {
   document.getElementById("myModal").style.display = "block";
-  // document.getElementById("header").style.display = "none";
+  document.body.style.overflow="hidden";
 }
 function closeModal() {
   document.getElementById("myModal").style.display = "none";
-  // document.getElementById("header").style.display = "block";
+  document.body.style.overflow="visible";
 }
 
 var slideIndex = 1;
@@ -220,10 +219,11 @@ function showSlides(n) {
       slides[i].style.display = "none";
   }
   slides[slideIndex-1].style.display = "block";
+  document.body.style.overflow="hidden";
 }
 /*scroll bar*/
 (function($){
   $(window).on("load",function(){
-      $(".img_box").mCustomScrollbar();
+    $(".img_box").mCustomScrollbar();
   });
 })(jQuery);

@@ -301,7 +301,6 @@ background:url(../img/star-solid.svg) no-repeat !important;
 .modal-content .mySlides .tit .right_tit li + li{margin-left:10px;}
 .modal-content .mySlides .tit .right_tit li a{color:#fff;}
 .modal-content .img_box {display: block; width: 100%; max-width: 1000px; height: 620px; margin: 0 auto; border: 1px solid #ddd; overflow-y: auto; top:20%;}
-.modal-content .img_box.img_width{width:50%;}
 .modal-content .mySlides .tit .txt br{display:contents;}
 .modal-content .img_box img{width:100%;}
 .modal-content .close{color: white; position: absolute; top: -54px; right: 0; font-size: 0; width:40px; height:40px; font-weight: bold; cursor: pointer; background:url(../img/close.svg) no-repeat; opacity:1;}
@@ -323,6 +322,7 @@ background:url(../img/star-solid.svg) no-repeat !important;
     .modal-content .mySlides .tit .txt br{display:initial;}
     .modal-content .mySlides .tit .right_tit{margin:5px 0;}
     .contact p {width: 95%;}
+    .section.projects .swiper-slide > h1{font-size:30px;}
 }
 @media screen and (max-width:414px){
     .projects .view-btn{display: block; margin: 10px auto;}
