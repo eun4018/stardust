@@ -143,7 +143,7 @@ $(document).ready(function () {
             return false;
             });
           $('.close').on('click',function(){
-            $('html, body').css({'overflow': ''});
+            $('html, body').css({'overflow': 'initial','height':'auto'});
             $('html,body').off('scroll touchmove mousewheel');
           })
         })

@@ -287,6 +287,7 @@ background:url(../img/star-solid.svg) no-repeat !important;
 .view-btn:hover {background-color: #ff6363; color: #fff; text-decoration: none;}
 .view-btn:hover:after {background-color: rgba(255, 255, 255, 0); transition: all 300ms ease-out;  width: 100%;}
 /*portfolio*/
+.section.projects .swiper-slide h1 br{display:contents;}
 .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
 .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{color: #9f9f9f;}
 /*Modal*/
@@ -322,10 +323,11 @@ background:url(../img/star-solid.svg) no-repeat !important;
     .modal-content .mySlides .tit .txt br{display:initial;}
     .modal-content .mySlides .tit .right_tit{margin:5px 0;}
     .contact p {width: 95%;}
-    .section.projects .swiper-slide > h1{font-size:30px;}
+    .section.projects .swiper-slide > h1{line-height:1.2;}
 }
 @media screen and (max-width:414px){
     .projects .view-btn{display: block; margin: 10px auto;}
+    .section.projects .swiper-slide h1 br{display:block;}
     .swiper-button-next, .swiper-button-prev {top: 40%;}
 }
 @media screen and (max-width:320px){
